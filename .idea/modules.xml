@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/content_catalogue.iml" filepath="$PROJECT_DIR$/.idea/content_catalogue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../stock_trader/.idea/stock_trader.iml" filepath="$PROJECT_DIR$/../stock_trader/.idea/stock_trader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../CraftAcademy/Projects/taskr/.idea/taskr.iml" filepath="$PROJECT_DIR$/../../CraftAcademy/Projects/taskr/.idea/taskr.iml" />
+    </modules>
+  </component>
+</project>
