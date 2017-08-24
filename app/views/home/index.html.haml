@@ -1,2 +1,8 @@
 %div
   %p LaffHub Content Catalogue
+  - if user_signed_in?
+    = link_to "My Account"
+  - else
+    = link_to "Log In", new_user_session_path
+
+  = flash[:notice]

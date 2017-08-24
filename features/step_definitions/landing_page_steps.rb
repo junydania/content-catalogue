@@ -7,3 +7,6 @@ Then(/^I should see "([^"]*)"$/) do |welcome|
 end
 
 
+Then(/^show page$/) do
+  save_and_open_page
+end
