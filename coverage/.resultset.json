@@ -76,7 +76,7 @@
         0,
         0,
         null,
-        null,
+        0,
         null,
         0
       ],
@@ -87,6 +87,96 @@
         0
       ]
     },
-    "timestamp": 1503595591
+    "timestamp": 1503597669
+  },
+  "RSpec": {
+    "coverage": {
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/video.rb": [
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/application_controller.rb": [
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/home_controller.rb": [
+        0,
+        null,
+        0,
+        0,
+        0
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/videos_controller.rb": [
+        0,
+        null,
+        0,
+        0,
+        0
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/application_record.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/user.rb": [
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0
+      ]
+    },
+    "timestamp": 1503597663
   }
 }
