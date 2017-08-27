@@ -18,11 +18,11 @@
         1,
         null,
         1,
-        2,
+        0,
         null,
         null,
         1,
-        5,
+        4,
         0,
         null,
         null,
@@ -35,13 +35,6 @@
         1,
         null
       ],
-      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/videos_controller.rb": [
-        1,
-        null,
-        1,
-        null,
-        null
-      ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/channels/application_cable/channel.rb": [
         0,
         0,
@@ -50,6 +43,13 @@
       ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/channels/application_cable/connection.rb": [
         0,
+        0,
+        0,
+        0
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/videos_controller.rb": [
+        0,
+        null,
         0,
         0,
         0
@@ -87,7 +87,7 @@
         0
       ]
     },
-    "timestamp": 1503657372
+    "timestamp": 1503703345
   },
   "RSpec": {
     "coverage": {

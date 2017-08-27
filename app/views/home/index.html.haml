@@ -5,4 +5,7 @@
   - else
     = link_to "Log In", new_user_session_path
 
+  = link_to  destroy_user_session_path, method: :delete  do
+    %span Log Out
+
   = flash[:notice]
