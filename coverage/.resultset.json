@@ -18,11 +18,11 @@
         1,
         null,
         1,
-        1,
+        4,
         null,
         null,
         1,
-        2,
+        13,
         0,
         null,
         null,
@@ -48,6 +48,35 @@
       ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/comedians_controller.rb": [
         1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/comedian.rb": [
+        1,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/channels/application_cable/channel.rb": [
@@ -91,11 +120,10 @@
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/video.rb": [
         0,
         null,
-        null,
         0
       ]
     },
-    "timestamp": 1503936665
+    "timestamp": 1503939636
   },
   "RSpec": {
     "coverage": {
@@ -103,9 +131,15 @@
         1,
         null
       ],
-      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/video.rb": [
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/comedian.rb": [
         1,
         null,
+        1,
+        null,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/video.rb": [
+        1,
         null,
         null
       ],
@@ -144,6 +178,32 @@
         null,
         null
       ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/comedians_controller.rb": [
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0
+      ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/home_controller.rb": [
         0,
         null,
@@ -155,6 +215,10 @@
         0,
         null,
         0,
+        0,
+        null,
+        0,
+        null,
         0,
         0
       ],
@@ -185,6 +249,6 @@
         0
       ]
     },
-    "timestamp": 1503922621
+    "timestamp": 1503939630
   }
 }

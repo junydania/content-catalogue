@@ -1,0 +1,9 @@
+%p Add New Comedian
+
+= form_for @comedian do |f|
+  = f.label :name, 'Comedian Name'
+  = f.text_field :name
+
+  = f.submit 'Submit'
+
+<% end %>
