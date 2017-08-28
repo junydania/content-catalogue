@@ -18,11 +18,11 @@
         1,
         null,
         1,
-        3,
+        1,
         null,
         null,
         1,
-        11,
+        2,
         0,
         null,
         null,
@@ -40,6 +40,14 @@
         null,
         1,
         null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/comedians_controller.rb": [
+        1,
         null
       ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/channels/application_cable/channel.rb": [
@@ -87,7 +95,7 @@
         0
       ]
     },
-    "timestamp": 1503922627
+    "timestamp": 1503936665
   },
   "RSpec": {
     "coverage": {

@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   root controller: :home, action: :index
 
   resources :videos
+  resources :comedians
 end
 
