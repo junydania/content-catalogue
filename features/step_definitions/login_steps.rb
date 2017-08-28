@@ -42,8 +42,8 @@ Given(/^I should receive a "([^"]*)" email$/) do |subject|
 end
 
 
-Then(/^I fill in "([^"]*)" with "([^"]*)"$/) do |arg1, arg2|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I fill in "([^"]*)" with "([^"]*)"$/) do |new_password, password|
+  fill_in new_password, with: password
 end
 
 Then(/^I click "([^"]*)"$/) do |arg1|

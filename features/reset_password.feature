@@ -19,6 +19,6 @@ Feature: As a user or administrator
     Then I should see "Change your password"
     And I fill in "New password" with "12345678"
     And I fill in "Confirm new password" with "12345678"
-    And I click "Change my password"
+    And I click on "Change my password"
     And I should see "Your password has been changed successfully. You are now signed in."
 
