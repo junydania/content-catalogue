@@ -1,0 +1,10 @@
+%p Add New Category
+
+= form_for @category do |f|
+  = f.label :category_name, 'Category Name'
+  = f.text_field :category_name
+
+  = f.submit 'Submit'
+
+<% end %>
+
