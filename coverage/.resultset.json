@@ -18,11 +18,11 @@
         1,
         null,
         1,
-        5,
+        6,
         null,
         null,
         1,
-        15,
+        17,
         0,
         null,
         null,
@@ -44,6 +44,36 @@
         1,
         null,
         null,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/categories_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/category.rb": [
+        1,
+        null,
+        1,
         null
       ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/comedians_controller.rb": [
@@ -156,11 +186,17 @@
         0
       ]
     },
-    "timestamp": 1504004718
+    "timestamp": 1504008153
   },
   "RSpec": {
     "coverage": {
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/category.rb": [
+        1,
+        null,
         1,
         null
       ],
@@ -217,6 +253,30 @@
         0,
         null,
         null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/categories_controller.rb": [
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0
       ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/comedians_controller.rb": [
         0,
@@ -315,6 +375,6 @@
         0
       ]
     },
-    "timestamp": 1504004709
+    "timestamp": 1504008145
   }
 }
