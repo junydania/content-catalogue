@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+coverage/.resultset.json
 
 # Ignore all logfiles and tempfiles.
 /log/*
