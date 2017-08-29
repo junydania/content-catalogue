@@ -1,0 +1,10 @@
+%p Add New Publisher
+
+= form_for @publisher do |f|
+  = f.label :publisher_name, 'Publisher Name'
+  = f.text_field :publisher_name
+
+  = f.submit 'Submit'
+
+<% end %>
+

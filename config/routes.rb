@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   resources :videos
   resources :comedians
+  resources :publishers
 end
 
