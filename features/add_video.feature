@@ -26,7 +26,7 @@ Feature: As a user or administrator
 
     And the following categories exist
       | category_name   |
-      | Stand Up        |
+      | Stand Up Comedy |
       | Arewa           |
       | Sitcom          |
       | Just for Laughs |
@@ -41,13 +41,13 @@ Feature: As a user or administrator
     And I click on "Add Video"
     And I fill in field "Title" with "BasketMouth yabbed Alibaba"
     And I fill in field "Description" with "Halirious stuff by basketmouth yabbing Alibaba and his family"
-    And I select "September 7, 2017" as the  "Release Date"
-    And I fill in field "Storage Path" with "ftp://s3.aws.com"
+    When I fill in "Release Date" date field with "2017, Aug, 29"
+    And I fill in field "Storage Location" with "ftp://s3.aws.com"
     And I select "AY Live" from "Publisher"
     And I select "Akpororo" from "Comedian"
     And I select "Stand Up Comedy" from "Category"
+    And I attach file "AYLive.jpg" in the image field
     And I click on "Submit"
     Then I should see "Video successfully added"
-
 
 
