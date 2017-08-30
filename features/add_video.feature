@@ -18,7 +18,6 @@ Feature: As a user or administrator
     And I click on "Add Video"
     And I fill in field "Title" with "BasketMouth yabbed Alibaba"
     And I fill in field "Description" with "Halirious stuff by basketmouth yabbing Alibaba and his family"
-    And I fill in field "Title" with "BasketMouth yabbed Alibaba"
     And I select "September 7, 2017" as the  "Release Date"
     And I fill in field "Storage Path" with "ftp://s3.aws.com"
     And I select "AY Live" from "Publisher"

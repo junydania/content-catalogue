@@ -1,0 +1,32 @@
+%p Add New Video
+
+= form_for @video, url: videos_path, html: { multipart: true }do |f|
+
+  = f.label :title, 'Title'
+  = f.text_field :title
+
+  = f.label :description, 'Description'
+  = f.text_field :description
+
+  = f.label :release_date, 'Release Date'
+  = f.date_field :release_date
+
+  = f.label :video_storage_path, 'Storage Location'
+  = f.text_field :video_storage_path
+
+  = f.label :comedian_id, 'Comedian'
+  = f.collection_select(:comedian_id, @comedians, :id, :name)
+
+  = f.label :image, 'Video Image'
+  = f.file_field :image
+
+  = f.label :category_id, 'Video Category'
+  = f.collection_select(:category_id, @categories, :id, :name)
+
+  = f.label :publisher_id, 'Publisher'
+  = f.collection_select(:publisher_id, @publishers, :id, :name)
+
+  = f.submit 'Submit'
+
+<% end %>
+

@@ -42,8 +42,53 @@
         null,
         null,
         1,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
+        null,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/video.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/comedian.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/publisher.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/category.rb": [
+        1,
+        null,
+        1,
         null
       ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/channels/application_cable/channel.rb": [
@@ -149,26 +194,6 @@
         0,
         0
       ],
-      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/category.rb": [
-        0,
-        null,
-        0,
-        0
-      ],
-      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/comedian.rb": [
-        0,
-        null,
-        0,
-        null,
-        0
-      ],
-      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/publisher.rb": [
-        0,
-        null,
-        0,
-        null,
-        0
-      ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/user.rb": [
         0,
         null,
@@ -179,14 +204,9 @@
         0,
         null,
         0
-      ],
-      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/video.rb": [
-        0,
-        null,
-        0
       ]
     },
-    "timestamp": 1504018039
+    "timestamp": 1504099911
   },
   "RSpec": {
     "coverage": {

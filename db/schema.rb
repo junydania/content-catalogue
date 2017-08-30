@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170829113242) do
+ActiveRecord::Schema.define(version: 20170830132022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 20170829113242) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "custom_auto_increments", id: :serial, force: :cascade do |t|
+    t.string "counter_model_name"
+    t.integer "counter", default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["counter_model_name"], name: "index_custom_auto_increments_on_counter_model_name"
   end
 
   create_table "publishers", force: :cascade do |t|
@@ -55,13 +63,25 @@ ActiveRecord::Schema.define(version: 20170829113242) do
 
   create_table "videos", force: :cascade do |t|
     t.string "title"
-    t.integer "video_key"
     t.string "description"
-    t.string "video_image"
     t.date "release_date"
     t.string "video_storage_path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "video_key"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.bigint "publisher_id"
+    t.bigint "comedian_id"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_videos_on_category_id"
+    t.index ["comedian_id"], name: "index_videos_on_comedian_id"
+    t.index ["publisher_id"], name: "index_videos_on_publisher_id"
   end
 
+  add_foreign_key "videos", "categories"
+  add_foreign_key "videos", "comedians"
+  add_foreign_key "videos", "publishers"
 end
