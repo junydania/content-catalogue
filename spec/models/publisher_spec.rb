@@ -7,6 +7,7 @@ RSpec.describe Publisher, type: :model do
 
   describe 'Validations' do
     it { is_expected.to validate_presence_of :publisher_name }
+
   end
 
 end

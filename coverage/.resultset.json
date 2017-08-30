@@ -236,7 +236,7 @@
         0
       ]
     },
-    "timestamp": 1504111023
+    "timestamp": 1504111373
   },
   "RSpec": {
     "coverage": {
@@ -254,6 +254,7 @@
         1,
         null,
         1,
+        1,
         null,
         null
       ],
@@ -261,11 +262,25 @@
         1,
         null,
         1,
+        1,
         null,
         null
       ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/video.rb": [
         1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
         null,
         null
       ],
@@ -394,9 +409,44 @@
         0,
         null,
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
         null,
         0,
-        0
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null
       ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/jobs/application_job.rb": [
         0,
@@ -425,6 +475,6 @@
         0
       ]
     },
-    "timestamp": 1504009147
+    "timestamp": 1504111366
   }
 }

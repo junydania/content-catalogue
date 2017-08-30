@@ -8,7 +8,7 @@ class Video < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
   validates_attachment_file_name :image, matches: [/png\z/, /jpe?g\z/]
 
-  validates_presence_of :title, :description, :video_storage_path
+  validates_presence_of :title, :description, :video_storage_path, :comedian_id, :publisher_id, :category_id
 
 end
 
