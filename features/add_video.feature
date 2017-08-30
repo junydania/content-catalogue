@@ -8,6 +8,29 @@ Feature: As a user or administrator
       | email                | first_name  | last_name | password | password_confirmation | role           |
       | o.dania@laffhub.com  | Osegbemoh   | Dania     | 12345678 | 12345678              | Administrator  |
 
+    And the following publishers exist
+      | publisher_name  |
+      | AY Live         |
+      | BasketMouth     |
+      | MC Abbey        |
+      | Mr Patrick      |
+      | Arewa           |
+
+    And the following comedians exist
+      | name            |
+      | Akpororo        |
+      | Whalemouth      |
+      | Gordons         |
+      | Pencil          |
+      | Ajebo           |
+
+    And the following categories exist
+      | category_name   |
+      | Stand Up        |
+      | Arewa           |
+      | Sitcom          |
+      | Just for Laughs |
+
   Scenario:
     Given I am on the landing page
     And I click on "Log In"

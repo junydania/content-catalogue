@@ -21,10 +21,10 @@
   = f.file_field :image
 
   = f.label :category_id, 'Video Category'
-  = f.collection_select(:category_id, @categories, :id, :name)
+  = f.collection_select(:category_id, @categories, :id, :category_name)
 
   = f.label :publisher_id, 'Publisher'
-  = f.collection_select(:publisher_id, @publishers, :id, :name)
+  = f.collection_select(:publisher_id, @publishers, :id, :publisher_name)
 
   = f.submit 'Submit'
 

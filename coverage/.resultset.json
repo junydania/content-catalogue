@@ -1,6 +1,28 @@
 {
   "Cucumber Features": {
     "coverage": {
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/publisher.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/comedian.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/category.rb": [
+        1,
+        null,
+        1,
+        null
+      ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/home_controller.rb": [
         1,
         null,
@@ -67,28 +89,6 @@
         null,
         null,
         null,
-        null
-      ],
-      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/comedian.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/publisher.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/models/category.rb": [
-        1,
-        null,
-        1,
         null
       ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/channels/application_cable/channel.rb": [
@@ -206,7 +206,7 @@
         0
       ]
     },
-    "timestamp": 1504099911
+    "timestamp": 1504101792
   },
   "RSpec": {
     "coverage": {
