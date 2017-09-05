@@ -4,6 +4,11 @@ Rails.application.routes.draw do
 
   root controller: :home, action: :index
 
+  get "/pages/login" => "users#login", as: :login
+  get "/pages/signup" => "users#signup", as: :signup
+  get "/pages/:page" => "pages#page", as: :page
+  get "/pages/pageindex" => "pages#pageindex", as: :pageindex
+
   resources :videos
   resources :comedians
   resources :publishers

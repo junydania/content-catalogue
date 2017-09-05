@@ -1,0 +1,198 @@
+%aside.main-sidebar
+  %section.sidebar
+    .user-panel
+      .pull-left.image
+        %img.img-circle{:alt => "User Image", :src => "http://i.pravatar.cc/300?img=59"}
+        .pull-left.info
+          %p Zachary Banks
+          %a{:href => "#"}
+            %i.fa.fa-circle.text-success
+            Online
+      %ul.sidebar-menu
+        %li.header MAIN NAVIGATION
+        %li
+          = link_to root_path, data: { pjax: true} do
+            %i.fa.fa-circle-o
+            %span Dashboard
+        %li.header GENERAL PAGES
+        %li
+          = link_to page_path(page: "widgets"), data: { pjax: true} do
+            %i.fa.fa-th
+            %span Widgets
+            %small.label.pull-right.bg-green Hot
+        %li.treeview
+          %a{:href => "#"}
+            %i.fa.fa-pie-chart
+            %span Charts
+            %i.fa.fa-angle-left.pull-right
+          %ul.treeview-menu
+            %li
+              = link_to page_path(page: "chartjs"), data: { pjax: true} do
+                %i.fa.fa-line-chart
+                ChartJS
+            %li
+              = link_to page_path(page: "morris"), data: { pjax: true} do
+                %i.fa.fa-bar-chart
+                Morris
+            %li
+              = link_to page_path(page: "flot"), data: { pjax: true} do
+                %i.fa.fa-area-chart
+                Flot
+            %li
+              = link_to page_path(page: "inline_charts"), data: { pjax: true} do
+                %i.fa.fa-signal
+                Inline charts
+        %li.treeview
+          %a{:href => "#"}
+            %i.fa.fa-laptop
+            %span UI Elements
+            %i.fa.fa-angle-left.pull-right
+          %ul.treeview-menu
+            %li
+              = link_to page_path(page: "ui_basic"), data: { pjax: true} do
+                %i.fa.fa-asterisk
+                General
+            %li
+              = link_to page_path(page: "icons"), data: { pjax: true} do
+                %i.fa.fa-fonticons
+                Icons
+            %li
+              = link_to page_path(page: "buttons"), data: { pjax: true} do
+                %i.fa.fa-hand-pointer-o
+                Buttons
+            %li
+              = link_to page_path(page: "slider"), data: { pjax: true} do
+                %i.fa.fa-sliders
+                Sliders  Toggles
+            %li
+              = link_to page_path(page: "timeline"), data: { pjax: true} do
+                %i.fa.fa-clock-o
+                Timeline
+            %li
+              = link_to page_path(page: "modals"), data: { pjax: true} do
+                %i.fa.fa-bullhorn
+                Modals
+        %li.treeview
+          %a{:href => "#"}
+            %i.fa.fa-edit
+            %span Forms
+            %i.fa.fa-angle-left.pull-right
+          %ul.treeview-menu
+            %li
+              = link_to page_path(page: "forms_simple"), data: { pjax: true} do
+                %i.fa.fa-keyboard-o
+                General Elements
+            %li
+              = link_to page_path(page: "forms_custom"), data: { pjax: true} do
+                %i.fa.fa-check-square
+                Custom Form Elements
+            %li
+              = link_to page_path(page: "forms_editor"), data: { pjax: true} do
+                %i.fa.fa-paragraph
+                Rich Text Editors
+        %li.treeview
+          %a{:href => "#"}
+            %i.fa.fa-table
+            %span Tables
+            %i.fa.fa-angle-left.pull-right
+          %ul.treeview-menu
+            %li
+              = link_to page_path(page: "tables_simple"), data: { pjax: true} do
+                %i.fa.fa-table
+                Simple tables
+            %li
+              = link_to page_path(page: "tables_data"), data: { pjax: true} do
+                %i.fa.fa-list-alt
+                Data tables
+        %li.treeview
+          %a{:href => "#"}
+            %i.fa.fa-folder
+            %span Custom Pages
+            %i.fa.fa-angle-left.pull-right
+          %ul.treeview-menu
+            %li
+              = link_to page_path(page: "invoice"), data: { pjax: true} do
+                %i.fa.fa-money
+                Invoice
+            %li
+              = link_to page_path(page: "profile"), data: { pjax: true} do
+                %i.fa.fa-user
+                Profile  Timeline
+            %li
+              = link_to login_path do
+                %i.fa.fa-sign-in
+                Login
+            %li
+              = link_to signup_path do
+                %i.fa.fa-sign-out
+                Signup
+            %li
+              = link_to page_path(page: "404"), data: { pjax: true} do
+                %i.fa.fa-exclamation-circle
+                404 Error
+            %li
+              = link_to page_path(page: "500"), data: { pjax: true} do
+                %i.fa.fa-exclamation-triangle
+                500 Error
+            %li
+              = link_to page_path(page: "blank"), data: { pjax: true} do
+                %i.fa.fa-circle-o
+                Blank Page
+        %li
+          = link_to page_path(page: "calendar"), data: { pjax: true} do
+            %i.fa.fa-calendar
+            %span Calendar
+            %small.label.pull-right.bg-red 3
+        %li.treeview
+          %a{:href => "#"}
+            %i.fa.fa-envelope-o
+            %span Email  Chat
+            %i.fa.fa-angle-left.pull-right
+          %ul.treeview-menu
+            %li
+              = link_to page_path(page: "email_inbox"), data: { pjax: true} do
+                %i.fa.fa-envelope
+                Inbox
+            %li
+              = link_to page_path(page: "email_compose"), data: { pjax: true} do
+                %i.fa.fa-pencil
+                Compose New Email
+        %li.treeview
+          %a{:href => "#"}
+            %i.fa.fa-share
+            %span Multilevel Menu
+            %i.fa.fa-angle-left.pull-right
+          %ul.treeview-menu
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-circle-o
+                Level One
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-circle-o
+                Level One
+                %i.fa.fa-angle-left.pull-right
+              %ul.treeview-menu
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-circle-o
+                    Level Two
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-circle-o
+                    Level Two
+                    %i.fa.fa-angle-left.pull-right
+                  %ul.treeview-menu
+                    %li
+                      %a{:href => "#"}
+                        %i.fa.fa-circle-o
+                        Level Three
+                    %li
+                      %a{:href => "#"}
+                        %i.fa.fa-circle-o
+                        Level Three
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-circle-o
+                Level One
+    / /.sidebar

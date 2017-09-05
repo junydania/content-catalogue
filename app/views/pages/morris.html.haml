@@ -1,0 +1,97 @@
+.content-wrapper.morris-page
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      Morris Charts
+      %small Demo Charts
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li
+        %a{:href => "#"} Charts
+      %li.active Morris
+  / Main content
+  %section.content
+    .row
+      .col-md-12
+        .box.box-primary{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title Overlapping Charts
+            .box-tools.pull-right
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-box-tool{"data-widget" => "remove"}
+                %i.fa.fa-times
+          .box-body.chart-responsive
+            %h5.text-center
+              Quaterly Sales Comparision FY 2015/16
+            %br/
+            #overlapping-chart.chart{:style => "height: 300px;"}
+          / /.box-body
+        / /.box
+    .row
+      .col-md-6
+        / AREA CHART
+        .box.box-primary{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title Area Chart
+            .box-tools.pull-right
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-box-tool{"data-widget" => "remove"}
+                %i.fa.fa-times
+          .box-body.chart-responsive
+            #revenue-chart.chart{:style => "height: 300px;"}
+          / /.box-body
+        / /.box
+        / DONUT CHART
+        .box.box-danger{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title Donut Chart
+            .box-tools.pull-right
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-box-tool{"data-widget" => "remove"}
+                %i.fa.fa-times
+          .box-body.chart-responsive
+            #sales-chart.chart{:style => "height: 300px; position: relative;"}
+          / /.box-body
+        / /.box
+      / /.col (LEFT)
+      .col-md-6
+        / LINE CHART
+        .box.box-info{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title Line Chart
+            .box-tools.pull-right
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-box-tool{"data-widget" => "remove"}
+                %i.fa.fa-times
+          .box-body.chart-responsive
+            #line-chart.chart{:style => "height: 300px;"}
+          / /.box-body
+        / /.box
+        / BAR CHART
+        .box.box-success{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title Bar Chart
+            .box-tools.pull-right
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-box-tool{"data-widget" => "remove"}
+                %i.fa.fa-times
+          .box-body.chart-responsive
+            #bar-chart.chart{:style => "height: 300px;"}
+          / /.box-body
+        / /.box
+      / /.col (RIGHT)
+    / /.row
+  / /.content
+/ /.content-wrapper
+- content_for :after_body do
+  %script{:src => "/plugins/raphael/raphael-min.js"}
+  %script{:src => "/plugins/morris/morris.min.js"}
+  %script{:src => "/assets/pages/morris.js"}

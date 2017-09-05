@@ -1,0 +1,266 @@
+.content-wrapper.inline-chart-page
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      Inline Charts
+      %small Sparklines  Knobs
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li
+        %a{:href => "#"} Charts
+      %li.active Inline Charts
+  / Main content
+  %section.content
+    / row
+    .row
+      .col-xs-12
+        / jQuery Knob
+        .box.box-solid{"data-aos" => "fade-up"}
+          .box-header
+            %i.fa.fa-bar-chart-o
+            %h3.box-title jQuery Knob
+            .box-tools.pull-right
+              %button.btn.btn-default.btn-sm{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-default.btn-sm{"data-widget" => "remove"}
+                %i.fa.fa-times
+          / /.box-header
+          .box-body
+            .row
+              .col-md-3.col-sm-6.col-xs-6.text-center
+                %input.knob{"data-fgColor" => "#3c8dbc", "data-height" => "90", "data-width" => "90", :type => "text", :value => "30"}
+                  .knob-label New Visitors
+                / ./col
+                .col-md-3.col-sm-6.col-xs-6.text-center
+                  %input.knob{"data-fgColor" => "#f56954", "data-height" => "90", "data-width" => "90", :type => "text", :value => "70"}
+                    .knob-label Bounce Rate
+                  / ./col
+                  .col-md-3.col-sm-6.col-xs-6.text-center
+                    %input.knob{"data-fgColor" => "#00a65a", "data-height" => "90", "data-max" => "150", "data-min" => "-150", "data-width" => "90", :type => "text", :value => "-80"}
+                      .knob-label Server Load
+                    / ./col
+                    .col-md-3.col-sm-6.col-xs-6.text-center
+                      %input.knob{"data-fgColor" => "#00c0ef", "data-height" => "90", "data-width" => "90", :type => "text", :value => "40"}
+                        .knob-label Disk Space
+                      / ./col
+                    / /.row
+                    .row
+                      .col-xs-6.text-center
+                        %input.knob{"data-fgColor" => "#932ab6", "data-height" => "90", "data-width" => "90", :type => "text", :value => "90"}
+                          .knob-label Bandwidth
+                        / ./col
+                        .col-xs-6.text-center
+                          %input.knob{"data-fgColor" => "#39CCCC", "data-height" => "90", "data-width" => "90", :type => "text", :value => "50"}
+                            .knob-label CPU
+                          / ./col
+                        / /.row
+                      / /.box-body
+                    / /.box
+                  / /.col
+                / /.row
+                .row
+                  .col-xs-12
+                    .box.box-solid{"data-aos" => "fade-up"}
+                      .box-header
+                        %i.fa.fa-bar-chart-o
+                        %h3.box-title jQuery Knob Different Sizes
+                        .box-tools.pull-right
+                          %button.btn.btn-default.btn-sm{"data-widget" => "collapse"}
+                            %i.fa.fa-minus
+                          %button.btn.btn-default.btn-sm{"data-widget" => "remove"}
+                            %i.fa.fa-times
+                      / /.box-header
+                      .box-body
+                        .row
+                          .col-md-3.col-sm-6.col-xs-6.text-center
+                            %input.knob{"data-fgColor" => "#3c8dbc", "data-height" => "90", "data-readonly" => "true", "data-width" => "90", :type => "text", :value => "30"}
+                              .knob-label data-width="90"
+                            / ./col
+                            .col-md-3.col-sm-6.col-xs-6.text-center
+                              %input.knob{"data-fgColor" => "#f56954", "data-height" => "120", "data-width" => "120", :type => "text", :value => "30"}
+                                .knob-label data-width="120"
+                              / ./col
+                              .col-md-3.col-sm-6.col-xs-6.text-center
+                                %input.knob{"data-fgColor" => "#00a65a", "data-height" => "90", "data-thickness" => "0.1", "data-width" => "90", :type => "text", :value => "30"}
+                                  .knob-label data-thickness="0.1"
+                                / ./col
+                                .col-md-3.col-sm-6.col-xs-6.text-center
+                                  %input.knob{"data-angleArc" => "250", "data-angleOffset" => "-125", "data-fgColor" => "#00c0ef", "data-height" => "120", "data-thickness" => "0.2", "data-width" => "120", :type => "text", :value => "30"}
+                                    .knob-label data-angleArc="250"
+                                  / ./col
+                                / /.row
+                              / /.box-body
+                            / /.box
+                          / /.col
+                        / /.row
+                        .row
+                          .col-xs-12
+                            .box.box-solid{"data-aos" => "fade-up"}
+                              .box-header
+                                %i.fa.fa-bar-chart-o
+                                %h3.box-title jQuery Knob Tron Style
+                                .box-tools.pull-right
+                                  %button.btn.btn-default.btn-sm{"data-widget" => "collapse"}
+                                    %i.fa.fa-minus
+                                  %button.btn.btn-default.btn-sm{"data-widget" => "remove"}
+                                    %i.fa.fa-times
+                              / /.box-header
+                              .box-body
+                                .row
+                                  .col-md-3.col-sm-6.col-xs-6.text-center
+                                    %input.knob{"data-fgColor" => "#3c8dbc", "data-height" => "90", "data-readonly" => "true", "data-skin" => "tron", "data-thickness" => "0.2", "data-width" => "90", :type => "text", :value => "80"}
+                                      .knob-label data-width="90"
+                                    / ./col
+                                    .col-md-3.col-sm-6.col-xs-6.text-center
+                                      %input.knob{"data-fgColor" => "#f56954", "data-height" => "120", "data-skin" => "tron", "data-thickness" => "0.2", "data-width" => "120", :type => "text", :value => "60"}
+                                        .knob-label data-width="120"
+                                      / ./col
+                                      .col-md-3.col-sm-6.col-xs-6.text-center
+                                        %input.knob{"data-fgColor" => "#00a65a", "data-height" => "90", "data-skin" => "tron", "data-thickness" => "0.1", "data-width" => "90", :type => "text", :value => "10"}
+                                          .knob-label data-thickness="0.1"
+                                        / ./col
+                                        .col-md-3.col-sm-6.col-xs-6.text-center
+                                          %input.knob{"data-angleArc" => "250", "data-angleOffset" => "-125", "data-fgColor" => "#00c0ef", "data-height" => "120", "data-skin" => "tron", "data-thickness" => "0.2", "data-width" => "120", :type => "text", :value => "100"}
+                                            .knob-label data-angleArc="250"
+                                          / ./col
+                                        / /.row
+                                      / /.box-body
+                                    / /.box
+                                  / /.col
+                                / /.row
+                                .row
+                                  .col-md-4
+                                    .box.box-solid{"data-aos" => "fade-up"}
+                                      .box-header
+                                        %h3.box-title.text-danger Sparkline Pie
+                                        .box-tools.pull-right
+                                          %button.btn.btn-default.btn-sm
+                                            %i.fa.fa-refresh
+                                      / /.box-header
+                                      .box-body.text-center
+                                        .sparkline{"data-height" => "100px", "data-offset" => "90", "data-type" => "pie", "data-width" => "100px"}
+                                          6,4,8
+                                      / /.box-body
+                                    / /.box
+                                  / /.col
+                                  .col-md-4
+                                    .box.box-solid{"data-aos" => "fade-up"}
+                                      .box-header
+                                        %h3.box-title.text-blue Sparkline line
+                                        .box-tools.pull-right
+                                          %button.btn.btn-default.btn-sm
+                                            %i.fa.fa-refresh
+                                      / /.box-header
+                                      .box-body.text-center
+                                        .sparkline{"data-fill-Color" => "rgba(57, 204, 204, 0.08)", "data-height" => "100px", "data-highlight-Line-Color" => "#222", "data-highlight-Spot-Color" => "#f39c12", "data-line-Color" => "#39CCCC", "data-line-Width" => "2", "data-max-Spot-Color" => "#00a65a", "data-min-Spot-Color" => "#f56954", "data-offset" => "90", "data-spot-Color" => "#39CCCC", "data-spot-Radius" => "3", "data-type" => "line", "data-width" => "100%"}
+                                          6,4,7,8,4,3,2,2,5,6,7,4,1,5,7,9,9,8,7,6
+                                      / /.box-body
+                                    / /.box
+                                  / /.col
+                                  .col-md-4
+                                    .box.box-solid{"data-aos" => "fade-up"}
+                                      .box-header
+                                        %h3.box-title.text-warning Sparkline Bar
+                                        .box-tools.pull-right
+                                          %button.btn.btn-default.btn-sm
+                                            %i.fa.fa-refresh
+                                      / /.box-header
+                                      .box-body.text-center
+                                        .sparkline{"data-bar-Color" => "#f39c12", "data-bar-Spacing" => "7", "data-bar-Width" => "14", "data-height" => "100px", "data-type" => "bar", "data-width" => "97%"}
+                                          6,4,8, 9, 10, 5, 13, 18, 21, 7, 9
+                                      / /.box-body
+                                    / /.box
+                                  / /.col
+                                / /.row
+                                .row
+                                  .col-xs-12
+                                    .box.box-solid{"data-aos" => "fade-up"}
+                                      .box-header
+                                        %h3.box-title Sparkline examples
+                                        .box-tools.pull-right
+                                          %button.btn.btn-default.btn-sm{"data-widget" => "collapse"}
+                                            %i.fa.fa-minus
+                                          %button.btn.btn-default.btn-sm{"data-widget" => "remove"}
+                                            %i.fa.fa-times
+                                      / /.box-header
+                                      #myBody.box-body
+                                        .row
+                                          .col-sm-6
+                                            %p
+                                              Mouse speed
+                                              %span#mousespeed Loading..
+                                            %p
+                                              Inline
+                                              %span.sparkline-1 10,8,9,3,5,8,5
+                                              line graphs
+                                              %span.sparkline-1 8,4,0,0,0,0,1,4,4,10,10,10,10,0,0,0,4,6,5,9,10
+                                            %p
+                                              Bar charts
+                                              %span.sparkbar 10,8,9,3,5,8,5
+                                              negative values:
+                                              %span.sparkbar -3,1,2,0,3,-1
+                                              stacked:
+                                              %span.sparkbar 0:2,2:4,4:2,4:1
+                                            %p
+                                              Composite inline
+                                              %span#compositeline 8,4,0,0,0,0,1,4,4,10,10,10,10,0,0,0,4,6,5,9,10
+                                            %p
+                                              Inline with normal range
+                                              %span#normalline 8,4,0,0,0,0,1,4,4,10,10,10,10,0,0,0,4,6,5,9,10
+                                            %p
+                                              Composite bar
+                                              %span#compositebar 4,6,7,7,4,3,2,1,4
+                                            %p
+                                              Discrete
+                                              %span.discrete1 4,6,7,7,4,3,2,1,4,4,5,6,7,6,6,2,4,5
+                                              %br
+                                                Discrete with threshold
+                                                %span#discrete2 4,6,7,7,4,3,2,1,4
+                                              %p
+                                                Bullet charts
+                                                %br
+                                                  %span.sparkbullet 10,12,12,9,7
+                                                  %br
+                                                    %span.sparkbullet 14,12,12,9,7
+                                                    %br
+                                                      %span.sparkbullet 10,12,14,9,7
+                                                      %br
+                                                    / /.col
+                                                    .col-sm-6
+                                                      %p
+                                                        Customize size and colours
+                                                        %span#linecustom 10,8,9,3,5,8,5,7
+                                                      %p
+                                                        Tristate charts
+                                                        %span.sparktristate 1,1,0,1,-1,-1,1,-1,0,0,1,1
+                                                        %br
+                                                          (think games won, lost or drawn)
+                                                        %p
+                                                          Tristate chart using a colour map:
+                                                          %span.sparktristatecols 1,2,0,2,-1,-2,1,-2,0,0,1,1
+                                                        %p
+                                                          Box Plot:
+                                                          %span.sparkboxplot 4,27,34,52,54,59,61,68,78,82,85,87,91,93,100
+                                                          %br
+                                                            Pre-computed box plot
+                                                            %span.sparkboxplotraw Loading..
+                                                          %p
+                                                            Pie charts
+                                                            %span.sparkpie 1,1,2
+                                                            %span.sparkpie 1,5
+                                                            %span.sparkpie 20,50,80
+                                                        / /.col
+                                                      / /.row
+                                                    / /.box-body
+                                                  / /.box
+                                                / /.col
+                                              / /.row
+                                            / /.content
+                                          / /.content-wrapper
+                                          - content_for :after_body do
+                                            %script{:src => "/plugins/knob/jquery.knob.js"}
+                                            %script{:src => "/plugins/sparkline/jquery.sparkline.min.js"}
+                                            %script{:src => "/assets/pages/inline-chart.js"}

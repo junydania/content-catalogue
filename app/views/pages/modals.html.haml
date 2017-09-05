@@ -1,0 +1,134 @@
+- content_for :before_scripts do
+  :css
+    .example-modal .modal {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      right: auto;
+      left: auto;
+      display: block;
+      z-index: 1;
+    }
+    .example-modal .modal {
+      background: transparent !important;
+    }
+.content-wrapper
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      Modals
+      %small Custom Modal Window Styles
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li
+        %a{:href => "#"} UI
+      %li.active Modals
+  / Main content
+  %section.content
+    .example-modal{"data-aos" => "fade-up"}
+      .modal
+        .modal-dialog
+          .modal-content
+            .modal-header
+              %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+                %span{"aria-hidden" => "true"} ×
+              %h4.modal-title Modal Default
+            .modal-body
+              %p One fine body…
+            .modal-footer
+              %button.btn.btn-default.pull-left{"data-dismiss" => "modal", :type => "button"} Close
+              %button.btn.btn-primary{:type => "button"} Save changes
+          / /.modal-content
+        / /.modal-dialog
+      / /.modal
+    / /.example-modal
+    .example-modal{"data-aos" => "fade-up"}
+      .modal.modal-primary
+        .modal-dialog
+          .modal-content
+            .modal-header
+              %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+                %span{"aria-hidden" => "true"} ×
+              %h4.modal-title Modal Primary
+            .modal-body
+              %p One fine body…
+            .modal-footer
+              %button.btn.btn-outline.pull-left{"data-dismiss" => "modal", :type => "button"} Close
+              %button.btn.btn-outline{:type => "button"} Save changes
+          / /.modal-content
+        / /.modal-dialog
+      / /.modal
+    / /.example-modal
+    .example-modal{"data-aos" => "fade-up"}
+      .modal.modal-info
+        .modal-dialog
+          .modal-content
+            .modal-header
+              %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+                %span{"aria-hidden" => "true"} ×
+              %h4.modal-title Modal Info
+            .modal-body
+              %p One fine body…
+            .modal-footer
+              %button.btn.btn-outline.pull-left{"data-dismiss" => "modal", :type => "button"} Close
+              %button.btn.btn-outline{:type => "button"} Save changes
+          / /.modal-content
+        / /.modal-dialog
+      / /.modal
+    / /.example-modal
+    .example-modal{"data-aos" => "fade-up"}
+      .modal.modal-warning
+        .modal-dialog
+          .modal-content
+            .modal-header
+              %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+                %span{"aria-hidden" => "true"} ×
+              %h4.modal-title Modal Warning
+            .modal-body
+              %p One fine body…
+            .modal-footer
+              %button.btn.btn-outline.pull-left{"data-dismiss" => "modal", :type => "button"} Close
+              %button.btn.btn-outline{:type => "button"} Save changes
+          / /.modal-content
+        / /.modal-dialog
+      / /.modal
+    / /.example-modal
+    .example-modal{"data-aos" => "fade-up"}
+      .modal.modal-success
+        .modal-dialog
+          .modal-content
+            .modal-header
+              %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+                %span{"aria-hidden" => "true"} ×
+              %h4.modal-title Modal Success
+            .modal-body
+              %p One fine body…
+            .modal-footer
+              %button.btn.btn-outline.pull-left{"data-dismiss" => "modal", :type => "button"} Close
+              %button.btn.btn-outline{:type => "button"} Save changes
+          / /.modal-content
+        / /.modal-dialog
+      / /.modal
+    / /.example-modal
+    .example-modal{"data-aos" => "fade-up"}
+      .modal.modal-danger
+        .modal-dialog
+          .modal-content
+            .modal-header
+              %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+                %span{"aria-hidden" => "true"} ×
+              %h4.modal-title Modal Danger
+            .modal-body
+              %p One fine body…
+            .modal-footer
+              %button.btn.btn-outline.pull-left{"data-dismiss" => "modal", :type => "button"} Close
+              %button.btn.btn-outline{:type => "button"} Save changes
+          / /.modal-content
+        / /.modal-dialog
+      / /.modal
+    / /.example-modal
+  / /.content
+/ /.content-wrapper

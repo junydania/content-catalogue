@@ -1,0 +1,104 @@
+.content-wrapper.flotjs-page
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      Flot Charts
+      %small Demo Charts
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li
+        %a{:href => "#"} Charts
+      %li.active Flot
+  / Main content
+  %section.content
+    .row
+      .col-xs-12
+        / interactive chart
+        .box.box-primary{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %i.fa.fa-bar-chart-o
+            %h3.box-title Interactive Area Chart
+            .box-tools.pull-right
+              Real time
+              #realtime.btn-group{"data-toggle" => "btn-toggle"}
+                %button.btn.btn-default.btn-xs.active{"data-toggle" => "on", :type => "button"} On
+                %button.btn.btn-default.btn-xs{"data-toggle" => "off", :type => "button"} Off
+          .box-body
+            #interactive{:style => "height: 300px;"}
+          / /.box-body
+        / /.box
+      / /.col
+    / /.row
+    .row
+      .col-md-6
+        / Line chart
+        .box.box-primary{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %i.fa.fa-bar-chart-o
+            %h3.box-title Line Chart
+            .box-tools.pull-right
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-box-tool{"data-widget" => "remove"}
+                %i.fa.fa-times
+          .box-body
+            #line-chart{:style => "height: 300px;"}
+          / /.box-body
+        / /.box
+        / Area chart
+        .box.box-primary{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %i.fa.fa-bar-chart-o
+            %h3.box-title Full Width Area Chart
+            .box-tools.pull-right
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-box-tool{"data-widget" => "remove"}
+                %i.fa.fa-times
+          .box-body
+            #area-chart.full-width-chart{:style => "height: 338px;"}
+          / /.box-body
+        / /.box
+      / /.col
+      .col-md-6
+        / Bar chart
+        .box.box-primary{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %i.fa.fa-bar-chart-o
+            %h3.box-title Bar Chart
+            .box-tools.pull-right
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-box-tool{"data-widget" => "remove"}
+                %i.fa.fa-times
+          .box-body
+            #bar-chart{:style => "height: 300px;"}
+          / /.box-body
+        / /.box
+        / Donut chart
+        .box.box-primary{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %i.fa.fa-bar-chart-o
+            %h3.box-title Donut Chart
+            .box-tools.pull-right
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-box-tool{"data-widget" => "remove"}
+                %i.fa.fa-times
+          .box-body
+            #donut-chart{:style => "height: 300px;"}
+          / /.box-body
+        / /.box
+      / /.col
+    / /.row
+  / /.content
+/ /.content-wrapper
+- content_for :after_body do
+  %script{:src => "/plugins/flot/jquery.flot.min.js"}
+  %script{:src => "/plugins/flot/jquery.flot.resize.min.js"}
+  %script{:src => "/plugins/flot/jquery.flot.pie.min.js"}
+  %script{:src => "/plugins/flot/jquery.flot.categories.min.js"}
+  %script{:src => "/assets/pages/flot.js"}
