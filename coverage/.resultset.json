@@ -6,6 +6,7 @@
         null,
         1,
         null,
+        null,
         null
       ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/application_controller.rb": [
@@ -209,6 +210,24 @@
         0,
         0
       ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/pages_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/users_controller.rb": [
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0
+      ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/jobs/application_job.rb": [
         0,
         0
@@ -236,7 +255,7 @@
         0
       ]
     },
-    "timestamp": 1504111373
+    "timestamp": 1504637070
   },
   "RSpec": {
     "coverage": {
@@ -374,6 +393,14 @@
         null,
         0,
         0,
+        null,
+        0
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/pages_controller.rb": [
+        0,
+        0,
+        0,
+        0,
         0
       ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/publishers_controller.rb": [
@@ -401,6 +428,17 @@
         0,
         null,
         null
+      ],
+      "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/users_controller.rb": [
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0
       ],
       "/Users/DanDevOps/Desktop/Web design/MyCodeCraft/content_catalogue/app/controllers/videos_controller.rb": [
         0,
@@ -475,6 +513,6 @@
         0
       ]
     },
-    "timestamp": 1504111366
+    "timestamp": 1504636958
   }
 }
