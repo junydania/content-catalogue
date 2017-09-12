@@ -20,6 +20,31 @@
             %i.fa.fa-th
             %span Widgets
             %small.label.pull-right.bg-green Hot
+        %li
+          = link_to new_comedian_path, data: { pjax: true} do
+            %i.fa.fa-plus-circle
+            %span Add Comedians
+
+        %li
+          = link_to new_publisher_path, data: { pjax: true} do
+            %i.fa.fa-plus-circle
+            %span Add Publisher
+
+        %li
+          = link_to new_category_path, data: { pjax: true} do
+            %i.fa.fa-plus-circle
+            %span Add Category
+
+        %li
+          = link_to new_video_path, data: { pjax: true} do
+            %i.fa.fa-plus-circle
+            %span Add Video
+
+        %li
+          = link_to destroy_user_session_path, method: :delete,  data: { pjax: true} do
+            %i.fa.fa-sign-out
+            %span Log Out
+
         %li.treeview
           %a{:href => "#"}
             %i.fa.fa-pie-chart

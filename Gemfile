@@ -15,6 +15,7 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+gem 'jquery-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
@@ -27,8 +28,6 @@ gem 'less-rails', '~> 2.7.0'
 gem 'therubyracer', platforms: :ruby
 gem 'json'
 gem 'sdoc', group: :doc
-gem 'jquery-rails'
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

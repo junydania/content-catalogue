@@ -4,17 +4,17 @@
     execute: function(selector, callback) {
       $(document).ready(function() {
         if(!$.turbo.hasRun) {
-          $(document).trigger("pjax:render")
+          $(document).trigger("pjax:render");
           $.turbo.hasRun = true
         }
-      })
+      });
 
       $(document).on("pjax:render", function() {
         if($(selector).length) callback()
       })
     }
   }
-}(jQuery))
+}(jQuery));
 
 $(function() {
   $.pjax({

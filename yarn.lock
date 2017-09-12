@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+jquery-pjax@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/jquery-pjax/-/jquery-pjax-2.0.1.tgz#6b3a1ba16e644e624bdcfe72eb6b3d96a846f5f2"
+
 jquery@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
+
+pjax-api@^3.15.2:
+  version "3.15.2"
+  resolved "https://registry.yarnpkg.com/pjax-api/-/pjax-api-3.15.2.tgz#b1be266ba966b4694cc04b446fb1a0c955de6f79"

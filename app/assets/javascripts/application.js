@@ -6,3 +6,5 @@
 //= require custom/offcanvas
 //= require custom/tree-menu
 //= require main
+//= require_tree .
+
