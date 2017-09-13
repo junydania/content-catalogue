@@ -20,20 +20,39 @@
             %i.fa.fa-th
             %span Widgets
             %small.label.pull-right.bg-green Hot
-        %li
-          = link_to new_comedian_path, data: { pjax: true} do
-            %i.fa.fa-plus-circle
-            %span Add Comedians
 
-        %li
-          = link_to new_publisher_path, data: { pjax: true} do
-            %i.fa.fa-plus-circle
-            %span Add Publisher
+        %li.treeview
+          %a{:href => "#"}
+            %i.fa.fa-group
+            %span Comedians
+            %i.fa.fa-angle-left.pull-right
+          %ul.treeview-menu
+            %li
+              = link_to new_comedian_path, data: { pjax: true} do
+                %i.fa.fa-plus-circle
+                %span Add Comedian
 
-        %li
-          = link_to new_category_path, data: { pjax: true} do
-            %i.fa.fa-plus-circle
-            %span Add Category
+        %li.treeview
+          %a{:href => "#"}
+            %i.fa.fa-video-camera
+            %span Publishers
+            %i.fa.fa-angle-left.pull-right
+          %ul.treeview-menu
+            %li
+              = link_to new_publisher_path, data: { pjax: true} do
+                %i.fa.fa-plus-circle
+                %span Add Publisher
+
+        %li.treeview
+          %a{:href => "#"}
+            %i.fa.fa-file-movie-o
+            %span Category
+            %i.fa.fa-angle-left.pull-right
+          %ul.treeview-menu
+            %li
+              = link_to new_category_path, data: { pjax: true} do
+                %i.fa.fa-plus-circle
+                %span Add Category
 
         %li
           = link_to new_video_path, data: { pjax: true} do

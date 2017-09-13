@@ -9,6 +9,8 @@ class PublishersController < ApplicationController
     if @publisher.save
       redirect_to publishers_path
       flash[:notice] = 'Publisher successfully added'
+    else
+      render new
     end
   end
 

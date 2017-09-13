@@ -23,6 +23,9 @@
             %h3.box-title New Comedian
           .box-body
             = form_for @comedian do |f|
+              - if @comedian.errors.any?
+                - @comedian.errors.full_messages.each do |message|
+                  = message
               .form-group
                 = f.label :name, "Comedian's Name"
                 %br

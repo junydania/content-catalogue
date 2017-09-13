@@ -10,9 +10,9 @@ class ComediansController < ApplicationController
       flash[:notice] = 'Comedian successfully added'
       redirect_to request.referrer
     else
-      render new
+      flash[:notice]= "Sorry! You must enter a name"
+      redirect_to new_comedian_path
     end
-
   end
 
 
@@ -22,3 +22,4 @@ class ComediansController < ApplicationController
   end
 
 end
+

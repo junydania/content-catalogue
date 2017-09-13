@@ -15,7 +15,7 @@ Feature: As a user or administrator
     And I click on "Sign In"
     And I should see "Content Catalogue Dashboard"
     And I click on "Add Publisher"
-    And I fill in field "Publisher Name" with "AY Comedian"
+    And I fill in field "Publisher's Name" with "AY Comedian"
     And I click on "Submit"
     Then I should see "Publisher successfully added"
 
