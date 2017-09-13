@@ -15,7 +15,7 @@ Feature: As a user or administrator
     And I click on "Sign In"
     And I should see "Content Catalogue Dashboard"
     And I click on "Add Comedian"
-    And I fill in field "Comedian Name" with "BasketMouth"
+    And I fill in field "Comedian's Name" with "BasketMouth"
     And I click on "Submit"
     Then I should see "Comedian successfully added"
 
