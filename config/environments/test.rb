@@ -57,7 +57,7 @@ Rails.application.configure do
       enable_starttls_auto: true
   }
   config.active_job.queue_adapter = :inline
-  
+
 end
 
 Paperclip.options[:command_path] = "/usr/local/bin/"

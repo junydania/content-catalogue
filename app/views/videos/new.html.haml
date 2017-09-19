@@ -5,37 +5,7 @@
   %link{:href => "/plugins/timepicker/bootstrap-timepicker.min.css", :rel => "stylesheet"}
   %link{:href => "/plugins/select2/select2.min.css", :rel => "stylesheet"}
 
-
--#%p Add New Video
--#
--#= form_for @video,  html: { multipart: true }do |f|
--#
--#  = f.label :title, 'Title'
--#  = f.text_field :title
--#
--#  = f.label :description, 'Description'
--#  = f.text_field :description
--#
--#  = f.label :release_date, 'Release Date'
--#  = f.date_select :release_date
--#
--#  = f.label :video_storage_path, 'Storage Location'
--#  = f.text_field :video_storage_path
--#
--#  = f.label :comedian_id, 'Comedian'
--#  = f.collection_select(:comedian_id, @comedians, :id, :name)
--#
--#  = f.label :category_id, 'Video Category'
--#  = f.collection_select(:category_id, @categories, :id, :category_name)
--#
--#  = f.label :publisher_id, 'Publisher'
--#  = f.collection_select(:publisher_id, @publishers, :id, :publisher_name)
--#
--#  = f.label :image, 'Video Image'
--#  = f.file_field :image
--#
--#  = f.submit 'Submit'
-
+    
 .content-wrapper
   / Content Header (Page header)
   %section.content-header
@@ -78,16 +48,16 @@
                 = f.file_field :image
               .form-group
                 = f.label :video_storage_path, "Video Storage Location"
-                = f.text_field :video_storage_path, class: "form-control", placeholder: "description"
+                = f.text_field :video_storage_path, class: 'form-control', placeholder: "description"
               .form-group
                 = f.label :comedian_id, "Comedian"
-                = f.collection_select(:comedian_id, @comedians, :id, :name, class:"form-control.select2", style: "width: 100%;", include_blank: "Select a comedian")
+                = f.collection_select(:comedian_id, @comedians, :id, :name, class:'form-control select2', style: 'width: 100%;', include_blank: 'Select a comedian')
                 |
                 = f.label :category_id, "Video Category"
-                = f.collection_select(:category_id, @categories, :id, :category_name, class:"form-control.select2", style: "width: 100%;", include_blank: "Select a video category")
+                = f.collection_select(:category_id, @categories, :id, :category_name, class:'form-control select2', style: "width: 100%;", include_blank: 'Select a video category')
               .form-group
                 = f.label :publisher_id, "Publisher"
-                = f.collection_select(:publisher_id, @publishers, :id, :publisher_name, class:"form-control.select2", style: "width: 100%;", include_blank: "Select a publisher")
+                = f.collection_select(:publisher_id, @publishers, :id, :publisher_name, class:'form-control select2', style: 'width: 100%;', include_blank: 'Select a publisher')
               = flash[:notice]
             .box-footer
               = f.submit 'Submit', class: 'btn btn-success'
