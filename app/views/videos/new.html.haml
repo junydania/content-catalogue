@@ -70,14 +70,9 @@
               .form-group
                 = f.label :description, 'Description'
                 = f.text_area :description,  class: "form-control", placeholder: "description"
-                %label{:for => "exampleInputPassword1"} Password
-                %input#exampleInputPassword1.form-control{:placeholder => "Password", :type => "password"}
               .form-group
                 = f.label :release_date, 'Release Date'
-                .input-group
-                  .input-group-addon
-                    %i.fa.fa-calendar
-                  = f.date_select :release_date, prompt: {day: 'Select Day', month: 'Select Month', year: 'Select Year'}, class: "reservation form-control pull-right"
+                = f.date_select :release_date, prompt: {day: 'Select Day', month: 'Select Month', year: 'Select Year'}, class: "reservation form-control pull-right"
               .form-group
                 = f.label :image, "Video Thumbnail"
                 = f.file_field :image
