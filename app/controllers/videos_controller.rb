@@ -16,10 +16,11 @@ class VideosController < ApplicationController
     @video.publisher_id = params[:video][:publisher_id]
     @video.comedian_id = params[:video][:comedian_id]
     if @video.save
-      redirect_to videos_path
       flash[:notice] = "Video successfully added"
+      redirect_to new_video_path
     else
-      render new
+      flash[:notice] = "Sorry can't save video until all fields are filled"
+      redirect_to  new_video_path
     end
 
   end

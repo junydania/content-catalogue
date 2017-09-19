@@ -41,7 +41,7 @@ Feature: As a user or administrator
     And I fill in field "Title" with "BasketMouth yabbed Alibaba"
     And I fill in field "Description" with "Halirious stuff by basketmouth yabbing Alibaba and his family"
     When I fill in "Release Date" date field with "2017, Aug, 29"
-    And I fill in field "Storage Location" with "ftp://s3.aws.com"
+    And I fill in field "Video Storage Location" with "ftp://s3.aws.com"
     And I select "AY Live" from "Publisher"
     And I select "Akpororo" from "Comedian"
     And I select "Stand Up Comedy" from "Category"
