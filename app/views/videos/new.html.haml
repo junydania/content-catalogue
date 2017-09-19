@@ -36,299 +36,299 @@
 
   = f.submit 'Submit'
 
-.content-wrapper
-  / Content Header (Page header)
-  %section.content-header
-    %h1
-      New Video
-      %small Add New Video
-    %ol.breadcrumb
-      %li
-        %a{:href => "#"}
-          %i.fa.fa-dashboard
-          Home
-      %li
-        %a{:href => "#"} Videos
-      %li.active New Video
-  / Main content
-  %section.content
-    .row
-      / left column
-      .col-md-6
-        / general form elements
-        .box.box-primary{"data-aos" => "fade-up"}
-          .box-header.with-border
-            %h3.box-title Video Details
-          / /.box-header
-          / form start
-          = form_for @video, html: { multipart: true }do |f|
-            .box-body
-              .form-group
-                = f.label :title, 'Title'
-                = f.text_field :title, autofocus: true, class: "form-control", placeholder: "Video Title"
-              .form-group
-                = f.label :description, 'Description'
-                = f.text_area :description,  class: "form-control", placeholder: "description"
-                %label{:for => "exampleInputPassword1"} Password
-                %input#exampleInputPassword1.form-control{:placeholder => "Password", :type => "password"}
-              .form-group
-                = f.label :releae_date, 'Release Date'
-                .input-group
-                  .input-group-addon
-                    %i.fa.fa-calendar
-                  = f.date_select :release_date, {order: [:day, :month, :year], prompt: {day: 'Select Day', month: 'Select Month', year: 'Select Year'}}, class: "reservation form-control pull-right"
-              .form-group
-                = f.label :image, "Video Thumbnail"
-                = f.file_field :image
-            / /.box-body
-            .box-footer
-              %button.btn.btn-primary{:type => "submit"} Submit
-        / /.box
-        / Form Element sizes
-        .box.box-success{"data-aos" => "fade-up"}
-          .box-header.with-border
-            %h3.box-title Different Height
-          .box-body
-            %input.form-control.input-lg{:placeholder => ".input-lg", :type => "text"}/
-            %br/
-            %input.form-control{:placeholder => "Default input", :type => "text"}/
-            %br/
-            %input.form-control.input-sm{:placeholder => ".input-sm", :type => "text"}/
-          / /.box-body
-        / /.box
-        .box.box-danger{"data-aos" => "fade-up"}
-          .box-header.with-border
-            %h3.box-title Different Width
-          .box-body
-            .row
-              .col-xs-3
-                %input.form-control{:placeholder => ".col-xs-3", :type => "text"}/
-              .col-xs-4
-                %input.form-control{:placeholder => ".col-xs-4", :type => "text"}/
-              .col-xs-5
-                %input.form-control{:placeholder => ".col-xs-5", :type => "text"}/
-          / /.box-body
-        / /.box
-        / Input addon
-        .box.box-info{"data-aos" => "fade-up"}
-          .box-header.with-border
-            %h3.box-title Input Addon
-          .box-body
-            .input-group
-              %span.input-group-addon @
-              %input.form-control{:placeholder => "Username", :type => "text"}/
-            %br/
-            .input-group
-              %input.form-control{:type => "text"}/
-              %span.input-group-addon .00
-            %br/
-            .input-group
-              %span.input-group-addon $
-              %input.form-control{:type => "text"}/
-              %span.input-group-addon .00
-            %h4 With icons
-            .input-group
-              %span.input-group-addon
-                %i.fa.fa-envelope
-              %input.form-control{:placeholder => "Email", :type => "email"}/
-            %br/
-            .input-group
-              %input.form-control{:type => "text"}/
-              %span.input-group-addon
-                %i.fa.fa-check
-            %br/
-            .input-group
-              %span.input-group-addon
-                %i.fa.fa-dollar
-              %input.form-control{:type => "text"}/
-              %span.input-group-addon
-                %i.fa.fa-ambulance
-            %h4 With checkbox and radio inputs
-            .row
-              .col-lg-6
-                .input-group
-                  %span.input-group-addon
-                    %input{:type => "checkbox"}/
-                  %input.form-control{:type => "text"}/
-                / /input-group
-              / /.col-lg-6
-              .col-lg-6
-                .input-group
-                  %span.input-group-addon
-                    %input{:type => "radio"}/
-                  %input.form-control{:type => "text"}/
-                / /input-group
-              / /.col-lg-6
-            / /.row
-            %h4 With buttons
-            %p.margin
-              Large:
-              %code .input-group.input-group-lg
-            .input-group.input-group-lg
-              .input-group-btn
-                %button.btn.btn-warning.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
-                  Action
-                  %span.fa.fa-caret-down
-                %ul.dropdown-menu
-                  %li
-                    %a{:href => "#"} Action
-                  %li
-                    %a{:href => "#"} Another action
-                  %li
-                    %a{:href => "#"} Something else here
-                  %li.divider
-                  %li
-                    %a{:href => "#"} Separated link
-              / /btn-group
-              %input.form-control.focus-warning{:type => "text"}/
-            / /input-group
-            %p.margin Normal
-            .input-group
-              .input-group-btn
-                %button.btn.btn-danger{:type => "button"} Action
-              / /btn-group
-              %input.form-control.focus-danger{:type => "text"}/
-            / /input-group
-            %p.margin
-              Small
-              %code .input-group.input-group-sm
-            .input-group.input-group-sm
-              %input.form-control.focus-info{:type => "text"}/
-              %span.input-group-btn
-                %button.btn.btn-info.btn-flat{:type => "button"} Go!
-            / /input-group
-          / /.box-body
-        / /.box
-      / /.col (left)
-      / right column
-      .col-md-6
-        / Horizontal Form
-        .box.box-info{"data-aos" => "fade-up"}
-          .box-header.with-border
-            %h3.box-title Horizontal Form
-          / /.box-header
-          / form start
-          %form.form-horizontal
-            .box-body
-              .form-group
-                %label.col-sm-2.control-label{:for => "inputEmail3"} Email
-                .col-sm-10
-                  %input#inputEmail3.form-control{:placeholder => "Email", :type => "email"}/
-              .form-group
-                %label.col-sm-2.control-label{:for => "inputPassword3"} Password
-                .col-sm-10
-                  %input#inputPassword3.form-control{:placeholder => "Password", :type => "password"}/
-              .form-group
-                .col-sm-offset-2.col-sm-10
-                  .checkbox
-                    %label
-                      %input{:type => "checkbox"}/
-                      Remember me
-            / /.box-body
-            .box-footer
-              %button.btn.btn-default{:type => "submit"} Cancel
-              %button.btn.btn-info.pull-right{:type => "submit"} Sign in
-            / /.box-footer
-        / /.box
-        / general form elements disabled
-        .box.box-warning{"data-aos" => "fade-up"}
-          .box-header.with-border
-            %h3.box-title General Elements
-          / /.box-header
-          .box-body
-            %form{:role => "form"}
-              / text input
-              .form-group
-                %label Text
-                %input.form-control{:placeholder => "Enter ...", :type => "text"}/
-              .form-group
-                %label Text Disabled
-                %input.form-control{:disabled => "disabled", :placeholder => "Enter ...", :type => "text"}/
-              / textarea
-              .form-group
-                %label Textarea
-                %textarea.form-control{:placeholder => "Enter ...", :rows => "3"}
-              .form-group
-                %label Textarea Disabled
-                %textarea.form-control{:disabled => "disabled", :placeholder => "Enter ...", :rows => "3"}
-              / input states
-              .form-group.has-success
-                %label.control-label{:for => "inputSuccess"}
-                  %i.fa.fa-check
-                  Input with success
-                %input#inputSuccess.form-control{:placeholder => "Enter ...", :type => "text"}/
-              .form-group.has-warning
-                %label.control-label{:for => "inputWarning"}
-                  %i.fa.fa-bell-o
-                  Input with warning
-                %input#inputWarning.form-control{:placeholder => "Enter ...", :type => "text"}/
-              .form-group.has-error
-                %label.control-label{:for => "inputError"}
-                  %i.fa.fa-times-circle-o
-                  Input with error
-                %input#inputError.form-control{:placeholder => "Enter ...", :type => "text"}/
-              / checkbox
-              .form-group
-                .checkbox
-                  %label
-                    %input{:type => "checkbox"}/
-                    Checkbox 1
-                .checkbox
-                  %label
-                    %input{:type => "checkbox"}/
-                    Checkbox 2
-                .checkbox
-                  %label
-                    %input{:disabled => "disabled", :type => "checkbox"}/
-                    Checkbox disabled
-              / radio
-              .form-group
-                .radio
-                  %label
-                    %input#optionsRadios1{:checked => "checked", :name => "optionsRadios", :type => "radio", :value => "option1"}/
-                    Option one is this and that—be sure to include why it's great
-                .radio
-                  %label
-                    %input#optionsRadios2{:name => "optionsRadios", :type => "radio", :value => "option2"}/
-                    Option two can be something else and selecting it will deselect option one
-                .radio
-                  %label
-                    %input#optionsRadios3{:disabled => "disabled", :name => "optionsRadios", :type => "radio", :value => "option3"}/
-                    Option three is disabled
-              / select
-              .form-group
-                %label Select
-                %select.form-control
-                  %option option 1
-                  %option option 2
-                  %option option 3
-                  %option option 4
-                  %option option 5
-              .form-group
-                %label Select Disabled
-                %select.form-control{:disabled => "disabled"}
-                  %option option 1
-                  %option option 2
-                  %option option 3
-                  %option option 4
-                  %option option 5
-              / Select multiple
-              .form-group
-                %label Select Multiple
-                %select.form-control{:multiple => "multiple"}
-                  %option option 1
-                  %option option 2
-                  %option option 3
-                  %option option 4
-                  %option option 5
-              .form-group
-                %label Select Multiple Disabled
-                %select.form-control{:disabled => "disabled", :multiple => "multiple"}
-                  %option option 1
-                  %option option 2
-                  %option option 3
-                  %option option 4
-                  %option option 5
+-#.content-wrapper
+-#  / Content Header (Page header)
+-#  %section.content-header
+-#    %h1
+-#      New Video
+-#      %small Add New Video
+-#    %ol.breadcrumb
+-#      %li
+-#        %a{:href => "#"}
+-#          %i.fa.fa-dashboard
+-#          Home
+-#      %li
+-#        %a{:href => "#"} Videos
+-#      %li.active New Video
+-#  / Main content
+-#  %section.content
+-#    .row
+-#      / left column
+-#      .col-md-6
+-#        / general form elements
+-#        .box.box-primary{"data-aos" => "fade-up"}
+-#          .box-header.with-border
+-#            %h3.box-title Video Details
+-#          / /.box-header
+-#          / form start
+-#          = form_for @video, html: { multipart: true }do |f|
+-#            .box-body
+-#              .form-group
+-#                = f.label :title, 'Title'
+-#                = f.text_field :title, autofocus: true, class: "form-control", placeholder: "Video Title"
+-#              .form-group
+-#                = f.label :description, 'Description'
+-#                = f.text_area :description,  class: "form-control", placeholder: "description"
+-#                %label{:for => "exampleInputPassword1"} Password
+-#                %input#exampleInputPassword1.form-control{:placeholder => "Password", :type => "password"}
+-#              .form-group
+-#                = f.label :releae_date, 'Release Date'
+-#                .input-group
+-#                  .input-group-addon
+-#                    %i.fa.fa-calendar
+-#                  = f.date_select :release_date, {order: [:day, :month, :year], prompt: {day: 'Select Day', month: 'Select Month', year: 'Select Year'}}, class: "reservation form-control pull-right"
+-#              .form-group
+-#                = f.label :image, "Video Thumbnail"
+-#                = f.file_field :image
+-#            / /.box-body
+-#            .box-footer
+-#              %button.btn.btn-primary{:type => "submit"} Submit
+-#        / /.box
+-#        / Form Element sizes
+-#        .box.box-success{"data-aos" => "fade-up"}
+-#          .box-header.with-border
+-#            %h3.box-title Different Height
+-#          .box-body
+-#            %input.form-control.input-lg{:placeholder => ".input-lg", :type => "text"}/
+-#            %br/
+-#            %input.form-control{:placeholder => "Default input", :type => "text"}/
+-#            %br/
+-#            %input.form-control.input-sm{:placeholder => ".input-sm", :type => "text"}/
+-#          / /.box-body
+-#        / /.box
+-#        .box.box-danger{"data-aos" => "fade-up"}
+-#          .box-header.with-border
+-#            %h3.box-title Different Width
+-#          .box-body
+-#            .row
+-#              .col-xs-3
+-#                %input.form-control{:placeholder => ".col-xs-3", :type => "text"}/
+-#              .col-xs-4
+-#                %input.form-control{:placeholder => ".col-xs-4", :type => "text"}/
+-#              .col-xs-5
+-#                %input.form-control{:placeholder => ".col-xs-5", :type => "text"}/
+-#          / /.box-body
+-#        / /.box
+-#        / Input addon
+-#        .box.box-info{"data-aos" => "fade-up"}
+-#          .box-header.with-border
+-#            %h3.box-title Input Addon
+-#          .box-body
+-#            .input-group
+-#              %span.input-group-addon @
+-#              %input.form-control{:placeholder => "Username", :type => "text"}/
+-#            %br/
+-#            .input-group
+-#              %input.form-control{:type => "text"}/
+-#              %span.input-group-addon .00
+-#            %br/
+-#            .input-group
+-#              %span.input-group-addon $
+-#              %input.form-control{:type => "text"}/
+-#              %span.input-group-addon .00
+-#            %h4 With icons
+-#            .input-group
+-#              %span.input-group-addon
+-#                %i.fa.fa-envelope
+-#              %input.form-control{:placeholder => "Email", :type => "email"}/
+-#            %br/
+-#            .input-group
+-#              %input.form-control{:type => "text"}/
+-#              %span.input-group-addon
+-#                %i.fa.fa-check
+-#            %br/
+-#            .input-group
+-#              %span.input-group-addon
+-#                %i.fa.fa-dollar
+-#              %input.form-control{:type => "text"}/
+-#              %span.input-group-addon
+-#                %i.fa.fa-ambulance
+-#            %h4 With checkbox and radio inputs
+-#            .row
+-#              .col-lg-6
+-#                .input-group
+-#                  %span.input-group-addon
+-#                    %input{:type => "checkbox"}/
+-#                  %input.form-control{:type => "text"}/
+-#                / /input-group
+-#              / /.col-lg-6
+-#              .col-lg-6
+-#                .input-group
+-#                  %span.input-group-addon
+-#                    %input{:type => "radio"}/
+-#                  %input.form-control{:type => "text"}/
+-#                / /input-group
+-#              / /.col-lg-6
+-#            / /.row
+-#            %h4 With buttons
+-#            %p.margin
+-#              Large:
+-#              %code .input-group.input-group-lg
+-#            .input-group.input-group-lg
+-#              .input-group-btn
+-#                %button.btn.btn-warning.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+-#                  Action
+-#                  %span.fa.fa-caret-down
+-#                %ul.dropdown-menu
+-#                  %li
+-#                    %a{:href => "#"} Action
+-#                  %li
+-#                    %a{:href => "#"} Another action
+-#                  %li
+-#                    %a{:href => "#"} Something else here
+-#                  %li.divider
+-#                  %li
+-#                    %a{:href => "#"} Separated link
+-#              / /btn-group
+-#              %input.form-control.focus-warning{:type => "text"}/
+-#            / /input-group
+-#            %p.margin Normal
+-#            .input-group
+-#              .input-group-btn
+-#                %button.btn.btn-danger{:type => "button"} Action
+-#              / /btn-group
+-#              %input.form-control.focus-danger{:type => "text"}/
+-#            / /input-group
+-#            %p.margin
+-#              Small
+-#              %code .input-group.input-group-sm
+-#            .input-group.input-group-sm
+-#              %input.form-control.focus-info{:type => "text"}/
+-#              %span.input-group-btn
+-#                %button.btn.btn-info.btn-flat{:type => "button"} Go!
+-#            / /input-group
+-#          / /.box-body
+-#        / /.box
+-#      / /.col (left)
+-#      / right column
+-#      .col-md-6
+-#        / Horizontal Form
+-#        .box.box-info{"data-aos" => "fade-up"}
+-#          .box-header.with-border
+-#            %h3.box-title Horizontal Form
+-#          / /.box-header
+-#          / form start
+-#          %form.form-horizontal
+-#            .box-body
+-#              .form-group
+-#                %label.col-sm-2.control-label{:for => "inputEmail3"} Email
+-#                .col-sm-10
+-#                  %input#inputEmail3.form-control{:placeholder => "Email", :type => "email"}/
+-#              .form-group
+-#                %label.col-sm-2.control-label{:for => "inputPassword3"} Password
+-#                .col-sm-10
+-#                  %input#inputPassword3.form-control{:placeholder => "Password", :type => "password"}/
+-#              .form-group
+-#                .col-sm-offset-2.col-sm-10
+-#                  .checkbox
+-#                    %label
+-#                      %input{:type => "checkbox"}/
+-#                      Remember me
+-#            / /.box-body
+-#            .box-footer
+-#              %button.btn.btn-default{:type => "submit"} Cancel
+-#              %button.btn.btn-info.pull-right{:type => "submit"} Sign in
+-#            / /.box-footer
+-#        / /.box
+-#        / general form elements disabled
+-#        .box.box-warning{"data-aos" => "fade-up"}
+-#          .box-header.with-border
+-#            %h3.box-title General Elements
+-#          / /.box-header
+-#          .box-body
+-#            %form{:role => "form"}
+-#              / text input
+-#              .form-group
+-#                %label Text
+-#                %input.form-control{:placeholder => "Enter ...", :type => "text"}/
+-#              .form-group
+-#                %label Text Disabled
+-#                %input.form-control{:disabled => "disabled", :placeholder => "Enter ...", :type => "text"}/
+-#              / textarea
+-#              .form-group
+-#                %label Textarea
+-#                %textarea.form-control{:placeholder => "Enter ...", :rows => "3"}
+-#              .form-group
+-#                %label Textarea Disabled
+-#                %textarea.form-control{:disabled => "disabled", :placeholder => "Enter ...", :rows => "3"}
+-#              / input states
+-#              .form-group.has-success
+-#                %label.control-label{:for => "inputSuccess"}
+-#                  %i.fa.fa-check
+-#                  Input with success
+-#                %input#inputSuccess.form-control{:placeholder => "Enter ...", :type => "text"}/
+-#              .form-group.has-warning
+-#                %label.control-label{:for => "inputWarning"}
+-#                  %i.fa.fa-bell-o
+-#                  Input with warning
+-#                %input#inputWarning.form-control{:placeholder => "Enter ...", :type => "text"}/
+-#              .form-group.has-error
+-#                %label.control-label{:for => "inputError"}
+-#                  %i.fa.fa-times-circle-o
+-#                  Input with error
+-#                %input#inputError.form-control{:placeholder => "Enter ...", :type => "text"}/
+-#              / checkbox
+-#              .form-group
+-#                .checkbox
+-#                  %label
+-#                    %input{:type => "checkbox"}/
+-#                    Checkbox 1
+-#                .checkbox
+-#                  %label
+-#                    %input{:type => "checkbox"}/
+-#                    Checkbox 2
+-#                .checkbox
+-#                  %label
+-#                    %input{:disabled => "disabled", :type => "checkbox"}/
+-#                    Checkbox disabled
+-#              / radio
+-#              .form-group
+-#                .radio
+-#                  %label
+-#                    %input#optionsRadios1{:checked => "checked", :name => "optionsRadios", :type => "radio", :value => "option1"}/
+-#                    Option one is this and that—be sure to include why it's great
+-#                .radio
+-#                  %label
+-#                    %input#optionsRadios2{:name => "optionsRadios", :type => "radio", :value => "option2"}/
+-#                    Option two can be something else and selecting it will deselect option one
+-#                .radio
+-#                  %label
+-#                    %input#optionsRadios3{:disabled => "disabled", :name => "optionsRadios", :type => "radio", :value => "option3"}/
+-#                    Option three is disabled
+-#              / select
+-#              .form-group
+-#                %label Select
+-#                %select.form-control
+-#                  %option option 1
+-#                  %option option 2
+-#                  %option option 3
+-#                  %option option 4
+-#                  %option option 5
+-#              .form-group
+-#                %label Select Disabled
+-#                %select.form-control{:disabled => "disabled"}
+-#                  %option option 1
+-#                  %option option 2
+-#                  %option option 3
+-#                  %option option 4
+-#                  %option option 5
+-#              / Select multiple
+-#              .form-group
+-#                %label Select Multiple
+-#                %select.form-control{:multiple => "multiple"}
+-#                  %option option 1
+-#                  %option option 2
+-#                  %option option 3
+-#                  %option option 4
+-#                  %option option 5
+-#              .form-group
+-#                %label Select Multiple Disabled
+-#                %select.form-control{:disabled => "disabled", :multiple => "multiple"}
+-#                  %option option 1
+-#                  %option option 2
+-#                  %option option 3
+-#                  %option option 4
+-#                  %option option 5
 
   - content_for :after_body do
     %script{:src => "/plugins/select2/select2.full.min.js"}
