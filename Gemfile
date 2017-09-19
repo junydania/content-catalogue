@@ -28,6 +28,8 @@ gem 'less-rails', '~> 2.7.0'
 gem 'therubyracer', platforms: :ruby
 gem 'json'
 gem 'sdoc', group: :doc
+gem 'aws-sdk', '~> 2'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
