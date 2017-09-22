@@ -28,6 +28,13 @@ class Application < Rails::Application
     generate.routing_specs false
     generate.controller_specs false
   end
+
+  config.to_prepare do
+    Devise::RegistrationsController.layout 'application'
+  end
+
+
+
 end
 
 
