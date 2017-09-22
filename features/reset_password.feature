@@ -6,7 +6,7 @@ Feature: As a user or administrator
   Background:
     Given the following user account exist
       | email                | first_name  | last_name | password | password_confirmation | role           |
-      | o.dania@laffhub.com  | Osegbemoh   | Dania     | 12345678 | 12345678              | Administrator  |
+      | o.dania@laffhub.com  | Osegbemoh   | Dania     | 12345678 | 12345678              | administrator  |
 
   Scenario: Change password for existing user
     Given I am on the "sign_in" page
