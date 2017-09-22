@@ -1,0 +1,24 @@
+.content-wrapper
+  / Main content
+  %section.content
+    .error-page.five-hundred
+      .box.box-solid.box-danger
+        .box-header.with-border.text-center
+          %h3.box-title Oops! We encountered an error!
+        .box-body
+          %h1.error-headline
+            500
+          %p
+            We could not find the page you were looking for.
+            Meanwhile, you may
+            %a{:href => "../../index.html"} return to dashboard
+            or try using the search form.
+          %form.search-form
+            .input-group
+              %input.form-control{:name => "search", :placeholder => "Search", :type => "text"}/
+              .input-group-btn
+                %button.btn.btn-danger.btn-flat{:name => "submit", :type => "submit"}
+                  %i.fa.fa-search
+            / /.input-group
+  / /.content
+/ /.content-wrapper

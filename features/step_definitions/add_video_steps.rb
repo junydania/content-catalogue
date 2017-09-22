@@ -36,6 +36,8 @@ When(/^I attach file "([^"]*)" to field "([^"]*)"$/) do |file, image|
 end
 
 When(/^I attach file "([^"]*)" in the image field$/) do |file|
-  attach_file("Video Image", File.join(Rails.root, 'app', 'assets', 'images', file))
+  attach_file("Video Thumbnail", File.join(Rails.root, 'app', 'assets', 'images', file))
 end
+
+
 

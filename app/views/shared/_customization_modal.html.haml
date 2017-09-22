@@ -1,0 +1,36 @@
+#toggle-customization-modal
+  %button.btn.btn-default.btn-sm{"data-target" => "#customizationModal", "data-toggle" => "modal"}
+    %i.fa.fa-gears
+#customizationModal.modal.fade{:role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+        %h4.modal-title Customize Atlas Template
+      .modal-body
+        %h5 Choose a color scheme
+        %ul.color-scheme-picker
+          %li.color-scheme-box.pale-green{"data-color" => "skin-pale-green"}
+          %li.color-scheme-box.deep-blue{"data-color" => "skin-deep-blue"}
+          %li.color-scheme-box.deep-orange{"data-color" => "skin-deep-orange"}
+          %li.color-scheme-box.deep-purple{"data-color" => "skin-deep-purple"}
+          %li.color-scheme-box.blue-grey{"data-color" => "skin-blue-grey"}
+        %hr/
+        %h5 Choose a sidebar image
+        %ul.sidebar-image-picker
+          %li.sidebar-image-box{"data-image" => "dark-waves"}
+            = image_tag "sidebar-thumbs/dark-waves.jpg", class: "img-responsive"
+          %li.sidebar-image-box{"data-image" => "starry"}
+            = image_tag "sidebar-thumbs/starry.jpg", class: "img-responsive"
+          %li.sidebar-image-box{"data-image" => "misty-mountains"}
+            = image_tag "sidebar-thumbs/misty-mountains.jpg", class: "img-responsive"
+          %li.sidebar-image-box{"data-image" => "sunrise"}
+            = image_tag "sidebar-thumbs/sunrise.jpg", class: "img-responsive"
+          %li.sidebar-image-box{"data-image" => "rocky-beach"}
+            = image_tag "sidebar-thumbs/rocky-beach.jpg", class: "img-responsive"
+          %li.sidebar-image-box{"data-image" => "starry-mountains"}
+            = image_tag "sidebar-thumbs/starry-mountains.jpg", class: "img-responsive"
+    / /.modal-content
+  / /.modal-dialog
+/ /.modal

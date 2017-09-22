@@ -1,0 +1,65 @@
+- content_for :before_scripts do
+  %link{:href => "/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css", :rel => "stylesheet"}/
+  %link{:href => "/plugins/summernote/summernote.css", :rel => "stylesheet"}/
+.content-wrapper.forms-editor-page
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      Text Editors
+      %small Rich Text (WYSIWYG) Editors
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li
+        %a{:href => "#"} Forms
+      %li.active Editors
+  / Main content
+  %section.content
+    .row
+      .col-md-12
+        .box.box-info{"data-aos" => "fade-up"}
+          .box-header
+            %h3.box-title
+              SummerNote Editor
+              %small Specialized editor for Bootstrap
+            / tools box
+            .pull-right.box-tools
+              %button.btn.btn-info.btn-sm{"data-toggle" => "tooltip", "data-widget" => "collapse", :title => "Collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-info.btn-sm{"data-toggle" => "tooltip", "data-widget" => "remove", :title => "Remove"}
+                %i.fa.fa-times
+            / /. tools
+          / /.box-header
+          .box-body.pad
+            %form
+              %textarea#summernote-editor{:cols => "80", :name => "editor1", :rows => "10"}
+                :preserve
+                  
+                                  This is my textarea to be replaced with Summernote Editor.
+                                        / /.box
+        .box{"data-aos" => "fade-up"}
+          .box-header
+            %h3.box-title
+              Bootstrap WYSIHTML5
+              %small Simple and fast
+            / tools box
+            .pull-right.box-tools
+              %button.btn.btn-default.btn-sm{"data-toggle" => "tooltip", "data-widget" => "collapse", :title => "Collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-default.btn-sm{"data-toggle" => "tooltip", "data-widget" => "remove", :title => "Remove"}
+                %i.fa.fa-times
+            / /. tools
+          / /.box-header
+          .box-body.pad
+            %form
+              %textarea.textarea{:placeholder => "Place some text here", :style => "width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"}
+      / /.col
+    / ./row
+  / /.content
+/ /.content-wrapper
+- content_for :after_scripts do
+  %script{:src => "/plugins/summernote/summernote.min.js"}
+  %script{:src => "/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"}
+  %script{:src => "/assets/pages/form-editor.js"}

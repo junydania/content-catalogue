@@ -1,0 +1,34 @@
+.content-wrapper
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      Blank page
+      %small Get started with Atlas
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li
+        %a{:href => "#"} Examples
+      %li.active Blank page
+  / Main content
+  %section.content
+    / Default box
+    .box
+      .box-header.with-border
+        %h3.box-title Title
+        .box-tools.pull-right
+          %button.btn.btn-box-tool{"data-toggle" => "tooltip", "data-widget" => "collapse", :title => "Collapse"}
+            %i.fa.fa-minus
+          %button.btn.btn-box-tool{"data-toggle" => "tooltip", "data-widget" => "remove", :title => "Remove"}
+            %i.fa.fa-times
+      .box-body
+        Start creating your amazing application!
+      / /.box-body
+      .box-footer
+        Footer
+      / /.box-footer
+    / /.box
+  / /.content
+/ /.content-wrapper

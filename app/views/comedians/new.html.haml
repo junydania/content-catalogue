@@ -1,9 +1,35 @@
-%p Add New Comedian
-
-= form_for @comedian do |f|
-  = f.label :name, 'Comedian Name'
-  = f.text_field :name
-
-  = f.submit 'Submit'
-
-<% end %>
+.content-wrapper
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      Add New Comedian
+      %small New Comedians
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li
+        %a{:href => "#"} Add Comedian
+      %li.active New Comedian
+  / Main content
+  %section.content
+    .row
+      / left column
+      .col-md-6
+        / general form elements
+        .box.box-primary{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title New Comedian
+          .box-body
+            = form_for @comedian do |f|
+              - if @comedian.errors.any?
+                - @comedian.errors.full_messages.each do |message|
+                  = message
+              .form-group
+                = f.label :name, "Comedian's Name"
+                %br
+                = f.text_field  :name, class: "form-control", :placeholder => "Enter Comedian full name"
+                %br
+                = f.submit 'Submit', class: "btn btn-primary"
+            = flash[:notice]

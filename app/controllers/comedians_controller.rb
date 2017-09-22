@@ -7,18 +7,19 @@ class ComediansController < ApplicationController
   def create
     @comedian = Comedian.new(comedian_param)
     if @comedian.save
-      redirect_to comedians_path
       flash[:notice] = 'Comedian successfully added'
+      redirect_to request.referrer
     else
-      render new
+      flash[:notice]= "Sorry! You must enter a name"
+      redirect_to new_comedian_path
     end
-
   end
 
 
   def comedian_param
     params.require(:comedian)
-        .permit(:name)
+          .permit(:name)
   end
 
 end
+

@@ -1,0 +1,36 @@
+- content_for :body_class, "login-box"
+- content_for :before_scripts do
+  %link{:href => "../../plugins/iCheck/square/blue.css", :rel => "stylesheet"}/
+.login-box
+  .login-logo
+    %a{:href => "/"} LaffHub Content Catalogue
+  / /.login-logo
+  .login-box-body
+    %p.login-box-msg Sign in to continue
+    %form{:action => "/", :method => "GET"}
+      .form-group.has-feedback
+        %input.form-control{:placeholder => "Email", :type => "email"}/
+        %span.glyphicon.glyphicon-envelope.form-control-feedback
+      .form-group.has-feedback
+        %input.form-control{:placeholder => "Password", :type => "password"}/
+        %span.glyphicon.glyphicon-lock.form-control-feedback
+      .row
+        .col-xs-8
+          .checkbox.icheck
+            %label
+              %input{:type => "checkbox"}/
+              Remember Me
+        / /.col
+        .col-xs-4
+          %button.btn.btn-primary.btn-block{:type => "submit"} Sign In
+    .login-box-footer.text-center
+      %a{:href => "#"} Forgot password?
+      %br/
+      = link_to "Register for a new account &rarr;".html_safe, signup_path, class: "text-center"
+  / /.login-box-body
+/ /.login-box
+- content_for :after_scripts do
+  %script{:src => "/plugins/jQuery/jQuery-2.1.4.min.js"}
+  %script{:src => "/plugins/bootstrap/js/bootstrap.min.js"}
+  %script{:src => "/plugins/iCheck/icheck.min.js"}
+  %script{:src => "/assets/pages/login.js"}

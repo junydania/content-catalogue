@@ -9,11 +9,10 @@ Feature: As a user or administrator
       | o.dania@laffhub.com  | Osegbemoh   | Dania     | 12345678 | 12345678              | Administrator  |
 
   Scenario:
-    Given I am on the landing page
-    And I click on "Log In"
-    And I fill in field "Email" with "o.dania@laffhub.com"
-    And I fill in field "Password" with "12345678"
-    And I click on "Log in"
+    Given I am on the "sign_in" page
+    And I fill in field "user_email" with "o.dania@laffhub.com"
+    And I fill in field "user_password" with "12345678"
+    And I click on "Sign In"
     And I should see "Content Catalogue Dashboard"
     And I click on "Add Category"
     And I fill in field "Category Name" with "Stand Up Comedy"

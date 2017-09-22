@@ -1,30 +1,75 @@
-%p Add New Video
+- content_for :before_scripts do
+  %link{:href => "/plugins/daterangepicker/daterangepicker-bs3.css", :rel => "stylesheet"}
+  %link{:href => "/plugins/iCheck/all.css", :rel => "stylesheet"}
+  %link{:href => "/plugins/colorpicker/bootstrap-colorpicker.min.css", :rel => "stylesheet"}
+  %link{:href => "/plugins/timepicker/bootstrap-timepicker.min.css", :rel => "stylesheet"}
+  %link{:href => "/plugins/select2/select2.min.css", :rel => "stylesheet"}
 
-= form_for @video,  html: { multipart: true }do |f|
 
-  = f.label :title, 'Title'
-  = f.text_field :title
+.content-wrapper
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      New Video
+      %small Add New Video
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li
+        %a{:href => "#"} Videos
+      %li.active New Video
+  / Main content
+  %section.content
+    .row
+      / left column
+      .col-md-10
+        / general form elements
+        .box.box-primary{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title Video Details
+          / /.box-header
+          / form start
+          = form_for @video, html: { multipart: true }do |f|
+            .box-body
+              = flash[:notice]
+              .form-group
+                = f.label :title, 'Title'
+                = f.text_field :title, autofocus: true, class: "form-control", placeholder: "Video Title"
+              .form-group
+                = f.label :description, 'Description'
+                = f.text_area :description,  class: "form-control", placeholder: "description"
+              .form-group
+                = f.label :release_date, 'Release Date'
+                = f.date_select :release_date, prompt: {day: 'Select Day', month: 'Select Month', year: 'Select Year'}, class: "reservation form-control pull-right"
+              .form-group
+                = f.label :image, "Video Thumbnail"
+                = f.file_field :image
+              .form-group
+                = f.label :video_storage_path, "Video Storage Location"
+                = f.text_field :video_storage_path, class: 'form-control', placeholder: "description"
+              .form-group
+                = f.label :comedian_id, "Comedian"
+                = f.collection_select(:comedian_id, @comedians, :id, :name, class:'form-control select2', style: 'width: 100%;', include_blank: 'Select a comedian')
+                |
+                = f.label :category_id, "Video Category"
+                = f.collection_select(:category_id, @categories, :id, :category_name, class:'form-control select2', style: "width: 100%;", include_blank: 'Select a video category')
+              .form-group
+                = f.label :publisher_id, "Publisher"
+                = f.collection_select(:publisher_id, @publishers, :id, :publisher_name, class:'form-control select2', style: 'width: 100%;', include_blank: 'Select a publisher')
+              = flash[:notice]
+            .box-footer
+              = f.submit 'Submit', class: 'btn btn-success'
 
-  = f.label :description, 'Description'
-  = f.text_field :description
-
-  = f.label :release_date, 'Release Date'
-  = f.date_select :release_date
-
-  = f.label :video_storage_path, 'Storage Location'
-  = f.text_field :video_storage_path
-
-  = f.label :comedian_id, 'Comedian'
-  = f.collection_select(:comedian_id, @comedians, :id, :name)
-
-  = f.label :category_id, 'Video Category'
-  = f.collection_select(:category_id, @categories, :id, :category_name)
-
-  = f.label :publisher_id, 'Publisher'
-  = f.collection_select(:publisher_id, @publishers, :id, :publisher_name)
-
-  = f.label :image, 'Video Image'
-  = f.file_field :image
-
-  = f.submit 'Submit'
-
+  - content_for :after_body do
+    %script{:src => "/plugins/select2/select2.full.min.js"}
+    %script{:src => "/plugins/input-mask/jquery.inputmask.js"}
+    %script{:src => "/plugins/input-mask/jquery.inputmask.date.extensions.js"}
+    %script{:src => "/plugins/input-mask/jquery.inputmask.extensions.js"}
+    %script{:src => "/plugins/moment/moment.js"}
+    %script{:src => "/plugins/daterangepicker/daterangepicker.js"}
+    %script{:src => "/plugins/colorpicker/bootstrap-colorpicker.min.js"}
+    %script{:src => "/plugins/timepicker/bootstrap-timepicker.min.js"}
+    %script{:src => "/plugins/iCheck/icheck.min.js"}
+    %script{:src => "/assets/pages/forms-custom.js"}

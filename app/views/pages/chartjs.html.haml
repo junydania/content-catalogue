@@ -1,0 +1,105 @@
+.content-wrapper.chartjs-page
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      ChartJS
+      %small Demo of ChartJS 2.0
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li
+        %a{:href => "#"} Charts
+      %li.active ChartJS
+  / Main content
+  %section.content
+    .row
+      .col-md-6
+        / AREA CHART
+        .box.box-primary{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title Multi-Line Chart
+            .box-tools.pull-right
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-box-tool{"data-widget" => "remove"}
+                %i.fa.fa-times
+          .box-body
+            .chart
+              %canvas#barChartMulti{:style => "height:250px"}
+          / /.box-body
+          .box-footer
+            .text-center
+              %button#refreshBarChartMulti.btn.btn-default
+                %i.fa.fa-refresh
+                Refresh Data
+        / /.box
+        .box.box-danger{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title Bubble Chart
+            .box-tools.pull-right
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-box-tool{"data-widget" => "remove"}
+                %i.fa.fa-times
+          .box-body
+            %canvas#bubbleChart{:style => "height:220px"}
+          / /.box-body
+        / /.box
+      / /.col (LEFT)
+      .col-md-6
+        .box.box-danger{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title Polar Area Chart
+            .box-tools.pull-right
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-box-tool{"data-widget" => "remove"}
+                %i.fa.fa-times
+          .box-body
+            %canvas#polar-area-chart{:style => "height:350px"}
+          / /.box-body
+        / /.box
+        / BAR CHART
+        .box.box-success{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title Radar Chart
+            .box-tools.pull-right
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-box-tool{"data-widget" => "remove"}
+                %i.fa.fa-times
+          .box-body
+            .chart
+              %canvas#radarChart{:style => "height:230px"}
+          / /.box-body
+          .box-footer
+            .text-center
+              %button#refreshRadar.btn.btn-default
+                %i.fa.fa-refresh
+                Refresh Data
+        / /.box
+      / /.col (RIGHT)
+    / /.row
+    .row
+      .col-md-12
+        .box.box-primary{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title Multi-Line Chart
+            .box-tools.pull-right
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+              %button.btn.btn-box-tool{"data-widget" => "remove"}
+                %i.fa.fa-times
+          .box-body
+            .chart
+              %canvas#multiLine{:style => "height:250px"}
+          / /.box-body
+        / /.box
+    / /.row
+  / /.content
+/ /.content-wrapper
+- content_for :after_body do
+  %script{:src => "/plugins/chartjs-2/Chart.min.js"}
+  %script{:src => "/assets/pages/chartjs.js"}

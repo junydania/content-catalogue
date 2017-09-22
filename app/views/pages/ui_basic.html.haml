@@ -1,0 +1,705 @@
+.content-wrapper
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      General UI
+      %small Preview of UI elements
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li
+        %a{:href => "#"} UI
+      %li.active General
+  / Main content
+  %section.content
+    / COLOR PALETTE
+    .box.box-default.box-solid.color-palette-box{"data-aos" => "fade-up"}
+      .box-header.with-border
+        %h3.box-title
+          %i.fa.fa-tag
+          Color Palette
+      .box-body
+        .row
+          .col-sm-4.col-md-2
+            %h4.text-center Primary
+            .color-palette-set
+              .bg-light-blue.disabled.color-palette
+                %span Disabled
+              .bg-light-blue.color-palette
+                %span #3c8dbc
+              .bg-light-blue-active.color-palette
+                %span Active
+          / /.col
+          .col-sm-4.col-md-2
+            %h4.text-center Info
+            .color-palette-set
+              .bg-aqua.disabled.color-palette
+                %span Disabled
+              .bg-aqua.color-palette
+                %span #00c0ef
+              .bg-aqua-active.color-palette
+                %span Active
+          / /.col
+          .col-sm-4.col-md-2
+            %h4.text-center Success
+            .color-palette-set
+              .bg-green.disabled.color-palette
+                %span Disabled
+              .bg-green.color-palette
+                %span #00a65a
+              .bg-green-active.color-palette
+                %span Active
+          / /.col
+          .col-sm-4.col-md-2
+            %h4.text-center Warning
+            .color-palette-set
+              .bg-yellow.disabled.color-palette
+                %span Disabled
+              .bg-yellow.color-palette
+                %span #f39c12
+              .bg-yellow-active.color-palette
+                %span Active
+          / /.col
+          .col-sm-4.col-md-2
+            %h4.text-center Danger
+            .color-palette-set
+              .bg-red.disabled.color-palette
+                %span Disabled
+              .bg-red.color-palette
+                %span #f56954
+              .bg-red-active.color-palette
+                %span Active
+          / /.col
+          .col-sm-4.col-md-2
+            %h4.text-center Gray
+            .color-palette-set
+              .bg-gray.disabled.color-palette
+                %span Disabled
+              .bg-gray.color-palette
+                %span #d2d6de
+              .bg-gray-active.color-palette
+                %span Active
+          / /.col
+        / /.row
+        .row
+          .col-sm-4.col-md-2
+            %h4.text-center Navy
+            .color-palette-set
+              .bg-navy.disabled.color-palette
+                %span Disabled
+              .bg-navy.color-palette
+                %span #001F3F
+              .bg-navy-active.color-palette
+                %span Active
+          / /.col
+          .col-sm-4.col-md-2
+            %h4.text-center Teal
+            .color-palette-set
+              .bg-teal.disabled.color-palette
+                %span Disabled
+              .bg-teal.color-palette
+                %span #39CCCC
+              .bg-teal-active.color-palette
+                %span Active
+          / /.col
+          .col-sm-4.col-md-2
+            %h4.text-center Purple
+            .color-palette-set
+              .bg-purple.disabled.color-palette
+                %span Disabled
+              .bg-purple.color-palette
+                %span #605ca8
+              .bg-purple-active.color-palette
+                %span Active
+          / /.col
+          .col-sm-4.col-md-2
+            %h4.text-center Orange
+            .color-palette-set
+              .bg-orange.disabled.color-palette
+                %span Disabled
+              .bg-orange.color-palette
+                %span #ff851b
+              .bg-orange-active.color-palette
+                %span Active
+          / /.col
+          .col-sm-4.col-md-2
+            %h4.text-center Maroon
+            .color-palette-set
+              .bg-maroon.disabled.color-palette
+                %span Disabled
+              .bg-maroon.color-palette
+                %span #D81B60
+              .bg-maroon-active.color-palette
+                %span Active
+          / /.col
+          .col-sm-4.col-md-2
+            %h4.text-center Black
+            .color-palette-set
+              .bg-black.disabled.color-palette
+                %span Disabled
+              .bg-black.color-palette
+                %span #111111
+              .bg-black-active.color-palette
+                %span Active
+          / /.col
+        / /.row
+      / /.box-body
+    / /.box
+    / START ALERTS AND CALLOUTS
+    %h2.page-header Alerts and Callouts
+    .row
+      .col-md-6
+        .box.box-default.box-solid{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %i.fa.fa-warning
+            %h3.box-title Alerts
+          / /.box-header
+          .box-body
+            .alert.alert-danger.alert-dismissable
+              %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"}
+              %h4
+                %i.icon.fa.fa-ban
+                Alert!
+              Danger alert preview. This alert is dismissable. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+            .alert.alert-info.alert-dismissable
+              %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"}
+              %h4
+                %i.icon.fa.fa-info
+                Alert!
+              Info alert preview. This alert is dismissable.
+            .alert.alert-warning.alert-dismissable
+              %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"}
+              %h4
+                %i.icon.fa.fa-warning
+                Alert!
+              Warning alert preview. This alert is dismissable.
+            .alert.alert-success.alert-dismissable
+              %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"}
+              %h4
+                %i.icon.fa.fa-check
+                Alert!
+              Success alert preview. This alert is dismissable.
+          / /.box-body
+        / /.box
+      / /.col
+      .col-md-6
+        .box.box-default.box-solid{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %i.fa.fa-bullhorn
+            %h3.box-title Callouts
+          / /.box-header
+          .box-body
+            .callout.callout-danger
+              %h4 I am a danger callout!
+              %p There is a problem that we need to fix. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+            .callout.callout-info
+              %h4 I am an info callout!
+              %p Follow the steps to continue to payment.
+            .callout.callout-warning
+              %h4 I am a warning callout!
+              %p This is a yellow callout.
+            .callout.callout-success
+              %h4 I am a success callout!
+              %p This is a green callout.
+          / /.box-body
+        / /.box
+      / /.col
+    / /.row
+    / END ALERTS AND CALLOUTS
+    / START CUSTOM TABS
+    %h2.page-header Atlas Custom Tabs
+    .row
+      .col-md-6{"data-aos" => "fade-up"}
+        / Custom Tabs
+        .nav-tabs-custom
+          %ul.nav.nav-tabs
+            %li.active
+              %a{"data-toggle" => "tab", :href => "#tab_1"} Tab 1
+            %li
+              %a{"data-toggle" => "tab", :href => "#tab_2"} Tab 2
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                Dropdown
+                %span.caret
+              %ul.dropdown-menu
+                %li{:role => "presentation"}
+                  %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Action
+                %li{:role => "presentation"}
+                  %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Another action
+                %li{:role => "presentation"}
+                  %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Something else here
+                %li.divider{:role => "presentation"}
+                %li{:role => "presentation"}
+                  %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Separated link
+            %li.pull-right
+              %a.text-muted{:href => "#"}
+                %i.fa.fa-gear
+          .tab-content
+            #tab_1.tab-pane.active
+              %b How to use:
+              %p
+                Exactly like the original bootstrap tabs except you should use
+                the custom wrapper
+                %code .nav-tabs-custom
+                to achieve this style.
+              A wonderful serenity has taken possession of my entire soul,
+              like these sweet mornings of spring which I enjoy with my whole heart.
+              I am alone, and feel the charm of existence in this spot,
+              which was created for the bliss of souls like mine. I am so happy,
+              my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+              that I neglect my talents. I should be incapable of drawing a single stroke
+              at the present moment; and yet I feel that I never was a greater artist than now.
+            / /.tab-pane
+            #tab_2.tab-pane
+              The European languages are members of the same family. Their separate existence is a myth.
+              For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ
+              in their grammar, their pronunciation and their most common words. Everyone realizes why a
+              new common language would be desirable: one could refuse to pay expensive translators. To
+              achieve this, it would be necessary to have uniform grammar, pronunciation and more common
+              words. If several languages coalesce, the grammar of the resulting language is more simple
+              and regular than that of the individual languages.
+            / /.tab-pane
+          / /.tab-content
+        / nav-tabs-custom
+      / /.col
+      .col-md-6{"data-aos" => "fade-up"}
+        / Custom Tabs (Pulled to the right)
+        .nav-tabs-custom
+          %ul.nav.nav-tabs.pull-right
+            %li.active
+              %a{"data-toggle" => "tab", :href => "#tab_1-1"} Tab 1
+            %li
+              %a{"data-toggle" => "tab", :href => "#tab_2-2"} Tab 2
+            %li
+              %a{"data-toggle" => "tab", :href => "#tab_3-2"} Tab 3
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                Dropdown
+                %span.caret
+              %ul.dropdown-menu
+                %li{:role => "presentation"}
+                  %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Action
+                %li{:role => "presentation"}
+                  %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Another action
+                %li{:role => "presentation"}
+                  %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Something else here
+                %li.divider{:role => "presentation"}
+                %li{:role => "presentation"}
+                  %a{:href => "#", :role => "menuitem", :tabindex => "-1"} Separated link
+          .tab-content
+            #tab_1-1.tab-pane.active
+              %b How to use:
+              %p
+                Exactly like the original bootstrap tabs except you should use
+                the custom wrapper
+                %code .nav-tabs-custom
+                to achieve this style.
+              A wonderful serenity has taken possession of my entire soul,
+              like these sweet mornings of spring which I enjoy with my whole heart.
+              I am alone, and feel the charm of existence in this spot,
+              which was created for the bliss of souls like mine. I am so happy,
+              my dear friend, so absorbed in the exquisite sense of mere tranquil existence,
+              that I neglect my talents. I should be incapable of drawing a single stroke
+              at the present moment; and yet I feel that I never was a greater artist than now.
+            / /.tab-pane
+            #tab_2-2.tab-pane
+              The European languages are members of the same family. Their separate existence is a myth.
+              For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ
+              in their grammar, their pronunciation and their most common words. Everyone realizes why a
+              new common language would be desirable: one could refuse to pay expensive translators. To
+              achieve this, it would be necessary to have uniform grammar, pronunciation and more common
+              words. If several languages coalesce, the grammar of the resulting language is more simple
+              and regular than that of the individual languages.
+            / /.tab-pane
+            #tab_3-2.tab-pane
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              It has survived not only five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+              sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+              like Aldus PageMaker including versions of Lorem Ipsum.
+            / /.tab-pane
+          / /.tab-content
+        / nav-tabs-custom
+      / /.col
+    / /.row
+    / END CUSTOM TABS
+    / START PROGRESS BARS
+    %h2.page-header Progress Bars
+    .row
+      .col-md-6{"data-aos" => "fade-up"}
+        .box.box-solid.box-default
+          .box-header.with-border
+            %h3.box-title Progress Bars Different Sizes
+          / /.box-header
+          .box-body
+            %p
+              %code .progress
+            .progress
+              .progress-bar.progress-bar-primary.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "40", :role => "progressbar", :style => "width: 40%"}
+                %span.sr-only 40% Complete (success)
+            %p
+              Class:
+              %code .sm
+            .progress.progress-sm.active
+              .progress-bar.progress-bar-success.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "20", :role => "progressbar", :style => "width: 20%"}
+                %span.sr-only 20% Complete
+            %p
+              Class:
+              %code .xs
+            .progress.progress-xs
+              .progress-bar.progress-bar-warning.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "width: 60%"}
+                %span.sr-only 60% Complete (warning)
+            %p
+              Class:
+              %code .xxs
+            .progress.progress-xxs
+              .progress-bar.progress-bar-danger.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "width: 60%"}
+                %span.sr-only 60% Complete (warning)
+          / /.box-body
+        / /.box
+      / /.col (left)
+      .col-md-6{"data-aos" => "fade-up"}
+        .box.box-solid.box-default
+          .box-header.with-border
+            %h3.box-title Progress bars
+          / /.box-header
+          .box-body
+            .progress
+              .progress-bar.progress-bar-green{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "40", :role => "progressbar", :style => "width: 40%"}
+                %span.sr-only 40% Complete (success)
+            .progress
+              .progress-bar.progress-bar-aqua{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "20", :role => "progressbar", :style => "width: 20%"}
+                %span.sr-only 20% Complete
+            .progress
+              .progress-bar.progress-bar-yellow{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "width: 60%"}
+                %span.sr-only 60% Complete (warning)
+            .progress
+              .progress-bar.progress-bar-red{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "80", :role => "progressbar", :style => "width: 80%"}
+                %span.sr-only 80% Complete
+          / /.box-body
+        / /.box
+      / /.col (right)
+    / /.row
+    .row
+      .col-md-6
+        .box.box-solid.box-default{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title Vertical Progress Bars Different Sizes
+          / /.box-header
+          .box-body.text-center
+            %p
+              By adding the class
+              %code .vertical
+              and
+              = succeed "," do
+                %code .progress-sm
+              %code .progress-xs
+              or
+              %code .progress-xxs
+              we achieve:
+            .progress.vertical.active
+              .progress-bar.progress-bar-primary.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "40", :role => "progressbar", :style => "height: 40%"}
+                %span.sr-only 40%
+            .progress.vertical.progress-sm
+              .progress-bar.progress-bar-success{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "20", :role => "progressbar", :style => "height: 100%"}
+                %span.sr-only 100%
+            .progress.vertical.progress-xs
+              .progress-bar.progress-bar-warning.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "height: 60%"}
+                %span.sr-only 60%
+            .progress.vertical.progress-xxs
+              .progress-bar.progress-bar-info.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "height: 60%"}
+                %span.sr-only 60%
+          / /.box-body
+        / /.box
+      / /.col (left)
+      .col-md-6
+        .box.box-solid.box-default{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title Vertical Progress bars
+          / /.box-header
+          .box-body.text-center
+            %p
+              By adding the class
+              %code .vertical
+              we achieve:
+            .progress.vertical
+              .progress-bar.progress-bar-green{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "40", :role => "progressbar", :style => "height: 40%"}
+                %span.sr-only 40%
+            .progress.vertical
+              .progress-bar.progress-bar-aqua{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "20", :role => "progressbar", :style => "height: 20%"}
+                %span.sr-only 20%
+            .progress.vertical
+              .progress-bar.progress-bar-yellow{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "height: 60%"}
+                %span.sr-only 60%
+            .progress.vertical
+              .progress-bar.progress-bar-red{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "80", :role => "progressbar", :style => "height: 80%"}
+                %span.sr-only 80%
+          / /.box-body
+        / /.box
+      / /.col (right)
+    / /.row
+    / END PROGRESS BARS
+    / START ACCORDION & CAROUSEL
+    %h2.page-header Bootstrap Accordion  Carousel
+    .row{"data-aos" => "fade-up"}
+      .col-md-6
+        .box.box-solid.box-default
+          .box-header.with-border
+            %h3.box-title Collapsible Accordion
+          / /.box-header
+          .box-body
+            #accordion.box-group
+              / we are adding the .panel class so bootstrap.js collapse plugin detects it
+              .panel.box.box-primary
+                .box-header.with-border
+                  %h5
+                    %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+                      Collapsible Group Item #1
+                #collapseOne.panel-collapse.collapse.in
+                  .box-body
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              .panel.box.box-danger
+                .box-header.with-border
+                  %h5
+                    %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
+                      Collapsible Group Danger
+                #collapseTwo.panel-collapse.collapse
+                  .box-body
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              .panel.box.box-success
+                .box-header.with-border
+                  %h5
+                    %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"}
+                      Collapsible Group Success
+                #collapseThree.panel-collapse.collapse
+                  .box-body
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          / /.box-body
+        / /.box
+      / /.col
+      .col-md-6
+        .box.box-solid.box-default
+          .box-header.with-border
+            %h3.box-title Carousel
+          / /.box-header
+          .box-body
+            #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
+              %ol.carousel-indicators
+                %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+                %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+                %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+              .carousel-inner
+                .item.active
+                  %img{:alt => "First slide", :src => "http://placehold.it/900x500/39CCCC/ffffff=I+Love+Bootstrap"}
+                    .carousel-caption
+                      First Slide
+                  .item
+                    %img{:alt => "Second slide", :src => "http://placehold.it/900x500/3c8dbc/ffffff=I+Love+Bootstrap"}
+                      .carousel-caption
+                        Second Slide
+                    .item
+                      %img{:alt => "Third slide", :src => "http://placehold.it/900x500/f39c12/ffffff=I+Love+Bootstrap"}
+                        .carousel-caption
+                          Third Slide
+                    %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic"}
+                      %span.fa.fa-angle-left
+                    %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic"}
+                      %span.fa.fa-angle-right
+                / /.box-body
+              / /.box
+            / /.col
+          / /.row
+          / END ACCORDION & CAROUSEL
+          / START TYPOGRAPHY
+          %h2.page-header Typography
+          .row{"data-aos" => "fade-up"}
+            .col-md-6
+              .box.box-solid.box-default
+                .box-header.with-border
+                  %i.fa.fa-text-width
+                  %h3.box-title Headlines
+                / /.box-header
+                .box-body
+                  %h1 h1. Bootstrap heading
+                  %h2 h2. Bootstrap heading
+                  %h3 h3. Bootstrap heading
+                  %h4 h4. Bootstrap heading
+                  %h5 h5. Bootstrap heading
+                  %h6 h6. Bootstrap heading
+                / /.box-body
+              / /.box
+            / ./col
+            .col-md-6
+              .box.box-solid.box-default
+                .box-header.with-border
+                  %i.fa.fa-text-width
+                  %h3.box-title Text Emphasis
+                / /.box-header
+                .box-body
+                  %p.lead Lead to emphasize importance
+                  %p.text-green Text green to emphasize success
+                  %p.text-aqua Text aqua to emphasize info
+                  %p.text-light-blue Text light blue to emphasize info (2)
+                  %p.text-red Text red to emphasize danger
+                  %p.text-yellow Text yellow to emphasize warning
+                  %p.text-muted Text muted to emphasize general
+                / /.box-body
+              / /.box
+            / ./col
+          / /.row
+          .row{"data-aos" => "fade-up"}
+            .col-md-6
+              .box.box-solid.box-default
+                .box-header.with-border
+                  %i.fa.fa-text-width
+                  %h3.box-title Block Quotes
+                / /.box-header
+                .box-body
+                  %blockquote
+                    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                    %small
+                      Someone famous in
+                      %cite{:title => "Source Title"} Source Title
+                / /.box-body
+              / /.box
+            / ./col
+            .col-md-6
+              .box.box-solid.box-default
+                .box-header.with-border
+                  %i.fa.fa-text-width
+                  %h3.box-title Block Quotes Pulled Right
+                / /.box-header
+                .box-body.clearfix
+                  %blockquote.pull-right
+                    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                    %small
+                      Someone famous in
+                      %cite{:title => "Source Title"} Source Title
+                / /.box-body
+              / /.box
+            / ./col
+          / /.row
+          .row{"data-aos" => "fade-up"}
+            .col-md-4
+              .box.box-solid.box-default
+                .box-header.with-border
+                  %i.fa.fa-text-width
+                  %h3.box-title Unordered List
+                / /.box-header
+                .box-body
+                  %ul
+                    %li Lorem ipsum dolor sit amet
+                    %li Consectetur adipiscing elit
+                    %li Integer molestie lorem at massa
+                    %li Facilisis in pretium nisl aliquet
+                    %li
+                      Nulla volutpat aliquam velit
+                      %ul
+                        %li Phasellus iaculis neque
+                        %li Purus sodales ultricies
+                        %li Vestibulum laoreet porttitor sem
+                        %li Ac tristique libero volutpat at
+                    %li Faucibus porta lacus fringilla vel
+                    %li Aenean sit amet erat nunc
+                    %li Eget porttitor lorem
+                / /.box-body
+              / /.box
+            / ./col
+            .col-md-4
+              .box.box-solid.box-default
+                .box-header.with-border
+                  %i.fa.fa-text-width
+                  %h3.box-title Ordered Lists
+                / /.box-header
+                .box-body
+                  %ol
+                    %li Lorem ipsum dolor sit amet
+                    %li Consectetur adipiscing elit
+                    %li Integer molestie lorem at massa
+                    %li Facilisis in pretium nisl aliquet
+                    %li
+                      Nulla volutpat aliquam velit
+                      %ol
+                        %li Phasellus iaculis neque
+                        %li Purus sodales ultricies
+                        %li Vestibulum laoreet porttitor sem
+                        %li Ac tristique libero volutpat at
+                    %li Faucibus porta lacus fringilla vel
+                    %li Aenean sit amet erat nunc
+                    %li Eget porttitor lorem
+                / /.box-body
+              / /.box
+            / ./col
+            .col-md-4
+              .box.box-solid.box-default
+                .box-header.with-border
+                  %i.fa.fa-text-width
+                  %h3.box-title Unstyled List
+                / /.box-header
+                .box-body
+                  %ul.list-unstyled
+                    %li Lorem ipsum dolor sit amet
+                    %li Consectetur adipiscing elit
+                    %li Integer molestie lorem at massa
+                    %li Facilisis in pretium nisl aliquet
+                    %li
+                      Nulla volutpat aliquam velit
+                      %ul
+                        %li Phasellus iaculis neque
+                        %li Purus sodales ultricies
+                        %li Vestibulum laoreet porttitor sem
+                        %li Ac tristique libero volutpat at
+                    %li Faucibus porta lacus fringilla vel
+                    %li Aenean sit amet erat nunc
+                    %li Eget porttitor lorem
+                / /.box-body
+              / /.box
+            / ./col
+          / /.row
+          .row{"data-aos" => "fade-up"}
+            .col-md-6
+              .box.box-solid.box-default
+                .box-header.with-border
+                  %i.fa.fa-text-width
+                  %h3.box-title Description
+                / /.box-header
+                .box-body
+                  %dl
+                    %dt Description lists
+                    %dd A description list is perfect for defining terms.
+                    %dt Euismod
+                    %dd Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+                    %dd Donec id elit non mi porta gravida at eget metus.
+                    %dt Malesuada porta
+                    %dd Etiam porta sem malesuada magna mollis euismod.
+                / /.box-body
+              / /.box
+            / ./col
+            .col-md-6
+              .box.box-solid.box-default
+                .box-header.with-border
+                  %i.fa.fa-text-width
+                  %h3.box-title Description Horizontal
+                / /.box-header
+                .box-body
+                  %dl.dl-horizontal
+                    %dt Description lists
+                    %dd A description list is perfect for defining terms.
+                    %dt Euismod
+                    %dd Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+                    %dd Donec id elit non mi porta gravida at eget metus.
+                    %dt Malesuada porta
+                    %dd Etiam porta sem malesuada magna mollis euismod.
+                    %dt Felis euismod semper eget lacinia
+                    %dd Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                / /.box-body
+              / /.box
+            / ./col
+          / /.row
+          / END TYPOGRAPHY
+        / /.content
+      / /.content-wrapper

@@ -1,0 +1,127 @@
+- content_for :before_scripts do
+  %link{:href => "/plugins/iCheck/flat/blue.css", :rel => "stylesheet"}/
+  %link{:href => "/plugins/summernote/summernote.css", :rel => "stylesheet"}/
+.content-wrapper.email-compose-page
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      Mailbox
+      %small Compose new email
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li.active Mailbox
+  / Main content
+  %section.content
+    .row
+      .col-md-3{"data-aos" => "fade-up"}
+        %a.btn.btn-primary.btn-block.margin-bottom{:href => "#{page_path(page: 'email_inbox')}"} Back to Inbox
+        .box.box-solid
+          .box-header.with-border
+            %h3.box-title Folders
+            .box-tools
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+          .box-body.no-padding
+            %ul.nav.nav-pills.nav-stacked
+              %li
+                %a{:href => "#{page_path(page: 'email_inbox')}"}
+                  %i.fa.fa-inbox
+                  Inbox
+                  %span.label.label-primary.pull-right 12
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-envelope-o
+                  Sent
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-file-text-o
+                  Drafts
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-filter
+                  Junk
+                  %span.label.label-warning.pull-right 65
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-trash-o
+                  Trash
+          / /.box-body
+        / /. box
+        .box.box-solid
+          .box-header.with-border
+            %h3.box-title Labels
+            .box-tools
+              %button.btn.btn-box-tool{"data-widget" => "collapse"}
+                %i.fa.fa-minus
+          / /.box-header
+          .box-body.no-padding
+            %ul.nav.nav-pills.nav-stacked
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-circle-o.text-red
+                  Important
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-circle-o.text-yellow
+                  Promotions
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-circle-o.text-light-blue
+                  Social
+          / /.box-body
+        / /.box
+      / /.col
+      .col-md-9{"data-aos" => "fade-up"}
+        .box.box-primary
+          .box-header.with-border
+            %h3.box-title Compose New Message
+          / /.box-header
+          .box-body
+            .form-group
+              %input.form-control{:placeholder => "To:"}/
+            .form-group
+              %input.form-control{:placeholder => "Subject:"}/
+            .form-group
+              %textarea#compose-textarea.form-control{:style => "height: 300px"}
+                %h1
+                  %u Heading Of Message
+                %h4 Subheading
+                %p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee
+                %ul
+                  %li List item one
+                  %li List item two
+                  %li List item three
+                  %li List item four
+                %p Thank you,
+                %p John Doe
+            .form-group
+              .btn.btn-default.btn-file
+                %i.fa.fa-paperclip
+                Attachment
+                %input{:name => "attachment", :type => "file"}/
+              %p.help-block Max. 32MB
+          / /.box-body
+          .box-footer
+            .pull-right
+              %button.btn.btn-default
+                %i.fa.fa-pencil
+                Draft
+              %button.btn.btn-primary{:type => "submit"}
+                %i.fa.fa-envelope-o
+                Send
+            %button.btn.btn-default
+              %i.fa.fa-times
+              Discard
+          / /.box-footer
+        / /. box
+      / /.col
+    / /.row
+  / /.content
+/ /.content-wrapper
+- content_for :after_body do
+  %script{:src => "/plugins/iCheck/icheck.min.js"}
+  %script{:src => "/plugins/summernote/summernote.min.js"}
+  %script{:src => "/assets/pages/email-compose.js"}

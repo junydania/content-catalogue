@@ -1,0 +1,49 @@
+- content_for :body_class, "login-page"
+- content_for :before_scripts do
+  %link{:href => "../../plugins/iCheck/square/blue.css", :rel => "stylesheet"}/
+.register-box
+  .register-logo
+    %a{:href => "/"} Atlas
+  .register-box-body
+    %p.login-box-msg Register a new account
+    %form{:action => "/", :method => "GET"}
+      .form-group.has-feedback
+        %input.form-control{:placeholder => "Account name", :type => "text"}/
+        %span.glyphicon.glyphicon-user.form-control-feedback
+      .form-group.has-feedback
+        %input.form-control{:placeholder => "Email", :type => "email"}/
+        %span.glyphicon.glyphicon-envelope.form-control-feedback
+      .form-group.has-feedback
+        %input.form-control{:placeholder => "Password", :type => "password"}/
+        %span.glyphicon.glyphicon-lock.form-control-feedback
+      .form-group.has-feedback
+        %input.form-control{:placeholder => "Confirm password", :type => "password"}/
+        %span.glyphicon.glyphicon-log-in.form-control-feedback
+      .row
+        .col-xs-8
+          .checkbox.icheck
+            %label
+              %input{:type => "checkbox"}/
+              I agree to the
+              %a{:href => "#"} terms
+        / /.col
+        .col-xs-4
+          %button.btn.btn-primary.btn-block{:type => "submit"} Register
+        / /.col
+    .social-auth-links.text-center
+      %p.text-muted - OR -
+      %a.btn.btn-block.btn-social.btn-facebook{:href => "#"}
+        %i.fa.fa-facebook
+        Sign up using Facebook
+      %a.btn.btn-block.btn-social.btn-google{:href => "#"}
+        %i.fa.fa-google-plus
+        Sign up using Google+
+    .login-box-footer.text-center
+      = link_to "I already have an account", login_path, class: "text-center"
+  / /.form-box
+/ /.register-box
+- content_for :after_body do
+  %script{:src => "/plugins/jQuery/jQuery-2.1.4.min.js"}
+  %script{:src => "/plugins/bootstrap/js/bootstrap.min.js"}
+  %script{:src => "/plugins/iCheck/icheck.min.js"}
+  %script{:src => "/assets/pages/login.js"}

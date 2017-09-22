@@ -7,10 +7,11 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_param)
     if @category.save
-      redirect_to categories_path
       flash[:notice] = "Category successfully created!"
+      redirect_to new_category_path
     else
-      render new
+      flash[:notice]= "Sorry! You must enter a category"
+      redirect_to new_category_path
     end
   end
 
@@ -20,3 +21,5 @@ class CategoriesController < ApplicationController
     params.require(:category).permit(:category_name)
   end
 end
+
+
