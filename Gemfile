@@ -29,6 +29,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'json'
 gem 'sdoc', group: :doc
 gem 'aws-sdk', '~> 2.3.0'
+gem 'will_paginate', '~> 3.1.0'
 
 
 group :development, :test do

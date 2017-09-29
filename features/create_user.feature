@@ -25,7 +25,3 @@ Feature: As an administrator
     And I click on "Submit"
     Then I should see "User successfully created"
 
-
-
-
-
