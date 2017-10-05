@@ -10,16 +10,59 @@ class Video < ApplicationRecord
   validates_attachment_file_name :image, matches: [/png\z/, /jpe?g\z/]
   validates_presence_of :title, :description, :video_storage_path, :comedian_id, :publisher_id, :category_id
 
+  scope :with_comedian_id, (lambda {|comedian_id|
+    where(comedian_id: [*comedian_id])})
 
-  filterrific(
-      default_filter_params: { sorted_by: 'title' },
-      available_filters: [
-          :sorted_by,
-          :search_query,
-          :with_comedian_id,
-          :with_publisher_id
-      ]
-  )
+  scope :with_publisher_id, (lambda {|publisher_id|
+    where(publisher_id: [*publisher_id])})
+
+  scope :with_category_id, (lambda {|category_id|
+      where(category_id: [*category_id])})
+
+  scope :with_comedian_name, (lambda {|comedian_name|
+    where('comedians.name = ?', comedian_name).joins(:comedian)
+  })
+
+  scope :with_publisher_name, (lambda {|publisher_name|
+    where('publishers.publisher_name = ?', publisher_name).joins(:publisher)
+  })
+
+  scope :with_category_name, (lambda {|category_name|
+    where('categories.category_name = ?', category_name).joins(:category)
+  })
+
+  scope :sorted_by, (lambda { |sort_option|
+    direction = (sort_option =~ /desc$/) ? 'desc' : 'asc'
+    case sort_option.to_s
+      when /^created_at_/
+        order("videos.created_at #{direction}")
+      when /^title_/
+        order("LOWER(videos.title) #{direction}")
+      when /^comedian_name_/
+        order("LOWER(comedians.name) #{direction}").includes(:country)
+      when /^publisher_name/
+        order("LOWER(publishers.name) #{direction}").includes(:publisher)
+      else
+        raise(ArgumentError, "Invalid sort option: #{ sort_option.inspect }")
+    end
+  })
+
+
+  scope :search_query, (lambda {|query|
+    return nil if query.blank?
+
+    terms = query.downcase.split(/\s+/)
+
+    terms = terms.map { |e|
+      (e.gsub('*', '%') + '%').gsub(/%+/, '%')
+    }
+
+    num_or_conds = 2
+    where(terms.map { |term|
+      "LOWER(comedians.name) LIKE ? OR LOWER(videos.title) LIKE ?)"
+    }, *terms.map { |e| [e] * num_or_conds }.flatten )
+  })
+
 
 end
 

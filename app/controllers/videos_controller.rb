@@ -5,21 +5,7 @@ class VideosController < ApplicationController
     @comedian= Comedian.all
     @publisher = Publisher.all
     @category = Category.all
-    @video = Video.search(params[:search])
-                 .order(sort_column + " " + sort_direction)
-                 .paginate(:per_page => 50, :page => params[:page])
-
-    @filterrific = initialize_filterrific(
-                       Video,
-                       params[:filterrific]
-    ) or return
-    @videos = @filterrific.find.page(params[:page])
-
-    respond_to do |format|
-        format.html
-        format.js
-    end
-
+    @video = Video.all
   end
 
   def new
@@ -59,15 +45,6 @@ class VideosController < ApplicationController
                 :publisher_id,
               )
   end
-
-  def sort_column
-    Video.column_names.include?(params[:sort]) ? params[:sort] : "Title"
-  end
-
-  def sort_direction
-    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
-  end
-
 
 end
 

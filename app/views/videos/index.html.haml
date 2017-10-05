@@ -41,12 +41,9 @@
           .box-body.table-responsive.no-padding
             %table.table.table-hover
               %tr
-                %th
-                  = sortable "key", "Key"
-                %th
-                  = sortable "title", "Title"
-                %th
-                  = sortable "comedian", "Comedian"
+                %th Key
+                %th Title
+                %th Comedian
                 %th Category
                 %th Publisher
                 %th Storage Path
@@ -60,8 +57,6 @@
                   %td #{ video.publisher.publisher_name }
                   %td
                     = link_to "Video Download", "http://#{video.video_storage_path}", target: "_blank", class:"label label-success "
-
-      = will_paginate @video
 
     %br
 
