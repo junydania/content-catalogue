@@ -6,5 +6,6 @@
 //= require custom/offcanvas
 //= require custom/tree-menu
 //= require main
+//= require filterrific/filterrific-jquery
 //= require_tree .
 

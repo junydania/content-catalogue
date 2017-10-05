@@ -20,8 +20,30 @@
               = f.submit :search, class: 'search-btn btn.btn-flat', id:'search-btn' do
                 %i.fa.fa-search
 
-
+  %br
   / Main content
+  .container
+    .row
+      .col-xs-12
+        = form_for_filterrific @filterrific do |f|
+          %div
+            Search
+            = f.text_field(:search_query, class: 'filterrific-periodically-observed')
+            Comedian
+            = f.select(:with_comedian_name, @filterrific.select_options[:with_comedian_name], { include_blank: '- Any -' })
+            Sorted by
+            = f.select(:sorted_by, @filterrific.select_options[:sorted_by])
+            Registered after
+            = f.text_field(:with_created_at_gte, class: 'js-datepicker')
+          %br
+          %div
+            Publisher
+            = f.select(:with_publisher_name, @filterrific.select_options[:with_publisher_name], { include_blank: '- Any -' })
+            Category
+            = f.select(:with_category_name, @filterrific.select_options[:with_category_name], { include_blank: '- Any -' })
+            = link_to('Reset filters', reset_filterrific_url, class: "btn btn-success")
+            = render_filterrific_spinner
+
   %section.content
     = flash[:notice]
     .row
@@ -38,25 +60,7 @@
               -#    -#    %i.fa.fa-search
 
               / /.box-header
-          .box-body.table-responsive.no-padding
-            %table.table.table-hover
-              %tr
-                %th Key
-                %th Title
-                %th Comedian
-                %th Category
-                %th Publisher
-                %th Storage Path
-              - @video.each do |video|
-                %tr
-                  %td #{video.video_key}
-                  %td #{video.title}
-                  %td #{video.comedian.name}
-                  %td
-                    %span.label.label-success #{video.category.category_name}
-                  %td #{ video.publisher.publisher_name }
-                  %td
-                    = link_to "Video Download", "http://#{video.video_storage_path}", target: "_blank", class:"label label-success "
+          = render( partial: 'videos/list',locals: { videos: @videos})
 
     %br
 

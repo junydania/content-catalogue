@@ -6,6 +6,24 @@ class VideosController < ApplicationController
     @publisher = Publisher.all
     @category = Category.all
     @video = Video.all
+
+    @filterrific = initialize_filterrific(
+        Video,
+        params[:filterrific],
+        select_options: {
+            with_comedian_name: Comedian.options_for_select,
+            with_publisher_name: Publisher.options_for_select,
+            with_category_name: Category.options_for_select,
+            sorted_by: Video.options_for_sorted_by
+        }
+    ) or return
+    @videos = @filterrific.find.page(params[:page])
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
   end
 
   def new

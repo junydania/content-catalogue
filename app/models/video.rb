@@ -47,6 +47,10 @@ class Video < ApplicationRecord
     end
   })
 
+  scope :created_at_gte, (lambda { |reference_time|
+    where('videos.created_at >= ?', reference_time)
+  })
+
 
   scope :search_query, (lambda {|query|
     return nil if query.blank?
@@ -63,7 +67,28 @@ class Video < ApplicationRecord
     }, *terms.map { |e| [e] * num_or_conds }.flatten )
   })
 
+  filterrific(
+      default_filter_params: { sorted_by: 'created_at_desc' },
+      available_filters: [
+          :sorted_by,
+          :search_query,
+          :with_comedian_name,
+          :with_publisher_name,
+          :with_category_name,
+          :with_created_at_gte
+      ]
+  )
+
+  def self.options_for_sorted_by
+    [
+        ['Title (a-z)', 'title_asc'],
+        ['Created date (newest first)', 'created_at_desc'],
+        ['Created Date (oldest first)', 'created-at_asc'],
+        ['Publisher (a-z)', 'publisher_name_asc' ]
+    ]
+  end
 
 end
+
 
 

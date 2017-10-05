@@ -1,0 +1,24 @@
+.box-body.table-responsive.no-padding
+  #filterrific_results
+    %table.table.table-hover
+      %tr
+        %th Key
+        %th Title
+        %th Comedian
+        %th Category
+        %th Publisher
+        %th Storage Path
+      - @video.each do |video|
+        %tr
+          %td #{video.video_key}
+          %td #{video.title}
+          %td #{video.comedian.name}
+          %td
+            %span.label.label-success #{video.category.category_name}
+          %td #{ video.publisher.publisher_name }
+          %td
+            = link_to "Video Download", "http://#{video.video_storage_path}", target: "_blank", class:"label label-success "
+
+    = page_entries_info videos
+    = will_paginate videos
+
