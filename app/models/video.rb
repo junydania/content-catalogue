@@ -11,14 +11,16 @@ class Video < ApplicationRecord
   validates_presence_of :title, :description, :video_storage_path, :comedian_id, :publisher_id, :category_id
 
 
-
-  def self.search(search)
-    if search
-      where('name LIKE ?', "%#{search}%")
-    else
-      all
-    end
-  end
+  filterrific(
+      default_filter_params: { sorted_by: 'title' },
+      available_filters: [
+          :sorted_by,
+          :search_query,
+          :with_comedian_id,
+          :with_publisher_id
+      ]
+  )
 
 end
+
 
