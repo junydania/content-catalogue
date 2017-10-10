@@ -39,9 +39,9 @@ class Video < ApplicationRecord
       when /^title_/
         order("LOWER(videos.title) #{direction}")
       when /^comedian_name_/
-        order("LOWER(comedians.name) #{direction}").includes(:country)
+        order("LOWER(comedians.name) #{direction}").includes(:comedian)
       when /^publisher_name/
-        order("LOWER(publishers.name) #{direction}").includes(:publisher)
+        order("LOWER(publishers.publisher_name) #{direction}").includes(:publisher)
       else
         raise(ArgumentError, "Invalid sort option: #{ sort_option.inspect }")
     end
@@ -52,15 +52,35 @@ class Video < ApplicationRecord
   })
 
 
+  scope :search_query, (lambda { |query|
+    nil if query.blank?
+    terms = query.to_s.downcase.split(/\s+/)
+    terms = terms.map { |e|
+      (e.gsub('*', '%') + '%').gsub(/%+/, '%')
+    }
+    num_or_conditions = 2
+    where(
+        terms.map {
+          or_clauses = [
+              "LOWER(videos.title) LIKE ?",
+              "LOWER(videos.video_key) LIKE ?"
+          ].join(' OR ')
+          "(#{ or_clauses })"
+        }.join(' AND '),
+        *terms.map { |e| [e] * num_or_conditions }.flatten
+    ).joins(:comedian)
+  })
+
+
   filterrific(
       default_filter_params: { sorted_by: 'created_at_desc' },
       available_filters: [
-          :sorted_by,
-          :search_query,
-          :with_comedian_name,
-          :with_publisher_name,
-          :with_category_name,
-          :with_created_at_gte
+        :sorted_by,
+        :search_query,
+        :with_comedian_name,
+        :with_publisher_name,
+        :with_category_name,
+        :with_created_at_gte
       ]
   )
 

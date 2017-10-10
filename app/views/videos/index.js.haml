@@ -1,5 +1,7 @@
-- js = escape_javascript( render(partial: 'videos/list', locals: { videos: @videos }))
-
 :javascript
-  $("#filterrific_results").html("=js");
+  var js = $("#{escape_javascript(render(partial: 'videos/list', locals: { videos: @videos }))}");
+  $("#filterrific_results").html(js);
+
+-#:plain
+-#  $("#filterrific_results").html("#{escape_javascript(render(partial: 'videos/list', locals: { videos: @videos }))}"));
 
