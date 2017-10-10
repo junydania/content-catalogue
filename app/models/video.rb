@@ -52,21 +52,6 @@ class Video < ApplicationRecord
   })
 
 
-  scope :search_query, (lambda {|query|
-    return nil if query.blank?
-
-    terms = query.downcase.split(/\s+/)
-
-    terms = terms.map { |e|
-      (e.gsub('*', '%') + '%').gsub(/%+/, '%')
-    }
-
-    num_or_conds = 2
-    where(terms.map { |term|
-      "LOWER(comedians.name) LIKE ? OR LOWER(videos.title) LIKE ?)"
-    }, *terms.map { |e| [e] * num_or_conds }.flatten )
-  })
-
   filterrific(
       default_filter_params: { sorted_by: 'created_at_desc' },
       available_filters: [
@@ -84,7 +69,8 @@ class Video < ApplicationRecord
         ['Title (a-z)', 'title_asc'],
         ['Created date (newest first)', 'created_at_desc'],
         ['Created Date (oldest first)', 'created-at_asc'],
-        ['Publisher (a-z)', 'publisher_name_asc' ]
+        ['Publisher (a-z)', 'publisher_name_asc'],
+        ['Comedian (a-z)', 'name_asc' ]
     ]
   end
 

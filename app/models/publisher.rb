@@ -4,7 +4,7 @@ class Publisher < ApplicationRecord
   validates_presence_of :publisher_name
 
   def self.options_for_select
-    order('Lower(publisher_name)').map { |e| [e.publisher_name, e.id]}
+    order('LOWER(publisher_name)').map { |e| [e.publisher_name, e.id]}
   end
 
 end
