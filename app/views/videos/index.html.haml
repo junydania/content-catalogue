@@ -11,7 +11,7 @@
             %a{:href => "#"}
               %i.fa.fa-dashboard
               Home
-          %li.active Dashboard
+          %li.active Content Catalogue Dashboard
       .col-sm-6.hidden-xs
         = form_for videos_path, method: 'get',  class: 'form header-form' do |f|
           .input-group.input-group-sm
@@ -24,23 +24,31 @@
   / Main content
   .container
     .row
-      .col-xs-12
+      .col-xs-12.col-md-12
         = form_for_filterrific @filterrific do |f|
           %div
             Search
-            = f.text_field(:search_query, class: 'filterrific-periodically-observed')
+            = f.text_field(:search_query,
+            class: 'filterrific-periodically-observed',
+            placeholder: 'Search by Movie Title', class: 'video-filter',
+            )
             Comedian
-            = f.select(:with_comedian_name, @filterrific.select_options[:with_comedian_name], { include_blank: '- Any -' })
+            = f.select(:with_comedian_id, @filterrific.select_options[:with_comedian_id], { include_blank: '- Any -' },
+            class: 'video-filter' )
             Sorted by
-            = f.select(:sorted_by, @filterrific.select_options[:sorted_by])
-            Registered after
-            = f.text_field(:with_created_at_gte, class: 'js-datepicker')
+            = f.select(:sorted_by, @filterrific.select_options[:sorted_by],
+            class: 'video-filter' )
           %br
+            
           %div
             Publisher
-            = f.select(:with_publisher_name, @filterrific.select_options[:with_publisher_name], { include_blank: '- Any -' })
+            = f.select(:with_publisher_id, @filterrific.select_options[:with_publisher_id],
+            { include_blank: '- Any -' },
+            class: 'video-filter')
             Category
-            = f.select(:with_category_name, @filterrific.select_options[:with_category_name], { include_blank: '- Any -' })
+            = f.select(:with_category_id, @filterrific.select_options[:with_category_id],
+            { include_blank: '- Any -' },
+            class: 'video-filter')
             = link_to('Reset filters', reset_filterrific_url, class: "btn btn-success")
             = render_filterrific_spinner
 
@@ -61,7 +69,7 @@
 
               / /.box-header
 
-          = render( partial: 'videos/list',locals: { videos: @videos})
+          = render( partial: 'videos/list', locals: { videos: @video})
 
     %br
 
@@ -157,8 +165,6 @@
   %script{:src => "/plugins/chartjs-2/Chart.min.js"}
   %script{:src => "/assets/pages/dashboard.js"}
 
-
-%p Content Catalogue Dashboard
 
 
 

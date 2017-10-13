@@ -7,5 +7,6 @@
 //= require custom/tree-menu
 //= require main
 //= require filterrific/filterrific-jquery
+//= require turbolinks
 //= require_tree .
 

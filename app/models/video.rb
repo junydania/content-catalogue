@@ -38,10 +38,10 @@ class Video < ApplicationRecord
         order("videos.created_at #{direction}")
       when /^title_/
         order("LOWER(videos.title) #{direction}")
-      when /^comedian_name_/
-        order("LOWER(comedians.name) #{direction}").includes(:comedian)
+      when /^name/
+        order("LOWER(comedians.name) #{direction}").joins(:comedian)
       when /^publisher_name/
-        order("LOWER(publishers.publisher_name) #{direction}").includes(:publisher)
+        order("LOWER(publishers.publisher_name) #{direction}").joins(:publisher)
       else
         raise(ArgumentError, "Invalid sort option: #{ sort_option.inspect }")
     end
@@ -77,9 +77,9 @@ class Video < ApplicationRecord
       available_filters: [
         :sorted_by,
         :search_query,
-        :with_comedian_name,
-        :with_publisher_name,
-        :with_category_name,
+        :with_comedian_id,
+        :with_publisher_id,
+        :with_category_id,
         :with_created_at_gte
       ]
   )
