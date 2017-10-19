@@ -29,8 +29,7 @@
           %div
             Search
             = f.text_field(:search_query,
-            class: 'filterrific-periodically-observed',
-            placeholder: 'Search by Movie Title', class: 'video-filter',
+            class: 'filterrific-periodically-observed video-filter', placeholder: 'Search by Movie Title',
             )
             Comedian
             = f.select(:with_comedian_id, @filterrific.select_options[:with_comedian_id], { include_blank: '- Any -' },
