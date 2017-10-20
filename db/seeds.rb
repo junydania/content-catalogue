@@ -42,7 +42,7 @@ comedian = Comedian.create!(
     [{ name: "Baseketmouth"},
                {name: "Whalemouth"},
                {name: "I Go Dye"},
-               {name: "Akpororo}"},
+               {name: "Akpororo"},
                 {name: "AYLIVE"}])
 
 publisher = Publisher.create([
@@ -66,59 +66,65 @@ video = Video.create!([
               title: "Movie1",
               description: "Laugh out loud",
               release_date: "Tue, 05 Feb 2013",
-              video_storage_path: "http://s3.amazonaws.com/contentcataloguefile/videos/images/000/000/031/medium/AYLive.jpg",
+              video_storage_path: "https://s3-us-west-2.amazonaws.com/laffhubarchive/LaffHub+Videos/0001.+ASUBABA+SKITS/asubaba/2016-08-29/24014-LIES.mp4",
               category: category.first,
               comedian: comedian.first,
-              publisher: publisher.first
+              publisher: publisher.first,
+              image: File.new("#{Rails.root}/app/assets/images/AYLIVE.jpg")
           },
 
           {
               title: "Movie2",
               description: "Laugh out loud2",
               release_date: "Tue, 05 Feb 2013",
-              video_storage_path: "http://s3.amazonaws.com/contentcataloguefile/videos/images/000/000/031/medium/AYLive.jpg",
+              video_storage_path: "https://s3-us-west-2.amazonaws.com/laffhubarchive/LaffHub+Videos/0001.+ASUBABA+SKITS/asubaba/2016-08-29/24014-LIES.mp4",
               category: category.last,
               comedian: comedian.last,
-              publisher: publisher.last
+              publisher: publisher.last,
+              image: File.new("#{Rails.root}/app/assets/images/AYLIVE.jpg")
           },
 
           {
               title: "IPOB fight",
               description: "Fighting in IPOB",
               release_date: "Tue, 05 Feb 2013",
-              video_storage_path: "http://s3.amazonaws.com/contentcataloguefile/videos/images/000/000/031/medium/AYLive.jpg",
+              video_storage_path: "https://s3-us-west-2.amazonaws.com/laffhubarchive/LaffHub+Videos/0001.+ASUBABA+SKITS/asubaba/2016-08-29/24014-LIES.mp4",
               category: category.last,
               comedian: comedian.last,
-              publisher: publisher.last
+              publisher: publisher.last,
+              image: File.new("#{Rails.root}/app/assets/images/AYLIVE.jpg")
           },
 
           {
               title: "Anambra fight",
               description: "Governor laughs at people",
               release_date: "Tue, 05 Feb 2013",
-              video_storage_path: "http://s3.amazonaws.com/contentcataloguefile/videos/images/000/000/031/medium/AYLive.jpg",
+              video_storage_path: "https://s3-us-west-2.amazonaws.com/laffhubarchive/LaffHub+Videos/0001.+ASUBABA+SKITS/asubaba/2016-08-29/24014-LIES.mp4",
               category: category[2],
               comedian: comedian[2],
-              publisher: publisher[2]
+              publisher: publisher[2],
+              image: File.new("#{Rails.root}/app/assets/images/AYLIVE.jpg")
           },
 
           {
               title: "Abuja chairman",
               description: "Laugh out loud",
               release_date: "Tue, 05 Feb 2013",
-              video_storage_path: "http://s3.amazonaws.com/contentcataloguefile/videos/images/000/000/031/medium/AYLive.jpg",
+              video_storage_path: "https://s3-us-west-2.amazonaws.com/laffhubarchive/LaffHub+Videos/0001.+ASUBABA+SKITS/asubaba/2016-08-29/24014-LIES.mp4",
               category: category.first,
               comedian: comedian.first,
-              publisher: publisher.first
+              publisher: publisher.first,
+              image: File.new("#{Rails.root}/app/assets/images/AYLIVE.jpg")
           },
           {
               title: "Ogusbaba laughs at people",
               description: "Chairman is laughing",
               release_date: "Tue, 05 Feb 2013",
-              video_storage_path: "http://s3.amazonaws.com/contentcataloguefile/videos/images/000/000/031/medium/AYLive.jpg",
+              video_storage_path: "https://s3-us-west-2.amazonaws.com/laffhubarchive/LaffHub+Videos/0001.+ASUBABA+SKITS/asubaba/2016-08-29/24014-LIES.mp4",
               category: category[2],
               comedian: comedian[2],
-              publisher: publisher[2]
+              publisher: publisher[2],
+              image: File.new("#{Rails.root}/app/assets/images/AYLIVE.jpg")
           }
       ])
 

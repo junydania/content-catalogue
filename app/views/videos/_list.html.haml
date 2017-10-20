@@ -7,7 +7,10 @@
         %th Comedian
         %th Category
         %th Publisher
-        %th Storage Path
+        %th Storage
+        %th
+        %th
+        %th
       - @videos.each do |video|
         %tr
           %td #{video.video_key}
@@ -17,7 +20,11 @@
             %span.label.label-success #{video.category.category_name}
           %td #{ video.publisher.publisher_name }
           %td
-            = link_to "Video Download", "http://#{video.video_storage_path}", target: "_blank", class:"label label-success "
+            = link_to "Download", "#{video.video_storage_path}", target: "_blank", class:"label label-success "
+          %td
+            = link_to "Show", video_path(video), class:"label label-success "
+          %td
+            = link_to "Edit", "http://#{video.video_storage_path}", target: "_blank", class:"label label-success "
 
     = page_entries_info @videos
     = will_paginate @videos
