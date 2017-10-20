@@ -1,0 +1,83 @@
+.content-wrapper
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      Video Details
+    %ol.breadcrumb
+      %li
+        %a{:href => videos_path}
+          %i.fa.fa-dashboard
+          Home
+      %li
+        %a{:href => videos_path } Videos List
+      %li.active Video details
+  / Main content
+  %section.content
+    .row
+      .col-md-3
+        / Profile Image
+        .box.box-primary
+          .box-body.box-profile
+            = image_tag @video.image.url(:thumb), class:"img profile-user-img img-responsive img-circle"
+            -#%img.profile-user-img.img-responsive.img-circle{:alt => "User profile picture", :src => "http://i.pravatar.cc/128?img=26"}/
+            %h3.profile-username.text-center #{@video.title}
+            %p.text-muted.text-center #{@video.comedian.name}
+            %ul.list-group.list-group-unbordered
+              %li.list-group-item
+                %b Publisher
+                %a.pull-right #{@video.publisher.publisher_name}
+              %li.list-group-item
+                %b #{@video.category.category_name}
+                -#%a.pull-right
+            = link_to "View Video", videos_path, class:"btn btn-primary btn-block"
+            = link_to "Download Video", videos_path, class:"btn btn-primary btn-block"
+            = link_to "Download Picture", videos_path, class:"btn btn-primary btn-block"
+
+      .col-md-9
+        #timeline.tab-pane
+          %ul.timeline.timeline-inverse
+            %li.time-label
+              %span.bg-green
+                =link_to "Click to Edit Record", videos_path
+            %li
+              %i.fa.fa-envelope.bg-blue
+              .timeline-item
+                %h3.timeline-header
+                  %a{:href => "#"} Video Title
+                .timeline-body
+                  #{@video.title}
+
+            %li
+              %i.fa.fa-comments.bg-yellow
+              .timeline-item
+                %span.time
+                %h3.timeline-header
+                  %a{:href => "#"} Video Description
+                .timeline-body
+                  #{@video.description}
+
+            %li
+              %i.fa.fa-user.bg-aqua
+              .timeline-item
+                %h3.timeline-header.no-border
+                  %a{:href => "#"} Comedian
+                  #{@video.comedian.name}
+
+            %li
+              %i.fa.fa-user.bg-aqua
+              .timeline-item
+                %h3.timeline-header.no-border
+                  %a{:href => "#"} Category
+                  #{@video.category.category_name}
+            %li
+              %i.fa.fa-user.bg-aqua
+              .timeline-item
+                %h3.timeline-header.no-border
+                  %a{:href => "#"} Publisher
+                  #{@video.publisher.publisher_name}
+                  / END timeline item
+                  / timeline time label
+            %li.time-label
+              %span.bg-green
+                =link_to "Delete Video", video_path(@video), method: 'destroy'
+
