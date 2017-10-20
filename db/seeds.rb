@@ -70,7 +70,7 @@ video = Video.create!([
               category: category.first,
               comedian: comedian.first,
               publisher: publisher.first,
-              image: File.new("#{Rails.root}/app/assets/images/AYLIVE.jpg")
+              image: File.open(File.join(Rails.root, "AYLIVE.jpg"))
           },
 
           {
@@ -81,7 +81,7 @@ video = Video.create!([
               category: category.last,
               comedian: comedian.last,
               publisher: publisher.last,
-              image: File.new("#{Rails.root}/app/assets/images/AYLIVE.jpg")
+              image: File.open(File.join(Rails.root, "AYLIVE.jpg"))
           },
 
           {
@@ -92,7 +92,7 @@ video = Video.create!([
               category: category.last,
               comedian: comedian.last,
               publisher: publisher.last,
-              image: File.new("#{Rails.root}/app/assets/images/AYLIVE.jpg")
+              image: File.open(File.join(Rails.root, "AYLIVE.jpg"))
           },
 
           {
@@ -103,7 +103,7 @@ video = Video.create!([
               category: category[2],
               comedian: comedian[2],
               publisher: publisher[2],
-              image: File.new("#{Rails.root}/app/assets/images/AYLIVE.jpg")
+              image: File.open(File.join(Rails.root, "AYLIVE.jpg"))
           },
 
           {
@@ -114,7 +114,7 @@ video = Video.create!([
               category: category.first,
               comedian: comedian.first,
               publisher: publisher.first,
-              image: File.new("#{Rails.root}/app/assets/images/AYLIVE.jpg")
+              image: File.open(File.join(Rails.root, "AYLIVE.jpg"))
           },
           {
               title: "Ogusbaba laughs at people",
@@ -124,7 +124,8 @@ video = Video.create!([
               category: category[2],
               comedian: comedian[2],
               publisher: publisher[2],
-              image: File.new("#{Rails.root}/app/assets/images/AYLIVE.jpg")
+              image: File.open(File.join(Rails.root, "AYLIVE.jpg"))
           }
       ])
 
+# image: File.new("#{Rails.root}/app/assets/images/AYLIVE.jpg")
