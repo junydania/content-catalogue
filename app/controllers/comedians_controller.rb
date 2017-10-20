@@ -1,5 +1,9 @@
 class ComediansController < ApplicationController
 
+  def index
+    @comedians = Comedian.all
+  end
+
   def new
     @comedian = Comedian.new
   end

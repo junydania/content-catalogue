@@ -1,7 +1,32 @@
 class VideosController < ApplicationController
 
   def index
+    @filterrific = initialize_filterrific(
+        Video,
+        params[:filterrific],
+        select_options: {
+            with_comedian_id: Comedian.options_for_select,
+            with_publisher_id: Publisher.options_for_select,
+            with_category_id: Category.options_for_select,
+            sorted_by: Video.options_for_sorted_by
+        },
+        persistence_id: 'shared_key',
+        default_filter_params: {},
+    ) or return
+    @videos = @filterrific.find.page(params[:page])
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
+  rescue ActiveRecord::RecordNotFound => e
+    # There is an issue with the persisted param_set. Reset it.
+    puts "Had to reset filterrific params: #{ e.message }"
+    redirect_to(reset_filterrific_url(format: :html)) && return
   end
+
+  
 
   def new
     @video = Video.new
@@ -9,6 +34,7 @@ class VideosController < ApplicationController
     @publishers = Publisher.all
     @categories = Category.all
   end
+
 
   def create
     @video = Video.new(video_params)
@@ -40,6 +66,9 @@ class VideosController < ApplicationController
                 :publisher_id,
               )
   end
+
 end
+
+
 
 

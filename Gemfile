@@ -14,6 +14,7 @@ gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
+gem 'jquery-turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'coffee-rails', '~> 4.2'
@@ -29,6 +30,8 @@ gem 'therubyracer', platforms: :ruby
 gem 'json'
 gem 'sdoc', group: :doc
 gem 'aws-sdk', '~> 2.3.0'
+gem 'will_paginate', '~> 3.1.1'
+gem 'filterrific'
 
 
 group :development, :test do
