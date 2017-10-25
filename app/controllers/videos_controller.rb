@@ -56,6 +56,23 @@ class VideosController < ApplicationController
     @video = Video.find(params[:id])
   end
 
+  def edit
+    @comedians = Comedian.all
+    @publishers = Publisher.all
+    @categories = Category.all
+    @video = Video.find(params[:id])
+
+  end
+
+  def update
+    @video = Video.find(params[:id])
+    if @video.update_attributes(video_params)
+      redirect_to  video_path(@video)
+      flash[:notice] = 'Video successfully updated'
+    else
+      render 'edit'
+    end
+  end
 
   private
 
