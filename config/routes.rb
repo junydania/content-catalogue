@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
   devise_for :users, :controllers => {:registrations => "user"}
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  devise_scope :user do
+    get '/myprofile', to: "user#profile"
+  end
+
 
   root controller: :videos, action: :index
 
@@ -14,5 +18,8 @@ Rails.application.routes.draw do
   resources :comedians
   resources :publishers
   resources :categories
+  resources :profiles
+
 end
+
 

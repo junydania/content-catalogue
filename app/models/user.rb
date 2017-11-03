@@ -8,6 +8,11 @@ class User < ApplicationRecord
 
   validates_presence_of  :encrypted_password, :email
 
+
+  def fullname
+    "#{first_name} #{last_name}"
+  end
+
 end
 
 
