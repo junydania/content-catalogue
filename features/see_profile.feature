@@ -11,7 +11,11 @@ Feature: As a user or administrator
 
 
   Scenario:
-    Given I visit the landing page
+    Given I am on the "sign_in" page
+    And I fill in field "user_email" with "o.dania@laffhub.com"
+    And I fill in field "user_password" with "12345678"
+    And I click on "Sign In"
+    And I should see "Content Catalogue Dashboard"
     And I click on "Osegbemoh Dania"
     And I click on "Profile"
     Then I should see "o.dania@laffhub.com"
