@@ -1,0 +1,70 @@
+.content-wrapper
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      User Profile
+    %ol.breadcrumb
+      %li
+        %a{:href => videos_path}
+          %i.fa.fa-dashboard
+          Home
+      %li.active User profile
+  / Main content
+  %section.content
+    .row
+      .col-md-3
+        / Profile Image
+        .box.box-primary
+          .box-body.box-profile
+            %img.profile-user-img.img-responsive.img-circle{:alt => "User profile picture", :src => "http://i.pravatar.cc/128?img=26"}/
+            %h3.profile-username.text-center #{@user.fullname}
+            %p.text-muted.text-center #{@user.email}
+            %a.btn.btn-primary.btn-block{:href => "#"}
+              %b Follow
+          / /.box-body
+        / /.box
+        / About Me Box
+        .box.box-primary
+          .box-header.with-border
+            %h3.box-title My Access
+          / /.box-header
+          .box-body
+            %strong
+              %i.fa.fa-pencil.margin-r-5
+              Role
+            %p
+              %span.label.label-danger #{current_user.role}
+            %hr/
+          / /.box-body
+        / /.box
+      / /.col
+      .col-md-9
+        .nav-tabs-custom
+          %ul.nav.nav-tabs
+            %li.active
+              %a{"data-toggle" => "tab", :href => "#activity"} Profile Details
+
+          .tab-content
+            %form.form-horizontal
+              .form-group
+                %label.col-sm-2.control-label{:for => "inputName"} First Name
+                .col-sm-10
+                  %input#inputName.form-control{:placeholder => current_user.first_name, :type => "email", :readonly => true}
+              .form-group
+                %label.col-sm-2.control-label{:for => "inputName"} Last Name
+                .col-sm-10
+                  %input#inputName.form-control{:placeholder => current_user.last_name, :type => "email", :readonly => true}
+              .form-group
+                %label.col-sm-2.control-label{:for => "inputEmail"} Email
+                .col-sm-10
+                  %input#inputEmail.form-control{:placeholder => current_user.email, :type => "email", :readonly => true}
+              .form-group
+                %label.col-sm-2.control-label{:for => "inputName"} Password
+                .col-sm-10
+                  %input#inputName.form-control{:placeholder => current_user.encrypted_password, :type => "text", :readonly => true}
+              .form-group
+                .col-sm-offset-2.col-sm-10
+                  = link_to 'Edit Profile',  edit_profile_path(current_user), class: 'btn btn-danger'
+
+
+
