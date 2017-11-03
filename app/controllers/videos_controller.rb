@@ -1,5 +1,7 @@
 class VideosController < ApplicationController
 
+  before_action :authenticate_user!
+
   def index
     @filterrific = initialize_filterrific(
         Video,

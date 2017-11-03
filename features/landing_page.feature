@@ -4,4 +4,4 @@ Feature: As a user or administrator,
 
   Scenario:
     Given I visit the landing page
-    Then I should see "Dashboard"
+    Then I should see "LaffHub Content Catalogue"

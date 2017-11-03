@@ -14,7 +14,7 @@ Feature: As a user or administrator
     And I fill in field "user_password" with "12345678"
     And I click on "Sign In"
     And I should see "Content Catalogue Dashboard"
+    And I click on "Osegbemoh Dania"
     And I click on "Log Out"
-    Then I should see "Signed out successfully"
 
 

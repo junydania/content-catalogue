@@ -1,13 +1,6 @@
 %aside.main-sidebar
   %section.sidebar
     .user-panel
-      .pull-left.image
-        %img.img-circle{:alt => "User Image", :src => "http://i.pravatar.cc/300?img=59"}
-        .pull-left.info
-          %p Zachary Banks
-          %a{:href => "#"}
-            %i.fa.fa-circle.text-success
-            Online
       %ul.sidebar-menu
         %li.header MAIN NAVIGATION
         %li
@@ -79,11 +72,6 @@
               = link_to new_user_registration_path, data: { pjax: true} do
                 %i.fa.fa-plus-circle
                 %span Create User
-        %li
-          = link_to destroy_user_session_path, method: :delete,  data: { pjax: true} do
-            %i.fa.fa-sign-out
-            %span Log Out
-
         %li.treeview
           %a{:href => "#"}
             %i.fa.fa-pie-chart
@@ -207,56 +195,4 @@
             %i.fa.fa-calendar
             %span Calendar
             %small.label.pull-right.bg-red 3
-        %li.treeview
-          %a{:href => "#"}
-            %i.fa.fa-envelope-o
-            %span Email  Chat
-            %i.fa.fa-angle-left.pull-right
-          %ul.treeview-menu
-            %li
-              = link_to page_path(page: "email_inbox"), data: { pjax: true} do
-                %i.fa.fa-envelope
-                Inbox
-            %li
-              = link_to page_path(page: "email_compose"), data: { pjax: true} do
-                %i.fa.fa-pencil
-                Compose New Email
-        %li.treeview
-          %a{:href => "#"}
-            %i.fa.fa-share
-            %span Multilevel Menu
-            %i.fa.fa-angle-left.pull-right
-          %ul.treeview-menu
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-circle-o
-                Level One
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-circle-o
-                Level One
-                %i.fa.fa-angle-left.pull-right
-              %ul.treeview-menu
-                %li
-                  %a{:href => "#"}
-                    %i.fa.fa-circle-o
-                    Level Two
-                %li
-                  %a{:href => "#"}
-                    %i.fa.fa-circle-o
-                    Level Two
-                    %i.fa.fa-angle-left.pull-right
-                  %ul.treeview-menu
-                    %li
-                      %a{:href => "#"}
-                        %i.fa.fa-circle-o
-                        Level Three
-                    %li
-                      %a{:href => "#"}
-                        %i.fa.fa-circle-o
-                        Level Three
-            %li
-              %a{:href => "#"}
-                %i.fa.fa-circle-o
-                Level One
-    / /.sidebar
+

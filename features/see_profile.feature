@@ -17,7 +17,7 @@ Feature: As a user or administrator
     And I click on "Sign In"
     And I should see "Content Catalogue Dashboard"
     And I click on "Osegbemoh Dania"
-    And I click on "Profile"
+    And I click on "My Profile"
     Then I should see "o.dania@laffhub.com"
 
 

@@ -1,10 +1,31 @@
-%h2 Forgot your password?
-= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  .actions
-    = f.submit "Send me reset password instructions"
-= render "devise/shared/links"
+- content_for :body_class, "login-box"
+- content_for :before_scripts do
+  %link{:href => "../../plugins/iCheck/square/blue.css", :rel => "stylesheet"}
+.login-box
+  .login-logo
+    %a{:href => "/"} LaffHub Content Catalogue
+  / /.login-logo
+  .login-box-body
+    = devise_error_messages!
+    = flash[:notice]
+    %p.login-box-msg Forgot Your Password?
+    = form_for(resource, as: resource_name, url: password_path(resource_name), html:{ method: :post }) do |f|
+      .form-group.has-feedback
+        = f.email_field :email, autofocus: true, class:"form-control", placeholder: "Email"
+        %span.glyphicon.glyphicon-envelope.form-control-feedback
+      .row
+        .col-xs-12
+          = f.submit "Send me reset password instructions", class: "button btn btn-primary btn-block"
+    .login-box-footer.text-center
+      = render "devise/shared/links"
+
+  / /.login-box-body
+/ /.login-box
+- content_for :after_scripts do
+  = javascript_include_tag "/plugins/jQuery/jQuery-2.1.4.min.js"
+  = javascript_include_tag "/plugins/bootstrap/js/bootstrap.min.js"
+  = javascript_include_tag "/plugins/iCheck/icheck.min.js"
+  = javascript_include_tag "/assets/pages/login.js"
+
+
+
