@@ -15,12 +15,19 @@ class ApplicationController < ActionController::Base
     redirect_to new_user_registration_path
   end
 
+  def after_update_path_for(resource)
+    redirect_to profile_path(resource)
+    flash[:notice] = "Account successfully updated"
+  end
+
   protected
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up) do |u|
       u.permit(:username, :first_name, :last_name, :email, :password)
     end
+
+    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:email, :password, :password_confirmation, :current_password, :first_name, :last_name)}
   end
 
   def layout_by_resource
