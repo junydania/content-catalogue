@@ -1,0 +1,96 @@
+.content-wrapper
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      User Profile
+    %ol.breadcrumb
+      %li
+        %a{:href => videos_path}
+          %i.fa.fa-dashboard
+          Home
+      %li.active User profile
+  / Main content
+  %section.content
+    .row
+      .col-md-3
+        / Profile Image
+        .box.box-primary
+          .box-body.box-profile
+            %img.profile-user-img.img-responsive.img-circle{:alt => "User profile picture", :src => "http://i.pravatar.cc/128?img=26"}/
+            %h3.profile-username.text-center #{@user.fullname}
+            %p.text-muted.text-center #{@user.email}
+            %a.btn.btn-primary.btn-block{:href => "#"}
+              %b Follow
+          / /.box-body
+        / /.box
+        / About Me Box
+        .box.box-primary
+          .box-header.with-border
+            %h3.box-title My Access
+          / /.box-header
+          .box-body
+            %strong
+              %i.fa.fa-pencil.margin-r-5
+              Role
+            %p
+              %span.label.label-danger #{current_user.role}
+            %hr/
+          / /.box-body
+        / /.box
+      / /.col
+      .col-md-9
+        .nav-tabs-custom
+          %ul.nav.nav-tabs
+            %li.active
+              %a{"data-toggle" => "tab", :href => "#activity"} Edit #{resource_name.to_s.humanize}
+
+          .tab-content
+            = form_for(resource, as: resource_name, url: user_registration_path, html: { class: 'form-horizontal', method: :put }) do |f|
+              = devise_error_messages!
+              .form-group
+                = f.label :first_name, 'First Name1111', class: 'col-sm-2 control-label'
+                .col-sm-10
+                  = f.text_field :first_name, class:'form-control', id:'first_name', placeholder: current_user.first_name
+              .form-group
+                = f.label :last_name, 'Last Name', class: 'col-sm-2 control-label'
+                .col-sm-10
+                  = f.text_field :last_name, class:'form-control', id:'last_name', placeholder: current_user.last_name
+              .form-group
+                = f.label :email, 'Email', class: 'col-sm-2 control-label'
+                .col-sm-10
+                  = f.email_field :email, autofocus: true, class:'form-control', id:'email', placeholder: current_user.email
+                  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+                    %div
+                      Currently waiting confirmation for : #{resource.unconfirmed_email}
+              .form-group
+                = f.label :password, 'Password', class: 'col-sm-2 control-label'
+                .col-sm-10
+                  = f.password_field :password, class:'form-control', id:'password',
+                    placeholder: "leave blank if you don't want to change it",
+                    autocomplete: "off"
+                  - if @minimum_password_length
+                    %br
+                    %em
+                      = @minimum_password_length
+                      characters minimum
+              .form-group
+                = f.label :password_confirmation, 'Password Confirmation', class: 'col-sm-2 control-label'
+                .col-sm-10
+                  = f.password_field :password_confirmation, class:'form-control', id:'password confirmation',
+                    placeholder: "leave blank if you don't want to change it",
+                    autocomplete: "off"
+                  - if @minimum_password_length
+                    %br
+                    %em
+                      = @minimum_password_length
+                    characters minimum
+              .form-group
+                = f.label :current_password, 'Current Password', class: 'col-sm-2 control-label'
+                .col-sm-10
+                  %i (we need your current password to confirm your changes)
+                  = f.password_field :current_password,  class:'form-control', id:'current password',
+                    placeholder: "Enter Current Password",
+                    autocomplete: "off"
+              .form-group
+                .col-sm-offset-2.col-sm-10
+                  = f.submit 'Update', class: 'btn btn-success'

@@ -65,7 +65,8 @@
                   %input#inputName.form-control{:placeholder => current_user.encrypted_password, :type => "text", :readonly => true}
               .form-group
                 .col-sm-offset-2.col-sm-10
-                  = link_to 'Edit Profile',  edit_user_registration_path(current_user), class: 'btn btn-danger'
+                  = link_to 'Edit Profile',  edit_user_registration_path, class: 'btn btn-danger'
+
 
 
 
