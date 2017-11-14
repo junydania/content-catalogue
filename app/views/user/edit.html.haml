@@ -48,7 +48,7 @@
             = form_for(resource, as: resource_name, url: user_registration_path, html: { class: 'form-horizontal', method: :put }) do |f|
               = devise_error_messages!
               .form-group
-                = f.label :first_name, 'First Name1111', class: 'col-sm-2 control-label'
+                = f.label :first_name, 'First Name', class: 'col-sm-2 control-label'
                 .col-sm-10
                   = f.text_field :first_name, class:'form-control', id:'first_name', placeholder: current_user.first_name
               .form-group
