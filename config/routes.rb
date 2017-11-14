@@ -2,10 +2,6 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => {:registrations => "user"}
 
-  devise_scope :user do
-    get '/myprofile', to: "user#profile"
-  end
-
 
   root controller: :videos, action: :index
 
