@@ -18,9 +18,11 @@ class UserController < Devise::RegistrationsController
     end
   end
 
+
   def edit
-    render :edit
+    render
   end
+
 
   def update
     if update_without_password_params[:password].blank?
