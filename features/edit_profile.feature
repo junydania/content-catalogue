@@ -24,7 +24,6 @@ Feature: As a user or administrator
     Then I should see "Account successfully updated"
 
 
-
   Scenario: When I change my password
     Given I am on the "sign_in" page
     And I fill in field "user_email" with "o.dania@laffhub.com"
@@ -41,15 +40,6 @@ Feature: As a user or administrator
     And I fill in field "current password" with "12345678"
     And I click on "Update"
     Then I should see "Account successfully updated"
-
-
-#    And I fill in field "user_email" with "o.dania@laffhub.com"
-#    And I fill in field "user_password" with "87654321"
-#    And I click on "Sign In"
-#    Then I should see "Dashboard"
-
-
-
 
 
 
