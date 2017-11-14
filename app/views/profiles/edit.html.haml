@@ -46,26 +46,17 @@
 
           .tab-content
             %form.form-horizontal
-              = flash[:notice]
-              .form-group
-                %label.col-sm-2.control-label{:for => "inputName"} First Name
-                .col-sm-10
-                  %input#inputName.form-control{:placeholder => current_user.first_name, :type => "email", :readonly => true}
-              .form-group
-                %label.col-sm-2.control-label{:for => "inputName"} Last Name
-                .col-sm-10
-                  %input#inputName.form-control{:placeholder => current_user.last_name, :type => "email", :readonly => true}
-              .form-group
-                %label.col-sm-2.control-label{:for => "inputEmail"} Email
-                .col-sm-10
-                  %input#inputEmail.form-control{:placeholder => current_user.email, :type => "email", :readonly => true}
-              .form-group
-                %label.col-sm-2.control-label{:for => "inputName"} Password
-                .col-sm-10
-                  %input#inputName.form-control{:placeholder => current_user.encrypted_password, :type => "text", :readonly => true}
-              .form-group
-                .col-sm-offset-2.col-sm-10
-                  = link_to 'Edit Profile',  edit_user_registration_path(current_user), class: 'btn btn-danger'
-
+              = form_for edit_user_registration_path(current_user), html: { multipart: true } do |f|
+                .form-group
+                  = f.label :first_name, 'First Name', class: 'col-sm-2 control-label'
+                  .col-sm-10
+                    = f.text_field :first_name, class:'form-control', id:'first_name', placeholder: current_user.first_name
+                .form-group
+                  = f.label :last_name, 'Last Name', class: 'col-sm-2 control-label'
+                  .col-sm-10
+                    = f.text_field :last_name, class:'form-control', id:'last_name', placeholder: current_user.last_name
+                .form-group
+                  .col-sm-offset-2.col-sm-10
+                    = f.submit 'Submit', class: 'btn btn-success'
 
 
