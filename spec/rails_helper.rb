@@ -5,7 +5,8 @@ require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
-require 'factory_girl_rails'
+require 'support/factory_girl'
+require 'faker'
 
 ActiveRecord::Migration.maintain_test_schema!
 
@@ -44,9 +45,4 @@ Shoulda::Matchers.configure do |config|
     with.test_framework :rspec
     with.library :rails
   end
-end
-
-RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods
-  FactoryGirl.definition_file_paths = [File.expand_path('../factories', __FILE__)]
 end
