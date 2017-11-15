@@ -21,6 +21,12 @@ RSpec.describe Video, type: :model do
     it { is_expected.to validate_presence_of :category_id }
   end
 
+  describe 'Video' do
+    it 'has a valid factory' do
+      expect(build(:video).to be_valid)
+    end
+  end
+
 
 end
 

@@ -6,5 +6,11 @@ FactoryGirl.define do
     video_image "MyString"
     release_date "2017-08-24"
     video_storage_path "MyString"
+    user
+    publisher
+    comedian
+    category
   end
 end
+
+
