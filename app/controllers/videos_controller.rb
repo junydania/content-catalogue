@@ -28,7 +28,6 @@ class VideosController < ApplicationController
     redirect_to(reset_filterrific_url(format: :html)) && return
   end
 
-  
 
   def new
     @video = Video.new
@@ -74,6 +73,13 @@ class VideosController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @video = Video.find(params[:id])
+    @video.destroy
+    redirect_to videos_path
+    flash[:notice] = "Video successfully deleted"
   end
 
   private
