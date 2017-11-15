@@ -7,6 +7,8 @@
 # Ignore bundler config.
 /.bundle
 coverage/.resultset.json
+coverage/*
+
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -19,6 +21,8 @@ coverage/.resultset.json
 
 .byebug_history
 */.idea/
+.idea/
+/.idea/
 .env
 Procfile
 
