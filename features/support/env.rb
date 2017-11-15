@@ -21,5 +21,6 @@ rescue NameError
 end
 
 World(FactoryGirl::Syntax::Methods)
+
 Cucumber::Rails::Database.javascript_strategy = :truncation
 

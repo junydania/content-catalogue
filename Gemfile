@@ -49,6 +49,8 @@ group :development, :test do
   gem 'coveralls', require: false
   gem 'launchy'
   gem 'foreman'
+  gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
+
 end
 
 group :development do
