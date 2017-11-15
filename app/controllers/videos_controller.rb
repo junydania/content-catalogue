@@ -28,7 +28,7 @@ class VideosController < ApplicationController
     redirect_to(reset_filterrific_url(format: :html)) && return
   end
 
-  
+
   def new
     @video = Video.new
     @comedians = Comedian.all
