@@ -19,6 +19,8 @@ coverage/.resultset.json
 
 .byebug_history
 */.idea/
+.idea/
+/.idea/
 .env
 Procfile
 
