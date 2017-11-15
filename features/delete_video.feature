@@ -41,7 +41,6 @@ Feature: As a user or administrator
     And I fill in field "user_password" with "12345678"
     And I click on "Sign In"
     And I click on "View Videos"
-    Then show page
     And I should see "Ogogoro Master"
     And I click on "Show"
     And I click on "Delete"

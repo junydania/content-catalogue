@@ -29,7 +29,6 @@ class VideosController < ApplicationController
   end
 
   
-
   def new
     @video = Video.new
     @comedians = Comedian.all
@@ -74,6 +73,13 @@ class VideosController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @video = Video.find(params[:id])
+    @video.destroy
+    redirect_to videos_path
+    flash[:notice] = "Video successfully deleted"
   end
 
   private
