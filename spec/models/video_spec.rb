@@ -23,7 +23,7 @@ RSpec.describe Video, type: :model do
 
   describe 'Video' do
     it 'has a valid factory' do
-      expect(build(:video).to be_valid)
+      expect(create(:video)).to be_valid
     end
   end
 

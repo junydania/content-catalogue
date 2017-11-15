@@ -1,12 +1,10 @@
 FactoryGirl.define do
-  factory :videos do
+  factory :video do
     title "MyString"
-    video_key 1
+    video_key "LF343434343"
     description "MyString"
-    video_image "MyString"
     release_date "2017-08-24"
     video_storage_path "MyString"
-    user
     publisher
     comedian
     category
