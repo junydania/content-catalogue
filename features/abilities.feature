@@ -7,6 +7,7 @@ Feature: As an administrator
     Given the following user account exist
       | email                | first_name  | last_name | password | password_confirmation | role           |
       | o.dania@laffhub.com  | Osegbemoh   | Dania     | 12345678 | 12345678              | standard       |
+      | ade@efluxz.com  | Dewunmi     | Adebowale | 12345678 | 12345678              | administrator  |
 
     And the following publishers exist
       | publisher_name  |
@@ -48,6 +49,16 @@ Feature: As an administrator
     Then I should see "Access Denied: You are not authorized to carry out this action"
 
 
+  Scenario: I should be able to delete any video
+    Given I am on the "sign_in" page
+    And I fill in field "user_email" with "ade@efluxz.com"
+    And I fill in field "user_password" with "12345678"
+    And I click on "Sign In"
+    And I click on "View Videos"
+    And I should see "Ogogoro Master"
+    And I click on "Show"
+    And I click on "Delete"
+    Then I should see "Video successfully deleted"
 
 
 
