@@ -6,7 +6,7 @@ Feature: As an administrator
   Background:
     Given the following user account exist
       | email                | first_name  | last_name | password | password_confirmation | role           |
-      | o.dania@laffhub.com  | Osegbemoh   | Dania     | 12345678 | 12345678              | administrator  |
+      | o.dania@laffhub.com  | Osegbemoh   | Dania     | 12345678 | 12345678              | standard       |
 
     And the following publishers exist
       | publisher_name  |
@@ -45,7 +45,8 @@ Feature: As an administrator
     And I should see "Ogogoro Master"
     And I click on "Show"
     And I click on "Delete"
-    Then I should see "Sorry You don't the right to delete this video"
+    Then I should see "Access Denied: You are not authorized to carry out this action"
+
 
 
 

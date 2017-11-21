@@ -1,4 +1,5 @@
 class UserController < Devise::RegistrationsController
+  load_and_authorize_resource
 
   prepend_before_action :require_no_authentication, :only => [ :cancel]
 
