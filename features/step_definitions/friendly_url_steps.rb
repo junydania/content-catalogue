@@ -15,6 +15,8 @@ def path_to(page_name, id = '')
       projects_path
     when 'show video' then
       video_path(id)
+    when 'show profile' then
+      user_profile_path(id)
     else
       raise('path to specified is not listed in #path_to')
   end
@@ -23,3 +25,4 @@ end
 Given(/^I go to "([^"]*)" page of  "([^"]*)"$/) do |page_name, id|
   visit path_to(page_name, id)
 end
+

@@ -50,7 +50,7 @@ Feature: As an administrator
     And I fill in field "user_email" with "o.dania@laffhub.com"
     And I fill in field "user_password" with "12345678"
     And I click on "Sign In"
-    And I go to "show video" page of  "ogogoro-master"
-    And I should see "Ogogoro Master"
+    And I go to "show profile" page of  "osegbemoh-dania"
+    And I should see "Osegbemoh Dania"
 
 
