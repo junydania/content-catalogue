@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  load_and_authorize_resource param_method: :category_param
+  skip_authorize_resource only: :index
 
   def index
     @category = Category.all

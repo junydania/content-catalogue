@@ -1,4 +1,6 @@
 class ComediansController < ApplicationController
+  load_and_authorize_resource param_method: :comedian_param
+  skip_authorize_resource only: :index
 
   def index
     @comedians = Comedian.all
