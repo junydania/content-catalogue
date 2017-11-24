@@ -17,6 +17,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'jquery-turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
+gem 'cancancan', '~> 2.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
@@ -32,7 +33,9 @@ gem 'sdoc', group: :doc
 gem 'aws-sdk', '~> 2.3.0'
 gem 'will_paginate', '~> 3.1.1'
 gem 'filterrific'
-gem 'cancancan', '~> 2.0'
+gem 'friendly_id', '~> 5.1.0'
+
+
 
 
 group :development, :test do

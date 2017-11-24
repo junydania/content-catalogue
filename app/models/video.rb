@@ -1,4 +1,8 @@
 class Video < ApplicationRecord
+
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :history]
+
   protokoll :video_key, :pattern => "LH%Y#####"
 
   belongs_to  :publisher

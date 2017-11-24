@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
-  load_and_authorize_resource  param_method: :video_params
-  skip_authorize_resource only: :index
+  load_and_authorize_resource  param_method: :video_params, find_by: :slug
+  skip_authorize_resource :index, :show
 
   before_action :authenticate_user!
 
@@ -54,17 +54,17 @@ class VideosController < ApplicationController
 
   end
 
-
   def show
-    @video = Video.find(params[:id])
+    @video = Video.friendly.find(params[:id])
   end
+
 
   def edit
     @comedians = Comedian.all
     @publishers = Publisher.all
     @categories = Category.all
     @video = Video.find(params[:id])
-
+    # authorize! :edit, @video
   end
 
   def update
@@ -75,6 +75,7 @@ class VideosController < ApplicationController
     else
       render 'edit'
     end
+    # authorize! :update, @video
   end
 
   def destroy
@@ -82,6 +83,7 @@ class VideosController < ApplicationController
     @video.destroy
     redirect_to videos_path
     flash[:notice] = "Video successfully deleted"
+    # authorize! :destroy, @video
   end
 
   private
@@ -100,7 +102,3 @@ class VideosController < ApplicationController
   end
 
 end
-
-
-
-
