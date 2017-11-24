@@ -21,7 +21,7 @@ Feature: As an administrator
     And I fill in field "Password Confirmation" with "12345678"
     And I fill in field "First Name" with "Adetutu"
     And I fill in field "Last Name" with "Adigwe"
-    And I select "User" from "Role"
+    And I select "Guest" from "Role"
     And I click on "Submit"
     Then I should see "User successfully created"
 

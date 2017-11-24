@@ -20,6 +20,12 @@ class ApplicationController < ActionController::Base
     flash[:notice] = "Account successfully updated"
   end
 
+  rescue_from CanCan::AccessDenied do |exception|
+    Rails.logger.debug "Access Denied: #{exception.message}"
+    redirect_to request.referer
+    flash[:notice] = "Access Denied: You are not authorized to carry out this action"
+  end
+
   protected
 
   def configure_permitted_parameters

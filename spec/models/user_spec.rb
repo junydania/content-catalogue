@@ -1,6 +1,8 @@
 require 'rails_helper'
 
+
 RSpec.describe User, type: :model do
+
   describe 'DB table User' do
     it { is_expected.to have_db_column :id }
     it { is_expected.to have_db_column :email }
@@ -21,5 +23,6 @@ RSpec.describe User, type: :model do
     end
   end
 
-
 end
+
+

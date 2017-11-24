@@ -1,4 +1,6 @@
 class VideosController < ApplicationController
+  load_and_authorize_resource  param_method: :video_params
+  skip_authorize_resource only: :index
 
   before_action :authenticate_user!
 

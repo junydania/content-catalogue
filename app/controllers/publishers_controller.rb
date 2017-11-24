@@ -1,4 +1,6 @@
 class PublishersController < ApplicationController
+  load_and_authorize_resource param_method: :publisher_param
+  skip_authorize_resource only: :index
 
   def index
     @publishers = Publisher.all
