@@ -24,7 +24,7 @@ class VideosController < ApplicationController
       format.js
       filename = "videos-#{Date.today}.csv"
       format.csv { send_data @videos.to_csv, filename: filename}
-      format.xls
+      format.xlsx
     end
 
   rescue ActiveRecord::RecordNotFound => e
