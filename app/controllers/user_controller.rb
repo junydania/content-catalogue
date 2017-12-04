@@ -1,10 +1,14 @@
 class UserController < Devise::RegistrationsController
-  load_and_authorize_resource param_method: :sign_up_params
+  load_and_authorize_resource param_method: :sign_up_params, find_by: :slug
 
   prepend_before_action :require_no_authentication, :only => [ :cancel]
 
   def new
     super
+  end
+
+  def show
+    @user = User.friendly.find(params[:id])
   end
 
 
@@ -28,7 +32,7 @@ class UserController < Devise::RegistrationsController
     if update_without_password_params[:password].blank?
       resource_updated = resource.update_without_password(update_without_password_params)
       if resource_updated
-        redirect_to profile_path(current_user)
+        redirect_to user_profile_path(current_user)
         flash[:notice] = "Account successfully updated"
       else
         render :edit
@@ -37,7 +41,7 @@ class UserController < Devise::RegistrationsController
       resource_updated = resource.update_with_password(update_with_password_params)
       if resource_updated
         bypass_sign_in(resource)
-        redirect_to profile_path(current_user)
+        redirect_to user_profile_path(current_user)
         flash[:notice] = "Account successfully updated"
       else
         render :edit

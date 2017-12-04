@@ -1,5 +1,5 @@
 class ComediansController < ApplicationController
-  load_and_authorize_resource param_method: :comedian_param
+  load_and_authorize_resource param_method: :comedian_param, find_by: :slug
   skip_authorize_resource only: :index
 
   def index
@@ -18,6 +18,20 @@ class ComediansController < ApplicationController
     else
       flash[:notice]= "Sorry! You must enter a name"
       redirect_to new_comedian_path
+    end
+  end
+
+  def edit
+    @comedian = Comedian.friendly.find(params[:id])
+  end
+
+  def update
+    @comedian = Comedian.friendly.find(params[:id])
+    if @comedian.update_attributes(comedian_param)
+      redirect_to  comedians_path
+      flash[:notice] = "Comedian's record successfully updated"
+    else
+      render 'edit'
     end
   end
 

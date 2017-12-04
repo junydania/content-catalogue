@@ -51,11 +51,11 @@ end
 Then(/^I fill in "([^"]*)" with "([^"]*)"$/) do |new_password, password|
   fill_in new_password, with: password
 end
-
-Then(/^I click "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^I should be on the "([^"]*)" page$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
+#
+# Then(/^I click "([^"]*)"$/) do |arg1|
+#   pending # Write code here that turns the phrase above into concrete actions
+# end
+#
+# Then(/^I should be on the "([^"]*)" page$/) do |arg1|
+#   pending # Write code here that turns the phrase above into concrete actions
+# end

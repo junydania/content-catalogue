@@ -2,8 +2,13 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => {:registrations => "user"}
 
+  devise_scope :user do
+    get 'user/:id' => 'user#show', as: :user_profile
+  end
 
   root controller: :videos, action: :index
+
+
 
   get "/pages/login" => "users#login", as: :login
   get "/pages/signup" => "users#signup", as: :signup
@@ -15,6 +20,8 @@ Rails.application.routes.draw do
   resources :publishers
   resources :categories
   resources :profiles
+
+  # resources :user, only: [:show]
 
 end
 

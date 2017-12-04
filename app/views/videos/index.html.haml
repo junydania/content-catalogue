@@ -12,13 +12,7 @@
               %i.fa.fa-dashboard
               Home
           %li.active Content Catalogue Dashboard
-      .col-sm-6.hidden-xs
-        = form_for videos_path, method: 'get',  class: 'form header-form' do |f|
-          .input-group.input-group-sm
-            = f.text_field :search, class:'form-control', placeholder: 'Search Video'
-            %span.input-group-btn
-              = f.submit :search, class: 'search-btn btn.btn-flat', id:'search-btn' do
-                %i.fa.fa-search
+      -#.col-sm-6.hidden-xs
 
   %br
   / Main content

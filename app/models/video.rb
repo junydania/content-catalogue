@@ -1,4 +1,8 @@
 class Video < ApplicationRecord
+
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :history]
+
   protokoll :video_key, :pattern => "LH%Y#####"
 
   belongs_to  :publisher
@@ -92,6 +96,16 @@ class Video < ApplicationRecord
         ['Publisher (a-z)', 'publisher_name_asc'],
         ['Comedian (a-z)', 'name_asc' ]
     ]
+  end
+
+  def self.to_csv(options={})
+    # attributes = %w{ video_key title description video_storage_path release_date   }
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |video|
+        csv << video.attributes.values_at(*column_names)
+      end
+    end
   end
 
 end
