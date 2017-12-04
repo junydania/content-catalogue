@@ -1,0 +1,36 @@
+.content-wrapper
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      Edit Comedian
+      %small Edit Comedian
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li
+        %a{:href => "#"} Edit Comedian
+      %li.active Edit Comedian
+
+  / Main content
+  %section.content
+    .row
+      / left column
+      .col-md-6
+        / general form elements
+        .box.box-primary{"data-aos" => "fade-up"}
+          .box-header.with-border
+            %h3.box-title Edit Comedian
+          .box-body
+            = form_for @comedian do |f|
+              - if @comedian.errors.any?
+                - @comedian.errors.full_messages.each do |message|
+                  = message
+              .form-group
+                = f.label :name, "Comedian's Name"
+                %br
+                = f.text_field  :name, class: "form-control", :placeholder => "Enter Comedian full name"
+                %br
+                = f.submit 'Submit', class: "btn btn-primary"
+            = flash[:notice]

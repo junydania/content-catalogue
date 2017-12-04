@@ -98,6 +98,16 @@ class Video < ApplicationRecord
     ]
   end
 
+  def self.to_csv(options={})
+    # attributes = %w{ video_key title description video_storage_path release_date   }
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |video|
+        csv << video.attributes.values_at(*column_names)
+      end
+    end
+  end
+
 end
 
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171124185530) do
+ActiveRecord::Schema.define(version: 20171204163303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20171124185530) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_comedians_on_slug", unique: true
   end
 
   create_table "custom_auto_increments", id: :serial, force: :cascade do |t|
@@ -51,6 +53,8 @@ ActiveRecord::Schema.define(version: 20171124185530) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "publisher_name"
+    t.string "slug"
+    t.index ["slug"], name: "index_publishers_on_slug", unique: true
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,0 +1,19 @@
+.box-body.table-responsive.no-padding
+  %table.table.table-hover
+    %tr
+      %th Publisher Name
+      %th Date Created
+      %th
+      %th
+      %th
+    - @publishers.each do |publisher|
+      %tr
+        %td #{publisher.publisher_name}
+        - @date = publisher.created_at
+        %td
+          %span.label.label-info #{@date.strftime('%B, %Y')}
+        %td
+          = link_to "Show", publisher_path(publisher), class:"label label-success "
+        %td
+          = link_to "Edit", edit_publisher_path(publisher), class:"label label-success "
+

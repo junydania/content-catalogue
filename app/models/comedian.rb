@@ -1,7 +1,7 @@
 class Comedian < ApplicationRecord
 
-  # extend FriendlyId
-  # friendly_id :name, use: :slugged
+  extend FriendlyId
+  friendly_id :name, use: [:slugged, :history]
 
   has_many :videos
   validates_presence_of  :name

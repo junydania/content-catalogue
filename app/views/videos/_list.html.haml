@@ -9,7 +9,9 @@
         %th Publisher
         %th Storage
         %th
+          = link_to "CSV", videos_path(format: 'csv', filterrific: @filterrific.to_hash), class: "btn btn-danger"
         %th
+          = link_to "Excel", videos_path(format: 'xls', filterrific: @filterrific.to_hash), class: "btn btn-danger"
         %th
       - @videos.each do |video|
         %tr

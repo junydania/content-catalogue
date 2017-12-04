@@ -21,6 +21,11 @@
             %i.fa.fa-angle-left.pull-right
           %ul.treeview-menu
             %li
+              = link_to comedians_path, data: { pjax: true} do
+                %i.fa.fa-plus-circle
+                %span View Comedians
+
+            %li
               = link_to new_comedian_path, data: { pjax: true} do
                 %i.fa.fa-plus-circle
                 %span Add Comedian
@@ -32,6 +37,11 @@
             %i.fa.fa-angle-left.pull-right
           %ul.treeview-menu
             %li
+              = link_to publishers_path, data: { pjax: true} do
+                %i.fa.fa-plus-circle
+                %span View Publishers
+
+            %li
               = link_to new_publisher_path, data: { pjax: true} do
                 %i.fa.fa-plus-circle
                 %span Add Publisher
@@ -42,6 +52,11 @@
             %span Category
             %i.fa.fa-angle-left.pull-right
           %ul.treeview-menu
+            %li
+              = link_to categories_path, data: { pjax: true} do
+                %i.fa.fa-plus-circle
+                %span View Categories
+
             %li
               = link_to new_category_path, data: { pjax: true} do
                 %i.fa.fa-plus-circle

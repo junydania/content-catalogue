@@ -22,6 +22,9 @@ class VideosController < ApplicationController
     respond_to do |format|
       format.html
       format.js
+      filename = "videos-#{Date.today}.csv"
+      format.csv { send_data @videos.to_csv, filename: filename}
+      format.xls
     end
 
   rescue ActiveRecord::RecordNotFound => e
@@ -81,6 +84,7 @@ class VideosController < ApplicationController
     redirect_to videos_path
     flash[:notice] = "Video successfully deleted"
   end
+
 
   private
 
