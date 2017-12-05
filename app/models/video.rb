@@ -100,15 +100,25 @@ class Video < ApplicationRecord
 
   def self.to_csv(options={})
     # attributes = %w{ video_key title description video_storage_path release_date   }
+    columns =  ["id", "video_key", "title", "description", "release_date", "video_storage_path", "created_at", "comedian_name", "publisher_name", "video_category"]
     CSV.generate(options) do |csv|
-      csv << column_names
-      all.each do |video|
-        csv << video.attributes.values_at(*column_names)
+      csv << columns.map(&:humanize)
+      with_comedian_details.each do |video|
+        csv << video.attributes.values_at(*columns)
       end
     end
   end
 
+  def self.with_comedian_details
+    Video.select('videos.*,
+                  publishers.publisher_name as publisher_name,
+                  comedians.name as comedian_name,
+                  categories.category_name as video_category')
+                  .joins(:publisher, :comedian, :category)
+  end
+
 end
+
 
 
 

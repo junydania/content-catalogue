@@ -1,0 +1,16 @@
+wb = xlsx_package.workbook
+styles = xlsx_package.workbook.styles
+header_style = styles.add_style bg_color: "00",
+                                fg_color: "FF",
+                                bold: true,
+                                alignment: { horizontal: :center }
+assocs = Video.reflect_on_all_associations(:belongs_to).map{|a| [a.foreign_key.to_sym, a.name]}.to_h
+wb.add_worksheet(name: "Videos") do |sheet|
+  attrs = ["id", "video_key", "title", "description", "release_date", "video_storage_path", "created_at", "comedian_name", "publisher_name", "video_category"]
+  sheet.add_row attrs.map { |n| @videos.first.class.human_attribute_name(n) }, style: header_style
+  @videos.each do |video|
+    sheet.add_row [video.id, video.video_key, video.title, video.description, video.release_date, video.video_storage_path, video.created_at, video.comedian_name, video.publisher_name, video.video_category]
+  end
+end
+
+

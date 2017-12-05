@@ -6,7 +6,7 @@ class VideosController < ApplicationController
 
   def index
     @filterrific = initialize_filterrific(
-        Video,
+        Video.with_comedian_details,
         params[:filterrific],
         select_options: {
             with_comedian_id: Comedian.options_for_select,
@@ -24,7 +24,7 @@ class VideosController < ApplicationController
       format.js
       filename = "videos-#{Date.today}.csv"
       format.csv { send_data @videos.to_csv, filename: filename}
-      format.xlsx
+      format.xlsx {set_attachment_name "#{filename}.xlsx" }
     end
 
   rescue ActiveRecord::RecordNotFound => e
