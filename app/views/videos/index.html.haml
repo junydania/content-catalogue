@@ -49,107 +49,14 @@
     = flash[:notice]
     .row
       .col-xs-12
-        .box{"data-aos" => "fade-up"}
+        .box
           .box-header
             %h3.box-title VIDEO DETAILS
             .box-tools
-              -#.input-group{:style => "width: 150px;"}
-              -#  = form_for videos_path, method: 'get' do |f|
-              -#    = f.text_field :search,  placeholder: "Search Video", class: "form-control.input-sm.pull-right"
-              -#    -#.input-group-btn
-              -#    -#  %button.btn.btn-sm.btn-default
-              -#    -#    %i.fa.fa-search
-
-              / /.box-header
-
           = render( partial: 'videos/list', locals: { videos: @video})
 
     %br
-
-    .row{"data-aos" => "fade-up"}
-      .col-md-12
-        .box.box-solid.box-default
-          .box-header.with-border
-            %h3.box-title Monthly Earnings Report
-            .box-tools.pull-right
-              %button.btn.btn-box-tool{"data-widget" => "collapse"}
-                %i.fa.fa-minus
-              .btn-group
-                %button.btn.btn-box-tool.dropdown-toggle{"data-toggle" => "dropdown"}
-                  %i.fa.fa-wrench
-                %ul.dropdown-menu{:role => "menu"}
-                  %li
-                    %a{:href => "#"} Action
-                  %li
-                    %a{:href => "#"} Another action
-                  %li
-                    %a{:href => "#"} Something else here
-                  %li.divider
-                  %li
-                    %a{:href => "#"} Separated link
-              %button.btn.btn-box-tool{"data-widget" => "remove"}
-                %i.fa.fa-times
-          / /.box-header
-          .box-body
-            .row
-              .col-md-7
-                %p.text-center
-                  %strong Sales: 1 Jan, 2016 - 30 Jul, 2016
-                .chart
-                  / Sales Chart Canvas
-                  %canvas#salesChart
-                / /.chart-responsive
-              / /.col
-              .col-md-5.stats-description-container
-                .row
-                  .col-sm-6
-                    .description-block
-                      %span.description-percentage.text-green
-                        %i.fa.fa-caret-up
-                        17%
-                      %h5.description-header $35,210.43
-                      %span.description-text TOTAL REVENUE
-                    / /.description-block
-                  .col-sm-6
-                    .description-block
-                      %span.description-percentage.text-yellow
-                        %i.fa.fa-caret-left
-                        0%
-                      %h5.description-header $10,390.90
-                      %span.description-text TOTAL COST
-                    / /.description-block
-                .row
-                  .col-sm-6
-                    .description-block
-                      %span.description-percentage.text-green
-                        %i.fa.fa-caret-up
-                        20%
-                      %h5.description-header $24,813.53
-                      %span.description-text TOTAL PROFIT
-                    / /.description-block
-                  .col-sm-6
-                    .description-block
-                      %span.description-percentage.text-red
-                        %i.fa.fa-caret-down
-                        18%
-                      %h5.description-header 1200
-                      %span.description-text GOAL COMPLETIONS
-
-    .row
-      .col-md-8
-        .box.box-primary
-          .box-header.with-border
-            %h3.box-title Real Time Website Visitor Map
-            .box-tools.pull-right
-              %button.btn.btn-box-tool{"data-widget" => "collapse"}
-                %i.fa.fa-minus
-              %button.btn.btn-box-tool{"data-widget" => "remove"}
-                %i.fa.fa-times
-          .box-body
-            .map-container
-              #map-canvas
-
-
+      
 - content_for :after_body do
   %script{:src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyDjmOKmkLPUWeJLc9P9L-H-ZynmHl16Lhs"}
   %script{:src => "/plugins/sparkline/jquery.sparkline.min.js"}
