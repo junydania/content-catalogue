@@ -1,0 +1,19 @@
+.box-body.table-responsive.no-padding
+  %table.table.table-hover
+    %tr
+      %th Comedian Name
+      %th Date Added
+      %th
+      %th
+      %th
+    - @comedians.each do |comedian|
+      %tr
+        %td #{comedian.name}
+        - @date = comedian.created_at
+        %td
+          %span.label.label-info #{@date.strftime('%B, %Y')}
+        %td
+          = link_to "Show", comedian_path(comedian), class:"label label-success "
+        %td
+          = link_to "Edit", edit_comedian_path(comedian), class:"label label-success "
+

@@ -1,12 +1,12 @@
 class VideosController < ApplicationController
-  load_and_authorize_resource  param_method: :video_params
-  skip_authorize_resource only: :index
+  load_and_authorize_resource  param_method: :video_params, find_by: :slug
+  skip_authorize_resource :index, :show
 
   before_action :authenticate_user!
 
   def index
     @filterrific = initialize_filterrific(
-        Video,
+        Video.with_comedian_details,
         params[:filterrific],
         select_options: {
             with_comedian_id: Comedian.options_for_select,
@@ -22,10 +22,12 @@ class VideosController < ApplicationController
     respond_to do |format|
       format.html
       format.js
+      filename = "videos-#{Date.today}.csv"
+      format.csv { send_data @videos.to_csv, filename: filename}
+      format.xlsx {set_attachment_name "#{filename}.xlsx" }
     end
 
   rescue ActiveRecord::RecordNotFound => e
-    # There is an issue with the persisted param_set. Reset it.
     puts "Had to reset filterrific params: #{ e.message }"
     redirect_to(reset_filterrific_url(format: :html)) && return
   end
@@ -54,21 +56,20 @@ class VideosController < ApplicationController
 
   end
 
-
   def show
-    @video = Video.find(params[:id])
+    @video = Video.friendly.find(params[:id])
   end
+
 
   def edit
     @comedians = Comedian.all
     @publishers = Publisher.all
     @categories = Category.all
-    @video = Video.find(params[:id])
-
+    @video = Video.friendly.find(params[:id])
   end
 
   def update
-    @video = Video.find(params[:id])
+    @video = Video.friendly.find(params[:id])
     if @video.update_attributes(video_params)
       redirect_to  video_path(@video)
       flash[:notice] = 'Video successfully updated'
@@ -78,11 +79,12 @@ class VideosController < ApplicationController
   end
 
   def destroy
-    @video = Video.find(params[:id])
+    @video = Video.friendly.find(params[:id])
     @video.destroy
     redirect_to videos_path
     flash[:notice] = "Video successfully deleted"
   end
+
 
   private
 
@@ -100,7 +102,3 @@ class VideosController < ApplicationController
   end
 
 end
-
-
-
-

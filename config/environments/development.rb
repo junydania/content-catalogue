@@ -74,9 +74,8 @@ Rails.application.configure do
           s3_region: ENV['AWS_REGION']
       }
   }
-
 end
 
-Paperclip.options[:command_path] = "/usr/local/bin/"
+Paperclip.options[:command_path] = '/usr/local/bin/'
 
 

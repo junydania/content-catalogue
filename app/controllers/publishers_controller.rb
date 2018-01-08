@@ -1,5 +1,5 @@
 class PublishersController < ApplicationController
-  load_and_authorize_resource param_method: :publisher_param
+  load_and_authorize_resource param_method: :publisher_param, find_by: :slug
   skip_authorize_resource only: :index
 
   def index
@@ -18,6 +18,20 @@ class PublishersController < ApplicationController
     else
       render new
     end
+  end
+
+  def edit
+    @publisher = Publisher.friendly.find(params[:id])
+  end
+
+  def update
+      @publisher = Publisher.friendly.find(params[:id])
+      if @pubisher.update_attributes(publisher_param)
+        redirect_to  publishers_path
+        flash[:notice] = "Publisher's record successfully updated"
+      else
+        render 'edit'
+      end
   end
 
 

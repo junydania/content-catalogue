@@ -8,11 +8,6 @@
             %i.fa.fa-circle-o
             %span Dashboard
         %li.header GENERAL PAGES
-        %li
-          = link_to page_path(page: "widgets"), data: { pjax: true} do
-            %i.fa.fa-th
-            %span Widgets
-            %small.label.pull-right.bg-green Hot
 
         %li.treeview
           %a{:href => "#"}
@@ -20,6 +15,11 @@
             %span Comedians
             %i.fa.fa-angle-left.pull-right
           %ul.treeview-menu
+            %li
+              = link_to comedians_path, data: { pjax: true} do
+                %i.fa.fa-plus-circle
+                %span View Comedians
+
             %li
               = link_to new_comedian_path, data: { pjax: true} do
                 %i.fa.fa-plus-circle
@@ -32,6 +32,11 @@
             %i.fa.fa-angle-left.pull-right
           %ul.treeview-menu
             %li
+              = link_to publishers_path, data: { pjax: true} do
+                %i.fa.fa-plus-circle
+                %span View Publishers
+
+            %li
               = link_to new_publisher_path, data: { pjax: true} do
                 %i.fa.fa-plus-circle
                 %span Add Publisher
@@ -42,6 +47,11 @@
             %span Category
             %i.fa.fa-angle-left.pull-right
           %ul.treeview-menu
+            %li
+              = link_to categories_path, data: { pjax: true} do
+                %i.fa.fa-plus-circle
+                %span View Categories
+
             %li
               = link_to new_category_path, data: { pjax: true} do
                 %i.fa.fa-plus-circle
@@ -72,28 +82,7 @@
               = link_to new_user_registration_path, data: { pjax: true} do
                 %i.fa.fa-plus-circle
                 %span Create User
-        %li.treeview
-          %a{:href => "#"}
-            %i.fa.fa-pie-chart
-            %span Charts
-            %i.fa.fa-angle-left.pull-right
-          %ul.treeview-menu
-            %li
-              = link_to page_path(page: "chartjs"), data: { pjax: true} do
-                %i.fa.fa-line-chart
-                ChartJS
-            %li
-              = link_to page_path(page: "morris"), data: { pjax: true} do
-                %i.fa.fa-bar-chart
-                Morris
-            %li
-              = link_to page_path(page: "flot"), data: { pjax: true} do
-                %i.fa.fa-area-chart
-                Flot
-            %li
-              = link_to page_path(page: "inline_charts"), data: { pjax: true} do
-                %i.fa.fa-signal
-                Inline charts
+
         %li.treeview
           %a{:href => "#"}
             %i.fa.fa-laptop
@@ -134,14 +123,6 @@
               = link_to page_path(page: "forms_simple"), data: { pjax: true} do
                 %i.fa.fa-keyboard-o
                 General Elements
-            %li
-              = link_to page_path(page: "forms_custom"), data: { pjax: true} do
-                %i.fa.fa-check-square
-                Custom Form Elements
-            %li
-              = link_to page_path(page: "forms_editor"), data: { pjax: true} do
-                %i.fa.fa-paragraph
-                Rich Text Editors
         %li.treeview
           %a{:href => "#"}
             %i.fa.fa-table
@@ -163,22 +144,6 @@
             %i.fa.fa-angle-left.pull-right
           %ul.treeview-menu
             %li
-              = link_to page_path(page: "invoice"), data: { pjax: true} do
-                %i.fa.fa-money
-                Invoice
-            %li
-              = link_to page_path(page: "profile"), data: { pjax: true} do
-                %i.fa.fa-user
-                Profile  Timeline
-            %li
-              = link_to login_path do
-                %i.fa.fa-sign-in
-                Login
-            %li
-              = link_to signup_path do
-                %i.fa.fa-sign-out
-                Signup
-            %li
               = link_to page_path(page: "404"), data: { pjax: true} do
                 %i.fa.fa-exclamation-circle
                 404 Error
@@ -186,13 +151,4 @@
               = link_to page_path(page: "500"), data: { pjax: true} do
                 %i.fa.fa-exclamation-triangle
                 500 Error
-            %li
-              = link_to page_path(page: "blank"), data: { pjax: true} do
-                %i.fa.fa-circle-o
-                Blank Page
-        %li
-          = link_to page_path(page: "calendar"), data: { pjax: true} do
-            %i.fa.fa-calendar
-            %span Calendar
-            %small.label.pull-right.bg-red 3
 

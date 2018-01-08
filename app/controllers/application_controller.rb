@@ -28,6 +28,11 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def set_attachment_name(name)
+    escaped = URI.encode(name)
+    response.headers['Content-Disposition'] = "attachment; filename*=UTF-8''#{escaped}"
+  end
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up) do |u|
       u.permit(:username, :first_name, :last_name, :email, :password)

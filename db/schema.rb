@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170922162957) do
+ActiveRecord::Schema.define(version: 20171204163303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20170922162957) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_comedians_on_slug", unique: true
   end
 
   create_table "custom_auto_increments", id: :serial, force: :cascade do |t|
@@ -35,10 +37,24 @@ ActiveRecord::Schema.define(version: 20170922162957) do
     t.index ["counter_model_name"], name: "index_custom_auto_increments_on_counter_model_name"
   end
 
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
   create_table "publishers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "publisher_name"
+    t.string "slug"
+    t.index ["slug"], name: "index_publishers_on_slug", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -57,8 +73,10 @@ ActiveRecord::Schema.define(version: 20170922162957) do
     t.string "first_name"
     t.string "last_name"
     t.integer "role", default: 0
+    t.string "slug"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["slug"], name: "index_users_on_slug", unique: true
   end
 
   create_table "videos", force: :cascade do |t|
@@ -76,9 +94,11 @@ ActiveRecord::Schema.define(version: 20170922162957) do
     t.bigint "publisher_id"
     t.bigint "comedian_id"
     t.bigint "category_id"
+    t.string "slug"
     t.index ["category_id"], name: "index_videos_on_category_id"
     t.index ["comedian_id"], name: "index_videos_on_comedian_id"
     t.index ["publisher_id"], name: "index_videos_on_publisher_id"
+    t.index ["slug"], name: "index_videos_on_slug"
   end
 
   add_foreign_key "videos", "categories"
